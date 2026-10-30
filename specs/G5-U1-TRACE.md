@@ -64,3 +64,5 @@ theorem g5_u1_trace (w : List ℕ) (hw : IsWord w) :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T09:59:55Z
+
+V1: V1-GREEN 2026-10-30T10:10:55Z — AM-1-second-head l. 36, AM l. 37 and PHASE-2-DEFINITIONS l. 9 (both cites) quoted exactly. Direction: t on the left, STATEMENTS.md §0's "t := tr(P_{a₁} ⋯ P_{a_k}) = (−1)^k tr W"; equivalent to the record's other orientation since ((−1)^k)² = 1. (−1)^k is the ring element of ZPhi, k = `w.length`, `W` the literal left-to-right product. Domain k ≥ 1 with syllables in {1, …, 4}, the record's population (AM-1-second-head l. 257, PHASE-2-DEFINITIONS l. 7). At k = 0 the identity would read tr I = tr I, so the restriction drops nothing true. Independent check: the identity holds on all 21,844 words with k ≤ 7. Parse: 0 Lean line(s) over 100 code points

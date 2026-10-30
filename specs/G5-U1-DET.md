@@ -51,3 +51,5 @@ theorem g5_u1_det (a : ℕ) (ha : 1 ≤ a ∧ a ≤ 4) : (P a).det = 1 := by sor
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T09:59:55Z
+
+V1: V1-GREEN 2026-10-30T10:10:55Z — AM-1-second-head l. 23 ("(1, 0) for all four") and AM l. 34 quoted exactly; the determinant is taken in ZPhi over its CommRing instance, and the record's (1, 0) is the pair 1 + 0φ = `1 : ZPhi`; domain a ∈ {1, …, 4}. Independent computation: det P_a = (1, 0) for all four. (C-i) for products rightly not claimed. Parse: 0 Lean line(s) over 100 code points

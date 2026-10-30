@@ -72,3 +72,5 @@ theorem g5_u1_ge_a (a : ℕ) (ha : 1 ≤ a ∧ a ≤ 4) (i j : Fin 2) :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T09:59:55Z
+
+V1: V1-GREEN 2026-10-30T10:10:55Z — the five cites (AM l. 198, AM l. 34, TA l. 51, DO l. 60, SH-P2-1 l. 176) match verbatim. The statement is AM §1.1 l. 34's first and third clauses conjoined — every entry of P_a in ℕ[φ] (`nonneg`) and I ≤ P_a entrywise in the REAL order (`RealNonneg (P a i j − 1 i j)`) — no stronger, no weaker; it is exactly the reading STATEMENTS.md §4's erratum (2026-10-30T10:02:47Z) and PHASE-2-DEFINITIONS l. 62's erratum fix for G5-MONO's first clause. Independent check: both clauses hold at all 16 entries. Cosmetic note, not a drift: the AM l. 198 quote is a verbatim prefix that stops before its own "and P_a − I real-nonnegative entries", so the ≥ I half rests on the l. 34 quote. Parse: 0 Lean line(s) over 100 code points

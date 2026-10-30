@@ -56,3 +56,5 @@ example : (1 : M2) 0 0 ≤ P 2 0 0 := by decide
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T09:59:55Z — CC-CANDIDATE, row stopped
+
+V1: V1-CC 2026-10-30T10:10:55Z — I agree with M's CC-CANDIDATE. Read coefficientwise (P_a − I has entries in ℕ[φ]), the recorded wording "Every P_a ≥ I entrywise over ℕ[φ]" (PHASE-2-DEFINITIONS l. 11; STATEMENTS.md row G5-MONO, first clause) is FALSE: independent pair arithmetic finds exactly four failing entries, a = 2 and a = 3 at (0, 0) and (1, 1), each φ − 1 = (−1, 1); the record says so itself (AM l. 34, the l. 52 correction note). The defect is in the wording, not the mathematics: no proof on the record uses the false reading, the true reading is GEa, and the wording is already carried as errata (STATEMENTS.md §4, PHASE-2-DEFINITIONS l. 62, both 2026-10-30T10:02:47Z). The row goes to the correction track, uncounted; no statement to freeze. V1-SPLIT-OK on GE → GEa / GEb. Parse: 0 Lean line(s) over 100 code points
