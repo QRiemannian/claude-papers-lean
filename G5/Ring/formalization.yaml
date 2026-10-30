@@ -1,0 +1,63 @@
+# Unit U1 (G5/Ring) — per-unit record, Claude Paper No. 1
+unit: "U1"
+module_path: "G5/Ring"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "0b277844f9aa258cd009b52e71d7e4e1b143ed1eaa08a044f5b5917018a147d6"
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the current edition, §4 erratum included)"
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+definitions:
+  - name: "ZPhi"
+    note: "ℤ[φ] as integer pairs ⟨x, y⟩ = x + yφ, with CommRing instance ZPhi.instCommRing (axioms proved in the block, no sorry), φ, phiCoeff, conj (σ), nrm, the exact real order (NonnegAB5, RealNonneg, LE, LT) and nonneg (ℕ[φ]) (G5-U1-DEFS)"
+  - name: "G5.M2"
+    note: "Matrix (Fin 2) (Fin 2) ZPhi (G5-U1-DEFS)"
+  - name: "G5.S"
+    note: "[[0, −1], [1, 0]] (G5-U1-DEFS)"
+  - name: "G5.T"
+    note: "[[1, φ], [0, 1]] (G5-U1-DEFS)"
+  - name: "G5.R"
+    note: "T * S, the literal SL matrix (G5-U1-DEFS)"
+  - name: "G5.P"
+    note: "the printed blocks P₁ … P₄, row-major; filler 1 off {1, 2, 3, 4}, never read — every statement using P carries 1 ≤ a ∧ a ≤ 4 or IsWord (G5-U1-DEFS, V1 freeze)"
+  - name: "G5.IsWord"
+    note: "non-empty list (k ≥ 1), syllables in {1, 2, 3, 4} (G5-U1-DEFS, V1 freeze)"
+  - name: "G5.W"
+    note: "the literal word R^{a₁} S ⋯ R^{a_k} S, left to right (G5-U1-DEFS)"
+  - name: "G5.blockProd"
+    note: "P_{a₁} ⋯ P_{a_k} (G5-U1-DEFS)"
+  - name: "G5.ntr"
+    note: "the normalized trace t = tr (P_{a₁} ⋯ P_{a_k}) (G5-U1-DEFS)"
+rows:
+  - row: "G5-U1-DEFS"
+    theorems: []
+    status: "STATED"
+    note: "the shared definitions block, byte for byte from the spec's §5; no theorem"
+  - row: "G5-U1-R5"
+    theorems: ["G5.g5_u1_r5"]
+    status: "STATED"
+    note: "phase-0/DEFINITIONS.md §2 (l. 16); R⁵ = −I, literal SL"
+  - row: "G5-U1-RAS"
+    theorems: ["G5.g5_u1_ras"]
+    status: "STATED"
+    note: "candidates/checks/AM-1-second-head.md §1 (l. 22, l. 28–32); R^a S = −P_a, a ∈ {1, …, 4}"
+  - row: "G5-U1-DET"
+    theorems: ["G5.g5_u1_det"]
+    status: "STATED"
+    note: "candidates/checks/AM-1-second-head.md §1 table (l. 23); det P_a = 1, a ∈ {1, …, 4}"
+  - row: "G5-U1-GEa"
+    theorems: ["G5.g5_u1_ge_a"]
+    status: "STATED"
+    note: "split half a of G5-U1-GE (V1-SPLIT-OK); AM transcript §5.1 (l. 198) and §1.1 (l. 34); entries in ℕ[φ] and ≥ I in the real order"
+  - row: "G5-U1-TRACE"
+    theorems: ["G5.g5_u1_trace"]
+    status: "STATED"
+    note: "phase-2/PHASE-2-DEFINITIONS.md §1 (l. 9); t = (−1)^k tr W for k ≥ 1"
+rows_not_stated:
+  - row: "G5-U1-GEb"
+    note: "V1-CC — correction track, uncounted; the coefficientwise reading of 'P_a ≥ I over ℕ[φ]' is false at a = 2, 3 (STATEMENTS.md §4 erratum); no statement"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"

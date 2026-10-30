@@ -1,0 +1,13 @@
+{
+    "challenge_module": "G5.Ring.Challenge",
+    "solution_module": "G5.Ring.Solution",
+    "theorem_names": [
+        "G5.g5_u1_r5",
+        "G5.g5_u1_ras",
+        "G5.g5_u1_det",
+        "G5.g5_u1_ge_a",
+        "G5.g5_u1_trace"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

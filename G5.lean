@@ -1,1 +1,2 @@
 -- G5: index of the units of Claude Paper No. 1 (one import per unit; none yet)
+import G5.Ring.Challenge
