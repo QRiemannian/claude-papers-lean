@@ -39,3 +39,11 @@ automation:
 statement_sha256_draft: "c6a43405c82a8b43218854dc605d0b9952332b82681dfb03a9008e6e3195d6a8"
 statement_sha256: "c6a43405c82a8b43218854dc605d0b9952332b82681dfb03a9008e6e3195d6a8"
 v2_signed: "2026-10-30T13:25:12Z"
+proofs_phase:
+  closed: "2026-10-30T13:43:54Z"
+  solution_module: "G5.SectorGroup.Solution"
+  solution_sha256: "ad41084f17758cf26774b597142736d6cfa7aa5429166a842653619983535c79"
+  theorems_proved: 2
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.Group.Solution, G5.Sector.Solution, G5.GroupLevel.Solution, G5.WordLevel.Solution; restates nothing; the comparator accepted the arrangement 13:42:26Z (exit 0, 64 s)"
+  note: "one helper g5_u9_aux_hyp: g5_u7_nf + trace invariance under conjugation; the negated forms through rabs (-t) = rabs t read in U5's real order; I, S, R^a excluded by g5_u8_ell + decide; constant words give t = (2,0); BGa from g5_u4_ba, BGb from the first conjunct of g5_u4_bc; build B2 13:41:17Z exit 0 (41 s, 8713 jobs, no warnings)"

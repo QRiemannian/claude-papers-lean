@@ -39,3 +39,11 @@ automation:
 statement_sha256_draft: "34608245fb7cc62c538d6e5cab0592061649df8857ae133221b289e37e56b288"
 statement_sha256: "34608245fb7cc62c538d6e5cab0592061649df8857ae133221b289e37e56b288"
 v2_signed: "2026-10-30T13:24:39Z"
+proofs_phase:
+  closed: "2026-10-30T13:39:28Z"
+  solution_module: "G5.Containment.Solution"
+  solution_sha256: "b7f52f132339421f6c3ab67dbef59c728419a331235e645503a32b63c94f8332"
+  theorems_proved: 1
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.Group.Solution, G5.GroupLevel.Solution, G5.WordLevel.Solution; restates nothing; the comparator accepted the arrangement 13:37:34Z (exit 0, 95 s)"
+  note: "a private copy of U8's normal-form pattern with the target set Q: closed under negation (finite part by decide, cone part by neg_neg); I, S, R^a by g5_u8_ell + decide; a word has tr W = ±t (g5_u1_trace), t = (2,0) on constant words else x ≥ 0, y ≥ 1 (g5_u3_a_nonneg, g5_u3_a_y_eq_zero); build B2 13:36:26Z exit 0 (39 s, 8712 jobs, no warnings)"

@@ -35,3 +35,11 @@ automation:
 statement_sha256_draft: "ee958447349e411d839a595dd2057af8d284daedcb410f4a71a4eca3d2c2b76c"
 statement_sha256: "ee958447349e411d839a595dd2057af8d284daedcb410f4a71a4eca3d2c2b76c"
 v2_signed: "2026-10-30T13:25:31Z"
+proofs_phase:
+  closed: "2026-10-30T13:34:44Z"
+  solution_module: "G5.Census.Solution"
+  solution_sha256: "45c8c0cb60525b4fa23bcd195eb97be8550ce9ec7f6210e353f631bd65e78248"
+  theorems_proved: 3
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.Ladder.Solution; restates nothing; the comparator accepted the arrangement 13:33:01Z (exit 0, 85 s)"
+  note: "census_a by contradiction on K < k through U5's lad_a_one / lad_a_two / lad_a_ge3 with t < (K+2)φ read in ℝ; census_b forces k = 2 (4φ ≤ t < 3φ excludes k ≥ 3), the 16 two-syllable words by decide, then lad_b_two gives the rotation of (1,4); census_b_wit by decide; build B2 13:31:41Z exit 0 (39 s, 8708 jobs, no warnings)"
