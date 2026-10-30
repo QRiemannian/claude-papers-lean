@@ -247,3 +247,25 @@ Build completed successfully (8709 jobs).
 [PASS] retired_names — 0 hits for the four retired names
 manifest: manifests/unit-G5.CensusCap-4c1d4ec.json · verdict PASS
 ```
+
+## K-U14 · G5/EvenKRemark · logged 2026-10-30T22:29:50Z
+
+Slot poll by process name (lean · lake · lean4export · comparator): all empty at 2026-10-30T22:27:31Z; no wait needed. Command run 2026-10-30T22:27:37Z → 2026-10-30T22:29:37Z, exit 0:
+
+`cd ~/Claude/projects/claude-papers-lean && export PATH="$HOME/.elan/bin:$PATH" && source tools/env.sh && bash tools/check.sh --unit G5/EvenKRemark`
+
+```
+check.sh @ 2026-10-30T22:27:37Z · commit bfc705e · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/EvenKRemark
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (8709 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 6.96s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 22 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.EvenKRemark-bfc705e.json · verdict PASS
+```
+
+manifest sha256: 53e6b224773024e3617a665e4edb8bd382cc2dfe35f91a93bdfa4a2518335937  manifests/unit-G5.EvenKRemark-bfc705e.json
