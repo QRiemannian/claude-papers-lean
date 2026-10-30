@@ -231,3 +231,19 @@ manifest: manifests/unit-G5.EvenK-fc8d6f2.json · verdict PASS
 ```
 
 manifest sha256: 8e8fe267862fc99d7726dc369c5b1b832ed1264d63e3cf4cf1017ec8db4fdf69  manifests/unit-G5.EvenK-fc8d6f2.json
+
+## K — U13 G5/CensusCap — 2026-10-30T19:12:21Z (start 2026-10-30T19:11:06Z, lane clear at poll 2026-10-30T19:11:00Z, no wait) — exit 0
+
+```
+check.sh @ 2026-10-30T19:11:06Z · commit 4c1d4ec · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/CensusCap
+warning: G5/CensusCap/Challenge.lean:51:8: declaration uses `sorry`
+Build completed successfully (8709 jobs).
+Build completed successfully (8709 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 5.81s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 18 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.CensusCap-4c1d4ec.json · verdict PASS
+```
