@@ -1,0 +1,48 @@
+# Unit U4 (G5/Sector) — per-unit record, Claude Paper No. 1
+unit: "U4"
+module_path: "G5/Sector"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "e0df0f356a20456e8b9a9cfdd816c41ee3d010642acc684a43bc4193c36733bf"
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition current at 2026-10-30T10:37:25Z, re-read equal at 10:41:04Z, §4 Errata included; the specs' headers carry 0b277844, the brief named 3a9e5400 — the errata between touch no U4 row: they concern G5-MONO, G5-LAD, G5-M4/M3 and G5-L2)"
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  unit: "U1"
+  module: "G5.Ring.Challenge"
+  challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+  note: "the frozen U1 prelude (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z); imported, not restated"
+definitions:
+  - name: "ZPhi.rabs"
+    note: "the real absolute value on ℤ[φ]: t if RealNonneg t, else −t, on U1's exact real order (G5-Bc §5, byte for byte; placed as M's probe places it, between g5_u4_bb_tr and g5_u4_bc, outside namespace G5)"
+definitions_note: "every other name (ZPhi, phi, conj, RealNonneg, the real order, IsWord, ntr, .x/.y) is U1's; rotations are mathlib's List.IsRotated"
+rows:
+  - row: "G5-Ba"
+    theorems: ["G5.g5_u4_ba"]
+    status: "STATED"
+    note: "split half a of G5-B (V1-SPLIT-OK); TA §1 Theorem B l. 43–44, LEDGER row AM-2 l. 13, SH-P2-1 §1 l. 70–73; y ≥ 1 and 0 ≤ x ≤ y + 2 for words neither (1^k) nor (4^k)"
+  - row: "G5-Bb"
+    theorems: ["G5.g5_u4_bb", "G5.g5_u4_bb_tr"]
+    status: "STATED"
+    note: "split half b of G5-B (V1-SPLIT-OK); LEDGER row AM-2′ l. 14, SH-P2-1 §1 l. 75, 88, 90; x = y + 2 iff a rotation of 1^a 4^b (a, b ≥ 1), and there t = (2 + ab) + abφ"
+  - row: "G5-Bc"
+    theorems: ["G5.g5_u4_bc", "G5.g5_u4_bc_id", "G5.g5_u4_bc_att"]
+    status: "STATED"
+    note: "split third part of G5-B (V1-SPLIT-OK); SH-P2-1 §1 l. 94–114, TA l. 47, LEDGER row TA-0 l. 28; 11·rabs(t^σ) ≤ (17 − 7φ)·t with equality iff t = 3 + φ, the identity (4 − φ)·11 = (17 − 7φ)(3 + φ), ntr [1, 4] = 3 + φ"
+  - row: "G5-Fa"
+    theorems: ["G5.g5_u4_fa"]
+    status: "STATED"
+    note: "leg a of G5-F (V1-SPLIT-OK); LEDGER row AM-3 l. 15, AM §3.5 l. 155, §6 l. 224; |y| ≥ k − 1 for non-constant words, k ≥ 2"
+  - row: "G5-Fb"
+    theorems: ["G5.g5_u4_fb"]
+    status: "STATED"
+    note: "leg b of G5-F (V1-SPLIT-OK); LEDGER row AM-3 l. 15, AM §3.5 l. 155, §6 l. 224; |y| = k − 1 iff a rotation of (1, 4^{k−1}) or (4, 1^{k−1})"
+  - row: "G5-Fc"
+    theorems: ["G5.g5_u4_fc"]
+    status: "STATED"
+    note: "leg c of G5-F (V1-SPLIT-OK, scope as V1 decided it: every word with a 2 or 3, every k ≥ 1); LEDGER row AM-3 l. 15, AM §3.5 l. 155, §6 l. 224; |y| ≥ k + 1"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "df5fdf79df09a7dd097a8d3102c96b644458d2fcde98856b16de002cf910996f"

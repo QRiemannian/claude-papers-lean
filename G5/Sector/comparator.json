@@ -1,0 +1,17 @@
+{
+    "challenge_module": "G5.Sector.Challenge",
+    "solution_module": "G5.Sector.Solution",
+    "theorem_names": [
+        "G5.g5_u4_ba",
+        "G5.g5_u4_bb",
+        "G5.g5_u4_bb_tr",
+        "G5.g5_u4_bc",
+        "G5.g5_u4_bc_id",
+        "G5.g5_u4_bc_att",
+        "G5.g5_u4_fa",
+        "G5.g5_u4_fb",
+        "G5.g5_u4_fc"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}
