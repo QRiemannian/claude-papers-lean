@@ -7,7 +7,7 @@ unit: U8
 paper: No. 1 — *The Realized Trace Set of the Hecke Group G(5)*
 source_sha256: e0df0f356a20456e8b9a9cfdd816c41ee3d010642acc684a43bc4193c36733bf (`Claude-Papers/No1-G5/phase-3/STATEMENTS.md`, `shasum -a 256` at 2026-10-30T11:00:47Z; §4 Errata included — this is the digest the brief names)
 depends_on: U1 `G5.Ring.Challenge` 863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c · U7 `G5.Group.Challenge` 689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae · U2 `G5.ModTwo.Challenge` c342ab92ba8ef07e5a9fba82422968b9de4410974583210dc1dcded53354c78c · U6 `G5.Congruence.Challenge` d576229b23afb62ac8beb64cd32f0ca753d5564ca4839eab90b55cf769aac532 (each the `statement_sha256` of the unit's `formalization.yaml`; `shasum -a 256` of each `Challenge.lean` at 2026-10-30T11:01Z matches)
-locus: `Claude-Papers/No1-G5/candidates/LEDGER.md` row AM-5 (l. 17, the statement cell); AM §2.3 (`Research-Team/sessions/2026-10-29-g5-phase-1-structure-dig/transcript/analytical-methods.md` l. 95), §2.4 (l. 116); DO §3.2 (`Research-Team/sessions/2026-10-29-g5-phase-1-structure-dig/transcript/depth-operations.md` l. 116, l. 121) and §10 D-2 (l. 246); STATEMENTS.md row G5-M3 (l. 19, pointer) and §4 l. 47–48 (the charter)
+locus: `Claude-Papers/No1-G5/candidates/LEDGER.md` row AM-5 (l. 17, the statement cell); AM §2.3 (`Research-Team/sessions/2026-10-29-g5-phase-1-structure-dig/transcript/analytical-methods.md` l. 95), §2.4 (l. 116); DO §3.2 (`Research-Team/sessions/2026-10-29-g5-phase-1-structure-dig/transcript/depth-operations.md` l. 116, l. 121) and §10 D-2 (l. 246); STATEMENTS.md row G5-M3 (l. 21, pointer) and §4 l. 47–48 (the charter)
 spec_clock: 2026-10-30T11:09:18Z
 
 ## 2 · Printed statement, verbatim
