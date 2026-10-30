@@ -1,0 +1,210 @@
+{
+  "clock": "2026-10-30T19:08:38Z",
+  "commit": "13d1b9b",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 7.41,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 7.41s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 18 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.EvenK.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.EvenK.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_red2M_W",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "G5.A.eq_2",
+      "axioms": []
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "G5.A.eq_def",
+      "axioms": []
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.A.match_1.eq_2",
+      "axioms": []
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "G5.g5_u12_evk_a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "G5.g5_u12_evk_b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_f.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_map",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_step._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "G5.A.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_trace_y",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "G5.red2M.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.A.match_1.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_pair._simp_1_7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_trace_y._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_pair",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_red2_trace",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EvenK.Solution",
+      "theorem": "_private.G5.EvenK.Solution.0.G5.g5_u12_aux_step",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/EvenK",
+      "sha256": "321dfbf5abdc78157328a8f7d1c53d40ae09a60b6a5cf027824d09da8f967565",
+      "signed": "321dfbf5abdc78157328a8f7d1c53d40ae09a60b6a5cf027824d09da8f967565"
+    }
+  ],
+  "file_hashes": {
+    "./G5/EvenK/Challenge.lean": "321dfbf5abdc78157328a8f7d1c53d40ae09a60b6a5cf027824d09da8f967565",
+    "./G5/EvenK/Solution.lean": "3ecd546a79d9b43545914ec0e15fb9e13a52dc823d5fe0c779c8247351211691",
+    "./G5/EvenK/comparator.json": "c1d12e24229c0e03c70cb29bdf98d10078cf570cada997beee2b81c446c59cfc",
+    "./G5/EvenK/formalization.yaml": "a36fae25de9cdaaf3aad66649da09a246310ebb7bafd423f07803381e81959ac"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/EvenK",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
