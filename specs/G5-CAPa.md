@@ -94,3 +94,7 @@ theorem g5_u13_cap_a (X : ZPhi) (hX : 3 * phi ≤ X) (w : List ℕ) (hw : IsWord
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T18:24:51Z
+
+V1: V1-GREEN 2026-10-30T18:35:49Z — faithful to SH-P2-1 §3.4 l. 193 ("For the record, the exact statement is: for X ≥ 3φ") and slip 4 l. 353 ("'t ≤ X ⟹ k ≤ X/φ − 1' holds for X ≥ 3φ"); all three inequalities non-strict as recorded; "k ≤ X/φ − 1" ⟺ (k + 1)φ ≤ X (φ > 0, U5's `g5_u5_lad_a_ge3` form, U1's real order); the record's "class" is a hyperbolic class (row G5-LAD l. 18 "hyperbolic class"; §2 note 4 words, not classes) and the constant words falsify the cap at every X (l. 191), so U5's `hc` is the record's domain, not a weakening; X : ZPhi is the row's own quantifier and M's X′ := max(t, 3φ) argument is correct (t, 3φ ∈ ℤ[φ], max ≤ X, (k + 1)φ ≤ X′ ≤ X), so the ℤ[φ] form and the record's real-X form say the same thing; U1 names (ZPhi, phi, IsWord, ntr, instLE) used in U1's senses; §2 quotes byte-equal to their loci (l. 189–193, l. 353, _V3-U11 l. 48, STATEMENTS l. 64 substring, print l. 509–514); own exact check, all words k ≤ 8 against every X by endpoint reduction: 0 violations.
+V1-parse: 0 Lean line(s) over 100 code points
+V1-split: V1-SPLIT-OK 2026-10-30T18:35:49Z — G5-CAP → G5-CAPa carries the row's part (a) whole.

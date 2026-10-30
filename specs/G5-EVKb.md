@@ -91,3 +91,6 @@ theorem g5_u12_evk_b (w : List ℕ) (hw : IsWord w) (hk : Even w.length) :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T18:24:51Z
+
+V1: V1-GREEN 2026-10-30T18:34:49Z — faithful to SH-P4-LW-A l. 58 and STATEMENTS.md row G5-EVK (l. 63, §5): (c) "y is even" = `Even (W w).trace.y`, (d) "x ≡ y ≡ 0 (mod 2)" = `Even (W w).trace.x ∧ Even (W w).trace.y` (the form of U2's frozen `g5_u2_l1`), on the literal trace as in EVKa. `hk : Even w.length` unused by the proof and KEPT: it is the record's "Let k be even", which scopes all four clauses — the statement says what the record says, not a weakening of it (precedent U3's G5-SEPa `hw`); own hand: (c) ⟺ (d) holds at every k = 1 … 8 (0 failures), consistent with U2's `g5_u2_l2`. ROW SIGNED, not struck: it is a one-line corollary of frozen `g5_u2_l2` (y even ∧ ¬(x odd ∧ y even) ⟹ x even), but (d) is a printed clause of Rem. 4.4 (record l. 58; print S4 l. 65; the print's gloss "exactly when tr W ∈ 2ℤ[φ]", l. 67), and without this row the lane would carry the printed equivalence short of (d). V1-SPLIT-OK ((c) ⟺ (d)). §2 quotes verbatim substrings of their loci; §5 block a byte substring of probe-U12.lean (d81684bd…).
+parse: 0 Lean line(s) over 100 code points
