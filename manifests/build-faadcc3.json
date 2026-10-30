@@ -1,0 +1,53 @@
+{
+  "clock": "2026-10-30T09:36:57Z",
+  "commit": "faadcc3",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 2.16,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 in 2.16s at leanprover/lean4:v4.33.0 / mathlib db584cd6d46c92f209a44c0f1c829460d327499d"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "0 Solution module(s), 0 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "0 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "0 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "axioms": [],
+  "challenge_digests": [],
+  "file_hashes": {
+    "./ClaudePapers.lean": "9fbfbdca11b06639c704993b47c4cefa1d72a9461b26d8e6514828fee014b454",
+    "./G5.lean": "fc6e04723e9ba22a10c71e2e23406c5ffa327cf878c0131a403e3531eb6909be",
+    "./formalization.yaml": "a1348dc54b22d9fc422e8e579054ed09c56d21a390adeeedf7389b534ae0e456",
+    "./lake-manifest.json": "a070fb158b90dcb56d035723ccdf536e4bed7a12379cf94ff1edf22fee6f9bcc",
+    "./lakefile.toml": "e94094c72596913d80da01ef58b1990883d90420d15e991f41c3598fe06162f2",
+    "./lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+    "./tools/check.sh": "2a421938fc168f2029fa74a152ffebee3c3b3e7bb25b04e156e3f04b1ae9f494",
+    "./tools/comparator.sh": "5ae02e0a717ea65d15c4028292f6065ea01d5caee5cdb00da6c9d9fa19df06ee",
+    "./tools/env.sh": "9c02acd5b4fbb0d5eed300be89e433f736081b175f3eed3db2186470656d050e"
+  },
+  "verdict": "PASS"
+}
