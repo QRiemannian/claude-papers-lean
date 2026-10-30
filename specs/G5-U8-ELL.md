@@ -45,7 +45,7 @@ The charter (pointers, not the authority; they fix what is word-level and what i
 
 - **The forms and their literal matrices** (U1, U7's `IsNF`): `1 : M2` (I), U1's `S = !![0, -1; 1, 0]`, `R ^ a` for a = 1, 2, 3, 4 with U1's `R = T * S` (the record's R = TS = [[φ, −1], [1, 0]], second head l. 21) and the monoid power of `M2` — written `R ^ 1`, not `R`, so the forms read exactly as `IsNF` writes them (`m = R ^ a`).
 - **The values, computed exactly in the pair ring** (own pair arithmetic, `<scratchpad>/M-U8/ell_check.py`, run 11:05:12Z): R² = [[φ, −φ], [φ, −1]], R³ = [[1, −φ], [φ, −φ]], R⁴ = [[0, −1], [1, −φ]]; tr I = ⟨2, 0⟩, tr S = ⟨0, 0⟩, tr R = ⟨0, 1⟩ (φ), tr R² = ⟨−1, 1⟩ (φ − 1), tr R³ = ⟨1, −1⟩ (1 − φ), tr R⁴ = ⟨0, −1⟩ (−φ) — the record's table l. 26 in order; and tr R⁵ = ⟨−2, 0⟩ (R⁵ = −I, U1's `g5_u1_r5`, not restated).
-- **φ⁻¹.** The pair ring carries no inverse operation by name; the table's "φ − 1 = φ⁻¹" is read as the identity φ · (φ − 1) = 1 together with ⟨−1, 1⟩ = φ − 1 (`phi = ⟨0, 1⟩`, `1 = ⟨1, 0⟩`; ⟨0, 1⟩ · ⟨−1, 1⟩ = ⟨1, 0⟩ by the product rule) — theorem `g5_u8_ell_inv`, a second theorem of this one spec.
+- **φ⁻¹.** The pair ring carries no inverse operation by name; the table's "φ − 1 = φ⁻¹" is read as the VALUE ⟨−1, 1⟩ = φ − 1 only — the identity φ · (φ − 1) = 1 (φ² = φ + 1) is NOT carried on U8 (struck at V₁-U8's word, 2026-10-30T11:28:12Z: it is one of V₃-U1's uncarried statements and the wall's scope; no leg uses it).
 - **The signed forms** (−I, −S, −R^a): their traces are the negatives by `Matrix.trace_neg`; the record's "±" (l. 74–75) is carried by that mathlib lemma at the legs, not restated here.
 - **Elliptic, parabolic, identity** are the record's names for these traces (l. 74–75); no predicate "elliptic" is defined or stated.
 
@@ -68,7 +68,7 @@ pow_one	FOUND _root_ Mathlib/Algebra/Group/Defs.lean:700
 
 ## 5 · Intended Lean statement
 
-In prose: the trace of the identity of `M2` is ⟨2, 0⟩ = 2, the trace of `S` is 0, and the traces of `R ^ 1`, `R ^ 2`, `R ^ 3`, `R ^ 4` are ⟨0, 1⟩ = φ, ⟨−1, 1⟩ = φ − 1, ⟨1, −1⟩ = 1 − φ, ⟨0, −1⟩ = −φ; and ⟨−1, 1⟩ = φ − 1 with φ · (φ − 1) = 1 (the table's φ − 1 = φ⁻¹).
+In prose: the trace of the identity of `M2` is ⟨2, 0⟩ = 2, the trace of `S` is 0, and the traces of `R ^ 1`, `R ^ 2`, `R ^ 3`, `R ^ 4` are ⟨0, 1⟩ = φ, ⟨−1, 1⟩ = φ − 1, ⟨1, −1⟩ = 1 − φ, ⟨0, −1⟩ = −φ. (The table's φ − 1 = φ⁻¹ is carried as the value ⟨−1, 1⟩ only; the identity φ · (φ − 1) = 1 is struck — V₁-U8.)
 
 Probe: `<scratchpad>/M-U8/probe.lean` (`import Mathlib` and the four frozen Challenge imports, then `open G5 ZPhi`, `namespace G5`, this unit's five theorems `:= by sorry`, `end G5`; sha256 in `_UNIT-U8.md`). **NOT RUN by this seat** (the brief: no `lake` command of any kind); the orchestrator elaborates it and returns any error to the row. The block below sits inside `namespace G5` after `open G5 ZPhi`, and is the probe's text byte for byte.
 
@@ -82,10 +82,6 @@ theorem g5_u8_ell :
       (R ^ 1).trace = (⟨0, 1⟩ : ZPhi) ∧ (R ^ 2).trace = (⟨-1, 1⟩ : ZPhi) ∧
       (R ^ 3).trace = (⟨1, -1⟩ : ZPhi) ∧ (R ^ 4).trace = (⟨0, -1⟩ : ZPhi) := by sorry
 
-/-- G5-U8-ELL. The table's `φ − 1 = φ⁻¹`: `⟨−1, 1⟩ = φ − 1` and `φ · (φ − 1) = 1`.
-Locus: `candidates/checks/AM-1-second-head.md` §1 table (l. 26).
-STATEMENTS.md sha256 prefix `e0df0f35`. -/
-theorem g5_u8_ell_inv : (⟨-1, 1⟩ : ZPhi) = phi - 1 ∧ phi * (phi - 1) = 1 := by sorry
 ```
 
 ## 6 · What the row does not claim
@@ -93,8 +89,10 @@ theorem g5_u8_ell_inv : (⟨-1, 1⟩ : ZPhi) = phi - 1 ∧ phi * (phi - 1) = 1 :
 - No classification of elements into elliptic / parabolic / hyperbolic, no order of R ("R of order 10" is V₃-U1's uncarried statement, offered, not specced), no claim that these are ALL the elliptic or parabolic traces of G(5).
 - Nothing about T or the parabolic elements' traces beyond the forms ±I (the record's "±2 from the identity and the parabolic elements", l. 267, is not stated: U8's forms are `IsNF`'s, and T itself is the word form −W (1) — R S = −T, second head l. 61 — a word-leg fact, not this row's).
 - No statement about −I, −S, −R^a (carried by `Matrix.trace_neg` at the legs).
-- No inverse operation on `ZPhi` is defined; "φ⁻¹" is read only as the identity of `g5_u8_ell_inv`.
+- No inverse operation on `ZPhi` is defined; "φ⁻¹" is read only as the value ⟨−1, 1⟩ = φ − 1 in `g5_u8_ell`; the identity φ · (φ − 1) = 1 is not on U8 (struck 2026-10-30T11:3xZ at V₁-U8's word; the wall's scope per V₃-U1).
 
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T11:08:51Z
+
+V1: V1-DRIFT 2026-10-30T11:28:12Z — `g5_u8_ell` is faithful and stands as written: the six values match the second head's table l. 21 and l. 26 and §4 l. 73–75 (own pair arithmetic: tr I = ⟨2, 0⟩, tr S = 0, tr R^a = ⟨0, 1⟩, ⟨−1, 1⟩, ⟨1, −1⟩, ⟨0, −1⟩ for a = 1..4, the table's φ, φ − 1, 1 − φ, −φ in order; R = TS = [[φ, −1], [1, 0]]); U1's `S`, `R` = `T * S`, `M2`, `ZPhi` in U1's sense; the spelling `R ^ 1` meets U7's `IsNF` (`m = R ^ a`) literally; the ± forms are left to `Matrix.trace_neg`, which the record's "±" needs and nothing more. The DRIFT is `g5_u8_ell_inv` alone, which should be struck. As a reading of "φ − 1 = φ⁻¹" it is fair (in a commutative ring φ · (φ − 1) = 1 says exactly that φ − 1 is φ's inverse). But its content is the identity φ · (φ − 1) = 1 (equivalently φ² = φ + 1), and V₃-U1 lists both as uncarried statements left to the wall's scope (`_V3-U1.md` l. 49 "φ² = φ + 1"; l. 50 "… and φ · (φ − 1) = 1 are not stated"). The charter (STATEMENTS.md §4 l. 48) routes only the TRACES of ±I, ±S, ±R^a to U8, and no leg uses the theorem. Keeping it would carry the wall's uncarried statement into U8, so the spec is stronger than its charter. The fix is mechanical: strike the second theorem (its §3 bullet "φ⁻¹", its clause in §5's prose and its §5 block, and the probe's l. 22–25); `g5_u8_ell` needs no change. The integer sentence of l. 76 ("only 0 and ±2 are integers") is decided by the stated values; its group-level form is U7's INTa, so nothing is dropped. §2: 6 cites, every one verbatim (5 exact, AM l. 130 a verbatim substring). Parse: 0 Lean line(s) over 100 code points
