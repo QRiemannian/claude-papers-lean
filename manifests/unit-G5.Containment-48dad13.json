@@ -1,0 +1,122 @@
+{
+  "clock": "2026-10-30T13:52:16Z",
+  "commit": "48dad13",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.21,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.21s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 6 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.Containment.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.Containment.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.Containment.Solution",
+      "theorem": "G5.g5_u10_cor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Containment.Solution",
+      "theorem": "_private.G5.Containment.Solution.0.G5.g5_u10_aux_tr_conj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Containment.Solution",
+      "theorem": "_private.G5.Containment.Solution.0.G5.g5_u10_aux_word._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Containment.Solution",
+      "theorem": "_private.G5.Containment.Solution.0.G5.g5_u10_aux_trW",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Containment.Solution",
+      "theorem": "_private.G5.Containment.Solution.0.G5.g5_u10_aux_main",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Containment.Solution",
+      "theorem": "_private.G5.Containment.Solution.0.G5.g5_u10_aux_word",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/Containment",
+      "sha256": "34608245fb7cc62c538d6e5cab0592061649df8857ae133221b289e37e56b288",
+      "signed": "34608245fb7cc62c538d6e5cab0592061649df8857ae133221b289e37e56b288"
+    }
+  ],
+  "file_hashes": {
+    "./G5/Containment/Challenge.lean": "34608245fb7cc62c538d6e5cab0592061649df8857ae133221b289e37e56b288",
+    "./G5/Containment/Solution.lean": "b7f52f132339421f6c3ab67dbef59c728419a331235e645503a32b63c94f8332",
+    "./G5/Containment/comparator.json": "6b16500b4e5181ab2f7aa111b42076313cbf5c37f12bf325fe4f65eaad4f3513",
+    "./G5/Containment/formalization.yaml": "66c779ca4b68139907cf69f22a8c6fcb03379ea56731e6ce42462f99b3d14ad5"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/Containment",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
