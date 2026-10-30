@@ -54,3 +54,11 @@ automation:
 statement_sha256_draft: "c17de52108773b18ccb7f8991ea27d20e8343c0c8b034493573677a8c1d3d81f"
 statement_sha256: "c17de52108773b18ccb7f8991ea27d20e8343c0c8b034493573677a8c1d3d81f"
 v2_signed: "2026-10-30T22:10:28Z"
+proofs_phase:
+  closed: "2026-10-30T22:26:17Z"
+  solution_module: "G5.CensusSearch.Solution"
+  solution_sha256: "d06966ecb0edb23f9f732c9fdd71c2561e5518d0eb52d5b3b921c2cb08a9021e"
+  theorems_proved: 4
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.Ladder.Solution, G5.Census.Solution, G5.CensusCap.Solution; restates the one definition Visited byte for byte in the Challenge's position; U13's real-order device and U5's block-product and rotation lemmas restated as g5_u15_aux_*; WordLevel not needed; the comparator accepted the arrangement (exit 0, 43 s, 'Your solution is okay!', 22:23:43Z, macOS shim — unsandboxed)"
+  note: "srch_cap: g5_u13_cap_a when 3phi <= X, else g5_u11_census_a at K = 2; srch_visit: ntr u <= ntr (u ++ s) by induction via g5_u5_mono_a with right factor [], ntr rotation-invariant, rotation keeps length and letters (IsRotated.perm), the cap carries to every prefix; srch_const: P1^j and P4^j closed forms by induction, trace 2; srch_inf: n -> 1^(n+1) injective, Set.infinite_of_injective_forall_mem. Builds B1 22:21:28Z exit 1 (ext split ZPhi; Matrix.ext), B2 22:22:13Z exit 0 (two seq-focus linter lines, fixed), B3 22:22:47Z exit 0 (23 s, 8710 jobs; the expected unused-variable line for hj — the frozen statement keeps hj)"

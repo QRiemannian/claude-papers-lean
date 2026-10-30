@@ -50,3 +50,11 @@ automation:
 statement_sha256_draft: "398c41e2254cecad8a0291cbd766b202219ffc56f6ced92822a859007c1c13cd"
 statement_sha256: "398c41e2254cecad8a0291cbd766b202219ffc56f6ced92822a859007c1c13cd"
 v2_signed: "2026-10-30T22:08:38Z"
+proofs_phase:
+  closed: "2026-10-30T22:26:17Z"
+  solution_module: "G5.EvenKRemark.Solution"
+  solution_sha256: "bfc799fb909d1155cd009c9e5272aefd5345d874af77daa895e40ff2f1a852c4"
+  theorems_proved: 5
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.ModTwo.Solution, G5.EvenK.Solution; restates nothing (no definition in the unit); U12's private helpers restated as g5_u14_aux_*; the comparator accepted the arrangement (exit 0, 67 s, 'Your solution is okay!', 22:18:11Z, macOS shim — unsandboxed)"
+  note: "evkr_mech: U12's mechanism (mod-2 reduction a ring map, two-syllable pairing in D5-bar by kernel decide) gives Rbar^(A w mod 5); evkr_one: ZMod.intCast_zmod_eq_zero_iff_dvd + Rbar^j = 1 iff j = 0 (decide); evkr_ord: orderOf_eq_iff with a decide table; evkr_b: cases on 5 | A; evkr_rot: A (l ++ [a]) = A l + (-1)^|l| a by induction, |l| odd from hk, Odd.neg_one_pow. Build B1 22:16:45Z exit 0 (33 s; no warning in the module; U12's hk linter line replayed)"
