@@ -38,3 +38,11 @@ automation:
 statement_sha256_draft: "321dfbf5abdc78157328a8f7d1c53d40ae09a60b6a5cf027824d09da8f967565"
 statement_sha256: "321dfbf5abdc78157328a8f7d1c53d40ae09a60b6a5cf027824d09da8f967565"
 v2_signed: "2026-10-30T18:51:02Z"
+proofs_phase:
+  closed: "2026-10-30T19:04:16Z"
+  solution_module: "G5.EvenK.Solution"
+  solution_sha256: "3ecd546a79d9b43545914ec0e15fb9e13a52dc823d5fe0c779c8247351211691"
+  theorems_proved: 2
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.ModTwo.Solution; restates the one definition A byte for byte; the comparator accepted the arrangement (exit 0, 72 s, 'Your solution is okay!', macOS shim — unsandboxed)"
+  note: "evk_a: g5_u2_red_hom gives the ring map f = red2, so red2M (W w) is the product of the reduced syllables; the pairing Rbar^a Sbar Rbar^b Sbar Rbar^j = Rbar^(a-b+j) in ZMod 5 by kernel decide (80 cases); structural recursion two syllables at a time gives Rbar^(A w mod 5) at even length; the phibar-coefficient of tr Rbar^j vanishes iff j = 0 (decide); ZMod.intCast_zmod_eq_zero_iff_dvd closes it. evk_b: the right conjunct, and g5_u2_l2 with Int.not_even_iff_odd. Build P2 19:0xZ exit 0 (35 s, 8708 jobs; one expected unused-variable linter line for hk, l. 114); P1 exit 1 (an ext too deep; Finset.Icc typed over ZMod 5) repaired in proof text only"

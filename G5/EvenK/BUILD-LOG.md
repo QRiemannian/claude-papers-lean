@@ -22,3 +22,31 @@
 3. Scratch: `<scratchpad>/L-ADD2/` (sec5.py, assemble.py, B1-U12.log; no waits log created — no wait).
 
 Closed: 2026-10-30T18:45Z.
+
+## PHASE PROOFS (step 6) — L-proofs-ADD2 seat
+- 2026-10-30T18:55:05Z FROZEN-CHECK U12: `shasum -a 256 G5/EvenK/Challenge.lean` = 321dfbf5abdc78157328a8f7d1c53d40ae09a60b6a5cf027824d09da8f967565 — matches statement_sha256. Proceeding.
+- 2026-10-30T18:57Z PRELUDE-RULE U12: Solution imports `Mathlib`, `G5.Ring.Solution`, `G5.ModTwo.Solution` (PROVED preludes; no Challenge); restates the ONE definition `A` byte for byte; statements byte for byte with docstrings, in order (script `<scratchpad>/L-ADD2-proofs/check_blocks.py`: 3/3 blocks found in order; no line > 100 code points; no barred word).
+- wait before P1: `tools/waitlean.sh` 2026-10-30T18:57:31Z — clear at the first poll (lean/lake/lean4export/comparator all empty), no wait.
+- P1 2026-10-30T18:57:31Z — `lake build G5.EvenK.Solution`: exit **1**, wall 32 s. First error: l. 37 `unsolved goals` (the `red2M` = `f.mapMatrix` helper: `ext` descended into `F4.ext`, the `.y` goal left). Also: `Finset.Icc 1 4` elaborated over `ZMod 5` (the cast in the body fixed the binder's type) → no `LocallyFiniteOrder (ZMod 5)`; the pair step then unknown. Fix: the helper by `congr 1; funext`; the binders typed `(1 : ℕ)`. Log `<scratchpad>/L-ADD2-proofs/B-U12-1.log`.
+- wait before P2: `tools/waitlean.sh` 2026-10-30T18:58:27Z — clear at the first poll, no wait.
+- P2 2026-10-30T18:58:27Z — `lake build G5.EvenK.Solution`: exit **0**, wall 35 s, `Build completed successfully (8708 jobs)`. First error: none. One warning, the expected linter line: l. 114 `Variable name `hk` is not explicitly referenced` (EVKb's `hk`, kept by V₁; not an error). Log `<scratchpad>/L-ADD2-proofs/B-U12-2.log`.
+- wait before the axioms print: 2026-10-30T18:59:07Z — clear, no wait. `lake env lean <scratchpad>/L-ADD2-proofs/axU12.lean` (exit 0, 18:59:26Z):
+  ```
+  'G5.g5_u12_evk_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'G5.g5_u12_evk_b' depends on axioms: [propext, Classical.choice, Quot.sound]
+  ```
+- wait before the comparator: 2026-10-30T18:59:31Z — clear, no wait. `bash tools/comparator.sh G5/EvenK` 2026-10-30T18:59:31Z: exit **0**, wall 72 s; landrun = the macOS shim (NOT sandboxed, as the script's first line says); last lines:
+  ```
+  Running Lean default kernel on solution.
+  Lean default kernel accepts the solution
+  Your solution is okay!
+  ```
+- `Solution.lean` sha256 `3ecd546a79d9b43545914ec0e15fb9e13a52dc823d5fe0c779c8247351211691`, 120 lines, every line ≤ 100 code points; no `sorry` / `admit` / `native_decide` / `axiom`. `Challenge.lean` re-hashed 19:01Z: `321dfbf5…7565`, unchanged.
+
+## Rows — proofs phase
+| row | theorem | status |
+|---|---|---|
+| G5-EVKa | `G5.g5_u12_evk_a` | PROVED |
+| G5-EVKb | `G5.g5_u12_evk_b` | PROVED |
+
+How: EVKa — from `g5_u2_red_hom` a ring map `f` agreeing with `red2`; `red2M` = `f.mapMatrix`, so `red2M (W w)` is the product of the reduced syllables `R̄^a S̄` and `red2` of the trace is the trace of `red2M`; the pairing `R̄^a S̄ R̄^b S̄ R̄^j = R̄^(a − b + j)` (exponents in `ZMod 5`) is a kernel `decide` over 4 × 4 × 5 cases, and a recursion two syllables at a time gives `R̄^(A w mod 5)` at even length; the φ̄-coefficient of `tr R̄^j` is 0 exactly at `j = 0` (kernel `decide`); `ZMod.intCast_zmod_eq_zero_iff_dvd` at 5 and at 2 closes it. EVKb — (d) ⟹ (c) the right conjunct; (c) ⟹ (d) by U2's `g5_u2_l2` with `Int.not_even_iff_odd`; `hk` unused. Closed: 2026-10-30T19:01Z.

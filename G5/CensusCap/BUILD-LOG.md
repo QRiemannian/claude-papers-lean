@@ -22,3 +22,32 @@
 3. Scratch: `<scratchpad>/L-ADD2/` (sec5.py, assemble.py, B1-U13.log; no waits log created — no wait).
 
 Closed: 2026-10-30T18:45Z.
+
+## PHASE PROOFS (step 6) — L-proofs-ADD2 seat
+- 2026-10-30T18:55:05Z FROZEN-CHECK U13: `shasum -a 256 G5/CensusCap/Challenge.lean` = d10844cbc16f2b02706d4f35d5d9d232d4809812e9ecbdb6265f1339387b067e — matches statement_sha256. Proceeding (after U12, serially).
+- 2026-10-30T19:03Z PRELUDE-RULE U13: Solution imports `Mathlib`, `G5.Ring.Solution`, `G5.Ladder.Solution`, `G5.Census.Solution` (PROVED preludes; no Challenge); restates nothing (U13 defines nothing); statements byte for byte with docstrings, in order (script `<scratchpad>/L-ADD2-proofs/check_blocks.py`: 3/3 blocks in order; no line > 100 code points; no barred word). The real-order device (ring map to ℝ, `le_iff`, `v_inj`, `lt`) is U11's private block restated as `g5_u13_aux_*` (assembled by `<scratchpad>/L-ADD2-proofs/asm13.py`), plus `g5_u13_aux_lt_of` and `g5_u13_aux_not_lt`.
+- erratum to the PRELUDE-RULE line above: written at 2026-10-30T19:02Z (stamped 19:03Z by hand; the build below started 19:02:03Z).
+- wait before P1: `tools/waitlean.sh` 2026-10-30T19:02:03Z — clear at the first poll (lean/lake/lean4export/comparator all empty), no wait.
+- P1 2026-10-30T19:02:03Z — `lake build G5.CensusCap.Solution`: exit **0**, wall 43 s (the module 39 s), `Build completed successfully (8709 jobs)`. First error: none; no warning in this module. Log `<scratchpad>/L-ADD2-proofs/B-U13-1.log`.
+- wait before the axioms print: 2026-10-30T19:02:54Z — clear, no wait. `lake env lean <scratchpad>/L-ADD2-proofs/axU13.lean` (exit 0, 19:03:13Z):
+  ```
+  'G5.g5_u13_cap_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'G5.g5_u13_cap_b' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'G5.g5_u13_cap_b_conv' depends on axioms: [propext, Classical.choice, Quot.sound]
+  ```
+- wait before the comparator: 2026-10-30T19:03:13Z — clear, no wait. `bash tools/comparator.sh G5/CensusCap` 2026-10-30T19:03:13Z: exit **0**, wall 45 s; landrun = the macOS shim (NOT sandboxed, as the script's first line says); last lines:
+  ```
+  Running Lean default kernel on solution.
+  Lean default kernel accepts the solution
+  Your solution is okay!
+  ```
+- `Solution.lean` sha256 `da8213ea97d825f222bb8e8741eda69b3474bd8d51e3deb9ab3fe9f330fe0e97`, 209 lines, every line ≤ 100 code points; no `sorry` / `admit` / `native_decide` / `axiom`. `Challenge.lean` re-hashed 19:04Z: `d10844cb…067e`, unchanged.
+
+## Rows — proofs phase
+| row | theorem | status |
+|---|---|---|
+| G5-CAPa | `G5.g5_u13_cap_a` | PROVED |
+| G5-CAPb | `G5.g5_u13_cap_b` | PROVED |
+| G5-CAPb | `G5.g5_u13_cap_b_conv` | PROVED |
+
+How: the real order is read through U11's ring map to ℝ (restated as `g5_u13_aux_*`, with `lt_of` added for the way back). A shared helper `g5_u13_aux_not_lt`: for k ≠ 2, real `t < (k + 1)φ` gives `ntr w < ((k − 1 : ℕ) + 2) φ` in ℤ[φ], and U11's `g5_u11_census_a` at K = k − 1 (K = 0 or K ≥ 2) forces k ≤ k − 1, false. CAPa: suppose X < (k + 1)φ; k = 2 contradicts `3φ ≤ X`; otherwise t ≤ X < (k + 1)φ meets the helper. CAPb: the helper leaves k = 2, so t ≤ X < 3φ; U11's `g5_u11_census_b` gives the rotation and t = 3 + φ, whence 3 + φ ≤ X. conv: `List.mem_cyclicPermutations_iff` and the decided `cyclicPermutations [1, 4] = [[1, 4], [4, 1]]` give w = [1, 4] or [4, 1]; ntr = 3 + φ by `decide`; length 2 and `((2 : ℕ) : ZPhi) + 1 = 3` by `norm_num`. Closed: 2026-10-30T19:04Z.
