@@ -17,3 +17,53 @@
 4. **Scratch:** the brief's Common notes name `<scratchpad>/L-U1/`, but the dispatch named `L-U6/`. This seat wrote only `<scratchpad>/L-U6/`: assemble.py, wait.sh, waits.log, B1.log, B2.log, inspect.lean and inspect.txt.
 
 Closed: 2026-10-30T10:31:07Z.
+
+---
+
+# BUILD-LOG — unit U6, seat L-U6, PHASE proofs
+
+*Seat L-U6 (proofs) opened 2026-10-30T10:44:38Z. Brief: `Orchestrator/Claude-Papers/No1-G5/briefs/SEAT-P3-LEAN-L-proofs-U6.md` (BRIEF READY 2026-10-30T10:43:48Z). No git, no web. Scratch: `<scratchpad>/L-U6-proofs/`.*
+
+- **freeze check** 2026-10-30T10:45:10Z — `shasum -a 256 G5/Congruence/Challenge.lean`: `d576229b23afb62ac8beb64cd32f0ca753d5564ca4839eab90b55cf769aac532`, the frozen value. Prelude `G5/Ring/Solution.lean`: `0a11790b32f126ecac0f1df2f41e7399a4a9b514a77794ebf08f7878825c0271`.
+- **PRELUDE-RULE U6: Solution imports G5.Ring.Solution** (not `G5.Congruence.Challenge`, not `G5.Ring.Challenge`); U6's DEFS block restated byte-identically at the root.
+- **plan** 2026-10-30T10:48:05Z — a Python enumeration (`<scratchpad>/L-U6-proofs/gen.py`) of the reductions: mod 4, the words of even length (empty word included) reach 160 matrices, odd length 160, disjoint, union 320; mod 3, both parities reach the same 120. Matrices are coded as base-n numbers (8 digits, Horner order (0,0).x, (0,0).y, (0,1).x, …); the closure and the trace laws are kernel `decide` checks over the code lists; the bridge (`map red_n` of a product is the reduced product; decode∘encode = id) is proved symbolically.
+- **waits** (the poller `<scratchpad>/L-U6-proofs/wait.sh` matches executables only — `bin/lean`, `bin/lake`, `lean4export`, `comparator` — never shells whose command line names the repo): 10:53:15Z → 10:54:15Z, 2 waits (another seat's comparator drive, then a `lake`); 10:55:29Z → 10:57:30Z, 4 waits (a `lake build` + `lean`, then another comparator drive); 10:58:44Z → 10:59:14Z, 1 wait (a `lake build` + `lean`); 11:00:14Z and 11:00:49Z clear at the first poll.
+- **T1 (scratch probe)** 2026-10-30T10:54:15Z → 10:54:58Z — `lake env lean <scratchpad>/L-U6-proofs/Solution-draft.lean` (the whole draft, all six theorems): exit 1, wall 42 s, peak RSS 4.8 GB. First error: l. 486, `maximum recursion depth has been reached` at `show (320 : ℕ) = g5_u6_aux_L4.length from rfl` (the elaborator unfolding a 320-element list). Second: `ZMod.intCast_eq_intCast_iff` takes `a b c` explicitly here (`(… _ _ 4).mp`). Every kernel `decide` (the closures, the trace laws, the 320 + 120 witness words, `Nodup`) went through on the first try. Fixed: the lengths become `g5_u6_aux_len4/len3` by `decide +kernel` and the theorems close by `.trans`; the deprecated `Set.mem_setOf_eq` became `Set.mem_ofPred_eq`.
+- **B1** 2026-10-30T10:57:30Z → 10:58:28Z — `lake build G5.Congruence.Solution` (the six theorems in one module, all at once rather than one per build — the probe had already carried them): exit **0**, wall 58 s, `Build completed successfully (8707 jobs)`. First error: none. One warning: the linter on `show` in M4b (l. 502).
+- **B2 (final)** 2026-10-30T10:59:14Z → 11:00:08Z — `lake build G5.Congruence.Solution` after the `show` became a `rw [show red4 (W w).trace = g5_u6_aux_trp 4 c from hk]`: exit **0**, wall 54 s, `Build completed successfully (8707 jobs)`. First error: none. Warnings in this module: none.
+- **byte checks** (`<scratchpad>/L-U6-proofs/assemble.py`, asserted at every write): the DEFS block (`/- G5-U6-DEFS.` … the `H4` definition, its `open G5 ZPhi` included) is a byte substring of both files; each of the six rows' comment + docstring + `theorem … :=` text is a byte substring of both files; 0 lines over 100 code points; no `sorry`, `admit`, `axiom`, `native_decide`, `set_option`; no forbidden word. Helpers are `private`, named `g5_u6_aux_*`, inside `namespace G5`, after the block.
+- **axioms** 2026-10-30T11:00:14Z → 11:00:42Z — `lake env lean <scratchpad>/L-U6-proofs/axioms.lean` (`import G5.Congruence.Solution` + six `#print axioms`), exit 0:
+  ```
+  'G5.g5_u6_m4a' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'G5.g5_u6_m4b' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'G5.g5_u6_m4c' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'G5.g5_u6_m4d' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'G5.g5_u6_m3a' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'G5.g5_u6_m3b' depends on axioms: [propext, Classical.choice, Quot.sound]
+  ```
+- **comparator** 2026-10-30T11:00:49Z → 11:02:08Z — `bash tools/comparator.sh G5/Congruence`: exit **0**, wall 79 s. Output (lake's progress and replay lines left out; the Challenge's own six `sorry` warnings and U1's replayed ones appear as expected):
+  ```
+  comparator.sh @ 2026-10-30T11:00:49Z · unit G5/Congruence · landrun /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh (the macOS shim: NOT sandboxed)
+  Exporting #[G5.g5_u6_m4a, G5.g5_u6_m4b, G5.g5_u6_m4c, G5.g5_u6_m4d, G5.g5_u6_m3a, G5.g5_u6_m3b, propext, Quot.sound, Classical.choice, Nat.add, …, List, eagerReduce] from G5.Congruence.Challenge
+  Building G5.Congruence.Solution
+  Build completed successfully (8707 jobs).
+  Exporting #[… the same list …] from G5.Congruence.Solution
+  Running Lean default kernel on solution.
+  Lean default kernel accepts the solution
+  Your solution is okay!
+  ```
+  The PRELUDE-RULE arrangement (Solution imports `G5.Ring.Solution`, Challenge imports `G5.Ring.Challenge`) is accepted.
+- **method, per row:** the bridge `g5_u6_aux_map_mul` (the reduction of `A * B` is the reduced product), `g5_u6_aux_dec_enc` (decode ∘ encode = id, by `Nat.add_mul_mod_self_left` / `Nat.add_mul_div_left`), and `g5_u6_aux_bridge` (the reduction of `W w` is the decoded fold of the syllable codes, by induction on the word, U1's definitions only — no U1 theorem is used). `g5_u6_aux_inv`: induction on the word keeps the code in the even- or odd-length list. M4b/M4c/M4d/M3b: kernel checks of the trace law on every listed code, carried to `ℤ` by `ZMod.val_intCast` and `omega` (M4c through `ZMod.intCast_eq_intCast_iff` and `push_cast`). M4a/M3a: `encode` is injective, the encoded image is exactly the code list (⊆ by the invariant; ⊇ by one listed literal word per code, checked by `decide +kernel`), the list is `Nodup`, length 320 / 120. All finite checks are `decide +kernel` (kernel reduction, no extra axiom; the axioms print shows it); none needed splitting.
+- `Solution.lean` sha256 `5165d2c1eccbfcd9bb84d5021e3287e15a53d9238a4a01f9634dbdd3eb12c1f4`, 572 lines. `Challenge.lean` re-hashed at close: `d576229b…ac532`, unchanged.
+
+| row | status |
+|---|---|
+| G5-U6-DEFS | restated byte-identically (comparator: definitions match) |
+| G5-M4a | PROVED |
+| G5-M4b | PROVED |
+| G5-M4c | PROVED |
+| G5-M4d | PROVED |
+| G5-M3a | PROVED |
+| G5-M3b | PROVED |
+
+Closed: 2026-10-30T11:02:42Z.

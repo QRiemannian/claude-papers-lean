@@ -56,3 +56,10 @@ automation:
 statement_sha256_draft: "d576229b23afb62ac8beb64cd32f0ca753d5564ca4839eab90b55cf769aac532"
 statement_sha256: "d576229b23afb62ac8beb64cd32f0ca753d5564ca4839eab90b55cf769aac532"
 v2_signed: "2026-10-30T10:40:29Z"
+proofs_phase:
+  closed: "2026-10-30T11:02:42Z"
+  solution_module: "G5.Congruence.Solution"
+  solution_sha256: "5165d2c1eccbfcd9bb84d5021e3287e15a53d9238a4a01f9634dbdd3eb12c1f4"
+  theorems_proved: 6
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + G5.Ring.Solution (the proved prelude), not G5.Congruence.Challenge; the comparator accepted the arrangement 11:02:08Z"

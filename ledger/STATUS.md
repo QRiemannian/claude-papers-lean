@@ -11,3 +11,9 @@
 | G5-U1-DET | U1 `G5/Ring` | `G5.g5_u1_det` | **PROVED** (K PASS · V₃ CLEAN) | as above |
 | G5-U1-GEa | U1 `G5/Ring` | `G5.g5_u1_ge_a` | **PROVED** (K PASS · V₃ CLEAN) | as above (K twice, V₃ CLEAN); GEb is V1-CC (real-order reading; STATEMENTS.md §4 erratum 10:02Z) and carries no theorem |
 | G5-U1-TRACE | U1 `G5/Ring` | `G5.g5_u1_trace` | **PROVED** (K PASS · V₃ CLEAN) | as above |
+| G5-M4a | U6 `G5/Congruence` | `G5.g5_u6_m4a` | L-PROVED, K pending | Challenge FROZEN `d576229b…` (V₂ 10:40:29Z); Solution `5165d2c1…` built 11:00:08Z, axioms propext/Classical.choice/Quot.sound, comparator okay 11:02:08Z; the prelude rule (Solution imports G5.Ring.Solution) accepted by the comparator |
+| G5-M4b | U6 `G5/Congruence` | `G5.g5_u6_m4b` | L-PROVED, K pending | as above |
+| G5-M4c | U6 `G5/Congruence` | `G5.g5_u6_m4c` | L-PROVED, K pending | as above |
+| G5-M4d | U6 `G5/Congruence` | `G5.g5_u6_m4d` | L-PROVED, K pending | as above |
+| G5-M3a | U6 `G5/Congruence` | `G5.g5_u6_m3a` | L-PROVED, K pending | as above |
+| G5-M3b | U6 `G5/Congruence` | `G5.g5_u6_m3b` | L-PROVED, K pending | as above; G5-U6-DEFS is the definitions block (no theorem) |
