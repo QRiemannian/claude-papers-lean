@@ -115,3 +115,7 @@ Your solution is okay!
 
 No `STATEMENT-CHANGE-NEEDED`. `G5.lean`, `Challenge.lean`, `comparator.json`, `formalization.yaml` untouched.
 Closed: 2026-10-30T10:31:49Z.
+
+### Orchestrator line — 2026-10-30T10:34:42Z
+
+The orchestrator added `import G5.Ring.Solution` to the index `G5.lean` and the index build failed: `import G5.Ring.Solution failed, environment already contains 'ZPhi.ext.match_1' from G5.Ring.Challenge`. That is the design, not a defect: the Solution restates the definitions block (CO's ruling) and so cannot share an environment with its Challenge. The import was removed in the same minute; the index carries Challenge files only and the comment in `G5.lean` says why. `Solution.lean` is untouched (sha 0a11790b…). Decided under the lifted bar (mechanical, reversible, documented here).
