@@ -1,0 +1,171 @@
+{
+  "clock": "2026-10-30T12:14:54Z",
+  "commit": "4543bcf",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.23,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.23s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 12 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.GroupLevel.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.GroupLevel.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "G5.g5_u8_l2g._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "_private.G5.GroupLevel.Solution.0.G5.g5_u8_aux_tr_conj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "ZPhi.red4.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "G5.g5_u8_m4g",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "_private.G5.GroupLevel.Solution.0.G5.g5_u8_aux_red4_neg",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "_private.G5.GroupLevel.Solution.0.G5.g5_u8_aux_H4_neg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "_private.G5.GroupLevel.Solution.0.G5.g5_u8_aux_main",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "G5.g5_u8_l2g",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "G5.g5_u8_l2g._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "G5.g5_u8_ell",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "_private.G5.GroupLevel.Solution.0.G5.g5_u8_aux_trR",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.GroupLevel.Solution",
+      "theorem": "G5.g5_u8_m3g",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/GroupLevel",
+      "sha256": "bf7316f7eae415f48781199ebd28706dfc940633d484ca5ef2aae997dcb08ccd",
+      "signed": "bf7316f7eae415f48781199ebd28706dfc940633d484ca5ef2aae997dcb08ccd"
+    }
+  ],
+  "file_hashes": {
+    "./G5/GroupLevel/Challenge.lean": "bf7316f7eae415f48781199ebd28706dfc940633d484ca5ef2aae997dcb08ccd",
+    "./G5/GroupLevel/Solution.lean": "e13158fcd8a1f24d2de37e8f3078b61f968e349dfa06d2ed69b7c4ff8aa85846",
+    "./G5/GroupLevel/comparator.json": "971b7a43daa8d69858395de36d2d20161728dfa39ada6ac70dcb19ebf85854c0",
+    "./G5/GroupLevel/formalization.yaml": "c05a478232ef057276bf1a67f0002c7e1739c1ae1910a4f598c0454e6f81c2fd"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/GroupLevel",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}

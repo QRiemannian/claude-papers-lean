@@ -124,3 +124,24 @@ Build completed successfully (8708 jobs).
 [PASS] retired_names — 0 hits for the four retired names
 manifest: manifests/unit-G5.Group-59eb6ca.json · verdict PASS
 ```
+
+## K-U8 · G5/GroupLevel · 2026-10-30T12:16:36Z
+
+Poll by process name (lean/lake/lean4export/comparator): clear at 2026-10-30T12:14:49Z, first poll, no wait.
+Command run once at 2026-10-30T12:14:54Z, ended 2026-10-30T12:16:36Z, exit 0.
+
+```
+check.sh @ 2026-10-30T12:14:54Z · commit 4543bcf · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/GroupLevel
+info: G5/Group/Solution.lean:583:2: `ext`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 582!
+Build completed successfully (8711 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 5.23s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 12 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.GroupLevel-4543bcf.json · verdict PASS
+```
+
+manifest sha256: 25683ee617f92f6591da3f7dff582e63b5b2bf3b2416ddacfda6e130fdb85672
