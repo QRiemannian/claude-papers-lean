@@ -48,3 +48,5 @@ automation:
   methods:
     - "Claude models (Anthropic), as agents"
 statement_sha256_draft: "398c41e2254cecad8a0291cbd766b202219ffc56f6ced92822a859007c1c13cd"
+statement_sha256: "398c41e2254cecad8a0291cbd766b202219ffc56f6ced92822a859007c1c13cd"
+v2_signed: "2026-10-30T22:08:38Z"
