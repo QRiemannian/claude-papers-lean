@@ -1,0 +1,343 @@
+{
+  "clock": "2026-10-30T22:35:07Z",
+  "commit": "5e519e2",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.9,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.9s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 33 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.CensusSearch.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.CensusSearch.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_bp_rep1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "G5.g5_u15_srch_inf._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_v._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.P.match_1.eq_2",
+      "axioms": []
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_v._proof_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_v._proof_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_v._proof_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_bp_rep4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_le_trans",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_snoc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_v_phi",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.P.match_1.eq_4",
+      "axioms": []
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_le_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_bp_nil",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_ntr_rot",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_bp_cons",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "G5.g5_u15_srch_cap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "G5.g5_u15_srch_inf",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.P.match_1.eq_3",
+      "axioms": []
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "G5.g5_u15_srch_visit._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "G5.g5_u15_srch_visit._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_v_inj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_lt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.P.match_1.eq_5",
+      "axioms": []
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.P.match_1.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "G5.g5_u15_srch_const",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_pref",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_lt_of",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_ab5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_bp_single",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "G5.g5_u15_srch_visit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_v_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusSearch.Solution",
+      "theorem": "_private.G5.CensusSearch.Solution.0.G5.g5_u15_aux_bp_append",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/CensusSearch",
+      "sha256": "c17de52108773b18ccb7f8991ea27d20e8343c0c8b034493573677a8c1d3d81f",
+      "signed": "c17de52108773b18ccb7f8991ea27d20e8343c0c8b034493573677a8c1d3d81f"
+    }
+  ],
+  "file_hashes": {
+    "./G5/CensusSearch/Challenge.lean": "c17de52108773b18ccb7f8991ea27d20e8343c0c8b034493573677a8c1d3d81f",
+    "./G5/CensusSearch/Solution.lean": "d06966ecb0edb23f9f732c9fdd71c2561e5518d0eb52d5b3b921c2cb08a9021e",
+    "./G5/CensusSearch/comparator.json": "8155f455e1fb3e8d56ea86fe359377f55ee1002d6ea047c5e65c072639fbfbe6",
+    "./G5/CensusSearch/formalization.yaml": "8545ce48874c414d1840575f37080b22fba24358c308f91311b9ac978ca39053"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/CensusSearch",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
