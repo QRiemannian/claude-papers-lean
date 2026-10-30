@@ -1,0 +1,225 @@
+{
+  "clock": "2026-10-30T13:46:31Z",
+  "commit": "47836d2",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 6.01,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 6.01s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 18 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.Census.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.Census.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_v_inj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_v._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_v._proof_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "G5.g5_u11_census_a._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "G5.g5_u11_census_a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_lt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_ab5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "G5.g5_u11_census_b._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "G5.g5_u11_census_b_wit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "G5.g5_u11_census_b._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "G5.g5_u11_census_a._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "G5.g5_u11_census_a._proof_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_v_phi",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_v._proof_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_v._proof_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "G5.g5_u11_census_b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_le_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Census.Solution",
+      "theorem": "_private.G5.Census.Solution.0.G5.g5_u11_aux_v_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/Census",
+      "sha256": "ee958447349e411d839a595dd2057af8d284daedcb410f4a71a4eca3d2c2b76c",
+      "signed": "ee958447349e411d839a595dd2057af8d284daedcb410f4a71a4eca3d2c2b76c"
+    }
+  ],
+  "file_hashes": {
+    "./G5/Census/Challenge.lean": "ee958447349e411d839a595dd2057af8d284daedcb410f4a71a4eca3d2c2b76c",
+    "./G5/Census/Solution.lean": "45c8c0cb60525b4fa23bcd195eb97be8550ce9ec7f6210e353f631bd65e78248",
+    "./G5/Census/comparator.json": "553241ddaeaf5d2fefc7041966a3035dfcf03e4ed3cee8582e233c193d72b0bc",
+    "./G5/Census/formalization.yaml": "d6c226c5f4af0f393bb735475668862d5a95c61d7509d0b509dd7ec43fa19ccb"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/Census",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}

@@ -145,3 +145,25 @@ manifest: manifests/unit-G5.GroupLevel-4543bcf.json · verdict PASS
 ```
 
 manifest sha256: 25683ee617f92f6591da3f7dff582e63b5b2bf3b2416ddacfda6e130fdb85672
+
+## K — U11 `G5/Census` — 2026-10-30T13:49:04Z (seat K-U11, procedural)
+
+Slot poll 2026-10-30T13:46:25Z by process name (lean · lake · lean4export · comparator): all empty, no wait. Command start 13:46:31Z, end 13:48:51Z, exit 0.
+
+`cd ~/Claude/projects/claude-papers-lean && export PATH="$HOME/.elan/bin:$PATH" && source tools/env.sh && bash tools/check.sh --unit G5/Census`
+
+```
+check.sh @ 2026-10-30T13:46:31Z · commit 47836d2 · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/Census
+warning: G5/Census/Challenge.lean:50:8: declaration uses `sorry`
+Build completed successfully (8708 jobs).
+Build completed successfully (8708 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 6.01s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 18 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.Census-47836d2.json · verdict PASS
+```
+
+manifest sha256: 3da322db9dee6e0c5ed50c1cc5e664e19d5608d4229da8ea602d699a068082c7  manifests/unit-G5.Census-47836d2.json
