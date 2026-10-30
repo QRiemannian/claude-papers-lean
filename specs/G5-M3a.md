@@ -65,3 +65,5 @@ theorem g5_u6_m3a :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T10:14:38Z
+
+V1: V1-GREEN · V1-SPLIT-OK 2026-10-30T10:24:46Z — the record's 120 is the order of the image in SL(2, ℤ[φ]/3) (AM l. 103, "120 (PSL 60)"; DO l. 108, binary icosahedral 2·A₅). The word-to-group step is G5-M4a's, sound here for the same reason. Own arithmetic: word closure 120 matrices (240 states with k mod 2), group closure of S̄, T̄ 120. The "240" in STATEMENTS.md (§2 note 3 and this row's Lean-notes cell) is a state count, not the record's order (§4 erratum 10:18:27Z), and the row correctly does not state it. Parse: 0 Lean line(s) over 100 code points

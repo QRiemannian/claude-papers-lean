@@ -72,3 +72,5 @@ theorem g5_u6_m3b (w : List ℕ) (hw : IsWord w) :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T10:14:38Z
+
+V1: V1-GREEN · V1-SPLIT-OK 2026-10-30T10:24:46Z — "x ≡ y ≢ 0 (mod 3)" read as x ≡ y ∧ x ≢ 0 picks out exactly the residues (1, 1), (2, 2): AM l. 103 "never (x, y) ≡ ±(1, 1)", DO l. 108 "(1,1), (2,2), i.e. ±φ²", AM l. 116 "φ̄² ↔ (1, 1)". The excluded set and the predicate are both invariant under negation, so the literal and normalized readings coincide. The record's literal trace (AM l. 113) is used, at word level. Own closure over the 120 matrices: realized residues {(0,0), (0,1), (0,2), (1,0), (1,2), (2,0), (2,1)} (7 of 9, AM l. 103), 0 violations. Parse: 0 Lean line(s) over 100 code points
