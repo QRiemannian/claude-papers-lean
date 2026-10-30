@@ -66,3 +66,5 @@ theorem g5_u7_int_b (t : ZPhi)
 SPEC-DRAFT 2026-10-30T10:17:01Z
 
 V1: V1-GREEN 2026-10-30T10:26:49Z — both §2 cites match verbatim (script). It is the ⊇ half of the record's EQUALITY Θ(G(5)) ∩ ℤ = {0, ±2} (second head l. 267, LEDGER l. 12, AM l. 128); 0 from the involution S, 2 from I, −2 from −I = S² (l. 72, l. 74–75), all in the group, so it is true. V1-SPLIT-OK on G5-U7-INT → INTa + INTb: the split keeps the equality whole, where the brief's half alone would have weakened it to an inclusion. Parse: 0 Lean line(s) over 100 code points
+
+V2: V2-GREEN 2026-10-30T10:56:50Z — the ⊇ half (AM-1-second-head l. 267, l. 74–75): each of 0, 2, −2 is the trace of some element of ⟨S, T⟩; with INTa the record's equality stays whole. Existence only, no witness named. Byte-identical to §5 (script).
