@@ -1,0 +1,38 @@
+# Unit U3 (G5/WordLevel) — per-unit record, Claude Paper No. 1
+unit: "U3"
+module_path: "G5/WordLevel"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "513244419676c1eecef06054d23a34909af196eb75471b7157b4a089b4149111"
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition current at 2026-10-30T10:24:24Z, §4 Errata included; the specs' headers carry 0b277844, V1-U3 read 0b277844 and 3a9e5400 — the errata between touch no U3 row)"
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  unit: "U1"
+  module: "G5.Ring.Challenge"
+  challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+  note: "the frozen U1 prelude (G5/Ring/formalization.yaml statement_sha256, V2-U1); imported, not restated"
+definitions: []
+definitions_note: "U3 defines nothing; every name (ZPhi, phi, conj, nonneg, the real order, IsWord, ntr, .x/.y) is U1's"
+rows:
+  - row: "G5-Aa"
+    theorems: ["G5.g5_u3_a_nonneg"]
+    status: "STATED"
+    note: "split half a of G5-A (V1-SPLIT-OK); AM-1-second-head l. 253–259, LEDGER row AM-1 l. 12; nonneg (ntr w) for every word"
+  - row: "G5-Ab"
+    theorems: ["G5.g5_u3_a_y_eq_zero"]
+    status: "STATED"
+    note: "split half b of G5-A (V1-SPLIT-OK); AM-1-second-head l. 257–261 and l. 60; y = 0 iff constant word in {1, 4}, then x = 2"
+  - row: "G5-SEPa"
+    theorems: ["G5.g5_u3_sep_lin"]
+    status: "STATED"
+    note: "split half a of G5-SEP (V1-SPLIT-OK); LEDGER row D-E2 l. 26, SH-P2-1 §4 l. 198–200; t − t^σ = y(2φ − 1) ≥ 2φ − 1 for y ≥ 1"
+  - row: "G5-SEPb"
+    theorems: ["G5.g5_u3_sep_sq"]
+    status: "STATED"
+    note: "split half b of G5-SEP (V1-SPLIT-OK); LEDGER row D-E2 l. 26, SH-P2-1 §4 l. 198–200; (t − t^σ)² = 5y² ≥ 5 for y ≥ 1"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "69533d2d17c4ed2dc569c1de6ddb5e92e42b85099901370bb946ea0ed7a13735"

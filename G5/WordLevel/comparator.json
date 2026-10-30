@@ -1,0 +1,12 @@
+{
+    "challenge_module": "G5.WordLevel.Challenge",
+    "solution_module": "G5.WordLevel.Solution",
+    "theorem_names": [
+        "G5.g5_u3_a_nonneg",
+        "G5.g5_u3_a_y_eq_zero",
+        "G5.g5_u3_sep_lin",
+        "G5.g5_u3_sep_sq"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}
