@@ -1,0 +1,41 @@
+# Unit U5 (G5/Ladder) — per-unit record, Claude Paper No. 1
+unit: "U5"
+module_path: "G5/Ladder"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "e0df0f356a20456e8b9a9cfdd816c41ee3d010642acc684a43bc4193c36733bf"
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition current at 2026-10-30T10:37:33Z, re-read 10:49:18Z unchanged, §4 Errata included; the specs' headers carry 0b277844, V1-U5 read 51324441, the brief named 3a9e5400 — every line the U5 specs quote, l. 18, l. 19, l. 44, matched at V1)"
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  unit: "U1"
+  module: "G5.Ring.Challenge"
+  challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+  note: "the frozen U1 prelude (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 10:23:30Z); imported, not restated"
+definitions: []
+definitions_note: "U5 defines nothing; every name is U1's (ZPhi, phi, nonneg, the real order, M2, P, IsWord, blockProd, ntr) or mathlib's / core's (Matrix.trace, List.IsRotated, List.replicate, List.head?, List.take)"
+rows:
+  - row: "G5-MONOa"
+    theorems: ["G5.g5_u5_mono_prod", "G5.g5_u5_mono_a"]
+    status: "STATED"
+    note: "split half a of G5-MONO; AM §5.1 l. 198 (with l. 34, l. 50), TA l. 51, SH-P2-1 §3.1 l. 176, §3.2 l. 178, STATEMENTS.md l. 19 second clause; mono_prod a separate declaration (V1-SPLIT-OK); tr(A B) ≤ tr(A P_a B) in the real order, A, B block products of possibly-empty lists"
+  - row: "G5-MONOb"
+    theorems: ["G5.g5_u5_mono_b_rot", "G5.g5_u5_mono_b_ge1", "G5.g5_u5_mono_b_step"]
+    status: "STATED"
+    note: "split half b of G5-MONO; AM §5.1 l. 198 stronger clause, SH-P2-1 §3.3 l. 180–185, l. 138–147, slip 2 l. 351, DEFINITIONS l. 21, STATEMENTS.md l. 19 third clause; rotation, entries ≥ 1, increments ≥ φ"
+  - row: "G5-LADa"
+    theorems: ["G5.g5_u5_lad_a_one", "G5.g5_u5_lad_a_two", "G5.g5_u5_lad_a_ge3"]
+    status: "STATED"
+    note: "split a of G5-LAD; TA §1 Theorem 4 l. 53–54, SH-P2-1 §2 item 2 l. 151, l. 156, l. 162–164, DEFINITIONS l. 21, STATEMENTS.md l. 18; t ≥ 2φ / 3 + φ / (k + 1)φ on the non-constant words"
+  - row: "G5-LADb"
+    theorems: ["G5.g5_u5_lad_b_one", "G5.g5_u5_lad_b_two", "G5.g5_u5_lad_b_ge3"]
+    status: "STATED"
+    note: "split b of G5-LAD; TA l. 53, SH-P2-1 l. 164, l. 166, l. 168–170, l. 120/126/128, l. 335–339, STATEMENTS.md l. 18; attainment and uniqueness of the minimizers (k = 1 and k = 2 iffs V1-SPLIT-OK)"
+rows_not_stated:
+  - row: "G5-LADc"
+    note: "V1-CC — correction track, uncounted; the recorded census sentence (TA l. 55, STATEMENTS.md l. 18) is false at K = 1 (the word (1, 4), t = 3 + φ < 3φ; STATEMENTS.md §4 erratum); no statement, and the probe's two witness examples are not carried"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "ea6b4aedd3021843c9399543ebbac30b625aeae4cdd18a0b9042b6b33513d11a"
