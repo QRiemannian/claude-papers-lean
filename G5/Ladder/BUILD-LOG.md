@@ -54,3 +54,77 @@
 5. `G5.lean` untouched (the orchestrator adds the import). No `Solution.lean`.
 
 Closed: 2026-10-30T10:49:53Z.
+
+---
+
+# Seat L-U5 — PHASE proofs (step 6)
+
+- **open** 2026-10-30T11:02:39Z — `shasum -a 256 G5/Ladder/Challenge.lean` →
+  `ea6b4aedd3021843c9399543ebbac30b625aeae4cdd18a0b9042b6b33513d11a` — matches the freeze. Not edited.
+- **PRELUDE-RULE U5: Solution imports G5.Ring.Solution** — `Solution.lean` begins `import Mathlib` +
+  `import G5.Ring.Solution` (the PROVED prelude, `0a11790b…`), does not import `G5.Ladder.Challenge`,
+  restates nothing (U5 declares nothing of its own), opens `open G5 ZPhi` + `namespace G5 … end G5`.
+  `G5.WordLevel.Solution` is NOT imported; the seat's own helpers are `private` `g5_u5_aux_*`.
+- **poll** — by process name only (`pgrep -x lean|lake|lean4export|comparator`), 15 s steps; each wait is logged
+  here and in the scratch `L-U5-proofs/waits.log`.
+- **wait** 11:03:06Z → 11:03:51Z · 11:04:40Z → 11:08:41Z · 11:10:21Z → 11:12:07Z · 11:12:51Z → 11:13:21Z
+  (scratch `lake env lean` checks of the helper block) · 11:16:21Z → 11:17:06Z — other seats' `lean`/`lake`.
+- **B1** 2026-10-30T11:17:11Z — `lake build G5.Ladder.Solution` · exit **0** · wall 38 s · the helper block +
+  `g5_u5_mono_prod` + `g5_u5_mono_a` (G5-MONOa) · first error: none · two linter infos (flexible `simp`).
+- **wait** 11:20:54Z → 11:21:24Z · 11:22:16Z → 11:22:46Z · 11:25:34Z → 11:26:49Z · 11:27:39Z → 11:28:54Z ·
+  11:29:19Z → 11:30:35Z (scratch checks; other seats' `lean`/`lake`). Two of the seat's own shell calls ended with
+  exit 144 while a foreground `sleep` waited inside the poll; the poll now waits with `perl select` (15 s), same rule.
+- **B2** 2026-10-30T11:31:04Z — `lake build G5.Ladder.Solution` · exit **0** · wall 31 s · adds
+  `g5_u5_mono_b_rot`, `g5_u5_mono_b_ge1`, `g5_u5_mono_b_step` (G5-MONOb) and `g5_u5_lad_a_one`,
+  `g5_u5_lad_a_two`, `g5_u5_lad_a_ge3` (G5-LADa) · first error: none · linter warnings only (style, flexible simp).
+- **wait** 11:33:03Z → 11:33:33Z · 11:34:27Z → 11:34:57Z (scratch checks of the LADb block) · 11:36:29Z → 11:36:59Z.
+- **B3** 2026-10-30T11:36:59Z — `lake build G5.Ladder.Solution` · exit **0** · wall 32 s · adds `g5_u5_lad_b_one`,
+  `g5_u5_lad_b_two`, `g5_u5_lad_b_ge3` (G5-LADb): all eleven proved · first error: none · two `show` style warnings.
+- **wait** 11:37:53Z → 11:38:38Z.
+- **B4 (final)** 2026-10-30T11:38:38Z — `lake build G5.Ladder.Solution` · exit **0** · wall 41 s (module 28–30 s) ·
+  `Build completed successfully (8707 jobs)` · first error: none · no warnings (the `show`s became `change`, the
+  flexible `simp`s became `simp only`/`simpa`; the Challenge docstrings copied above each theorem).
+- **statement check (script)** — each of the eleven Challenge texts, docstring through the statement up to `:=`, occurs
+  exactly once in `Solution.lean` followed by `:=`: 11/11. Lines ≤ 100 code points: all. No `sorry`, `admit`,
+  `axiom`, `native_decide`. Imports: `Mathlib`, `G5.Ring.Solution` only.
+- **wait** 11:39:28Z → 11:40:28Z.
+- **axioms** 2026-10-30T11:40:28Z — scratch `L-U5-proofs/Axioms.lean` (`import G5.Ladder.Solution` + eleven
+  `#print axioms`) through `lake env lean`:
+      'G5.g5_u5_mono_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_mono_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_mono_b_rot' depends on axioms: [propext, Quot.sound]
+      'G5.g5_u5_mono_b_ge1' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_mono_b_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_lad_a_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_lad_a_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_lad_a_ge3' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_lad_b_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_lad_b_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+      'G5.g5_u5_lad_b_ge3' depends on axioms: [propext, Classical.choice, Quot.sound]
+  No `sorryAx`; within the permitted three (`mono_b_rot` uses two of them).
+- **comparator** 2026-10-30T11:40:54Z — `bash tools/comparator.sh G5/Ladder` · exit **0** · wall 44 s · landrun is the
+  macOS shim (NOT sandboxed, its first line says so) · it built `G5.Ladder.Challenge` (11 × `sorry` warnings, as
+  frozen) and `G5.Ladder.Solution`, exported both, then:
+      Running Lean default kernel on solution.
+      Lean default kernel accepts the solution
+      Your solution is okay!
+  The prelude arrangement (Challenge on `G5.Ring.Challenge`, Solution on `G5.Ring.Solution`) is accepted.
+- **close** — `Challenge.lean` re-hashed `ea6b4aed…3d11a` (unchanged); `Solution.lean` sha256
+  `7b4326ca615910ae87b4861175f81d942e8d3e784d2664263d7d67369b58a141` (656 lines); U1 prelude `0a11790b…` unchanged.
+
+| row | theorems | status |
+|---|---|---|
+| G5-MONOa | `g5_u5_mono_prod`, `g5_u5_mono_a` | PROVED |
+| G5-MONOb | `g5_u5_mono_b_rot`, `g5_u5_mono_b_ge1`, `g5_u5_mono_b_step` | PROVED |
+| G5-LADa | `g5_u5_lad_a_one`, `g5_u5_lad_a_two`, `g5_u5_lad_a_ge3` | PROVED |
+| G5-LADb | `g5_u5_lad_b_one`, `g5_u5_lad_b_two`, `g5_u5_lad_b_ge3` | PROVED |
+
+Routes taken: the real order through the ring map `g5_u5_aux_v : ZPhi →+* ℝ` (`x + y φ`), whose order lemma is the
+exact `NonnegAB5 a b ↔ 0 ≤ a + b√5` and whose injectivity is `Real.goldenRatio_irrational`; MONOa by induction with
+U1's `g5_u1_ge_a`; MONOb's rotation through a list lemma (an adjacent (1, 4) or a 4…1 wrap);
+LADa/LADb by induction on the length from a `decide` base at k = 3 (64 words, both clauses), the step deleting the
+last syllable of the rotated word (`mono_b_step`); uniqueness by antisymmetry (the prefix sits at its own minimum,
+so by induction it is `2 :: 1^{k−2}` or `3 :: 4^{k−2}`) and the x-coefficient: any other last syllable leaves
+`x ≠ 0`, while `(k + 1)φ` has `x = 0`. No STATEMENT-CHANGE-NEEDED. `G5.WordLevel.Solution` not imported.
+
+Closed: 2026-10-30T11:42:10Z.

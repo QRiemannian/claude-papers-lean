@@ -32,3 +32,7 @@
 | G5-Fa | U4 `G5/Sector` | `G5.g5_u4_fa` | L-PROVED, K pending | as above |
 | G5-Fb | U4 `G5/Sector` | `G5.g5_u4_fb` | L-PROVED, K pending | as above |
 | G5-Fc | U4 `G5/Sector` | `G5.g5_u4_fc` | L-PROVED, K pending | as above |
+| G5-MONOa | U5 `G5/Ladder` | `G5.g5_u5_mono_prod`, `G5.g5_u5_mono_a` | L-PROVED, K pending | Challenge FROZEN `ea6b4aed…` (V₂ 10:53:28Z); Solution `7b4326ca…` built 11:38:38Z, axioms propext/Classical.choice/Quot.sound (mono_b_rot propext/Quot.sound), comparator okay 11:40:54Z; the prelude rule accepted; the real order through a ring map to ℝ with `Real.goldenRatio_irrational` |
+| G5-MONOb | U5 `G5/Ladder` | `G5.g5_u5_mono_b_rot`, `G5.g5_u5_mono_b_ge1`, `G5.g5_u5_mono_b_step` | L-PROVED, K pending | as above |
+| G5-LADa | U5 `G5/Ladder` | `G5.g5_u5_lad_a_one`, `G5.g5_u5_lad_a_two`, `G5.g5_u5_lad_a_ge3` | L-PROVED, K pending | as above; induction on the length with a decide base at k = 3 (64 words) and the deletion step |
+| G5-LADb | U5 `G5/Ladder` | `G5.g5_u5_lad_b_one`, `G5.g5_u5_lad_b_two`, `G5.g5_u5_lad_b_ge3` | L-PROVED, K pending | as above; uniqueness by antisymmetry + induction + the x-coefficient of (k + 1)φ; G5-LADc V1-CC, no statement |

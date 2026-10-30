@@ -41,3 +41,10 @@ automation:
 statement_sha256_draft: "ea6b4aedd3021843c9399543ebbac30b625aeae4cdd18a0b9042b6b33513d11a"
 statement_sha256: "ea6b4aedd3021843c9399543ebbac30b625aeae4cdd18a0b9042b6b33513d11a"
 v2_signed: "2026-10-30T10:53:28Z"
+proofs_phase:
+  closed: "2026-10-30T11:42:10Z"
+  solution_module: "G5.Ladder.Solution"
+  solution_sha256: "7b4326ca615910ae87b4861175f81d942e8d3e784d2664263d7d67369b58a141"
+  theorems_proved: 11
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + G5.Ring.Solution (the proved prelude), not G5.Ladder.Challenge; the comparator accepted the arrangement 11:40:54Z"
