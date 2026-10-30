@@ -62,3 +62,10 @@ automation:
 statement_sha256_draft: "c342ab92ba8ef07e5a9fba82422968b9de4410974583210dc1dcded53354c78c"
 statement_sha256: "c342ab92ba8ef07e5a9fba82422968b9de4410974583210dc1dcded53354c78c"
 v2_signed: "2026-10-30T10:57:07Z"
+proofs_phase:
+  closed: "2026-10-30T11:20:30Z"
+  solution_module: "G5.ModTwo.Solution"
+  solution_sha256: "920c6398b7bef7ec5c350f633f703d7be26aa42db221d251fc64c0e74d6d045f"
+  theorems_proved: 9
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + G5.Ring.Solution (the proved prelude), not G5.ModTwo.Challenge; the comparator accepted the arrangement 11:20:30Z"

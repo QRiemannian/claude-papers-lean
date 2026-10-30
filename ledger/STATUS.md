@@ -21,3 +21,8 @@
 | G5-Ab | U3 `G5/WordLevel` | `G5.g5_u3_a_y_eq_zero` | L-PROVED, K pending | as above; the direct closed-path weight route (AM-1-SH §3), 25 private helpers |
 | G5-SEPa | U3 `G5/WordLevel` | `G5.g5_u3_sep_lin` | L-PROVED, K pending | as above; `hw` unused (the frozen statement carries it; the separation needs `hy` only) |
 | G5-SEPb | U3 `G5/WordLevel` | `G5.g5_u3_sep_sq` | L-PROVED, K pending | as above |
+| G5-U2-HOM | U2 `G5/ModTwo` | `G5.g5_u2_f4`, `G5.g5_u2_red_hom`, `G5.g5_u2_red_eq_zero` | L-PROVED, K pending | Challenge FROZEN `c342ab92…` (V₂ 10:57:07Z); Solution `920c6398…` built 11:17:04Z, axioms propext/Classical.choice/Quot.sound, comparator okay 11:20:30Z; the prelude rule accepted; G5-U2-MOD2 is the definitions block (restated byte-identically) |
+| G5-U2-D5 | U2 `G5/ModTwo` | `G5.g5_u2_d5_gens`, `G5.g5_u2_d5_image` | L-PROVED, K pending | as above; the ten matrices by decide +kernel |
+| G5-U2-TRD5 | U2 `G5/ModTwo` | `G5.g5_u2_d5_trace` | L-PROVED, K pending | as above |
+| G5-L1 | U2 `G5/ModTwo` | `G5.g5_u2_l1` | L-PROVED, K pending | as above; induction on the word keyed to parity |
+| G5-L2 | U2 `G5/ModTwo` | `G5.g5_u2_l2`, `G5.g5_u2_l2_int` | L-PROVED, K pending | as above; the word-level leg (the group-level clause is U8's G5-U8-L2G) |

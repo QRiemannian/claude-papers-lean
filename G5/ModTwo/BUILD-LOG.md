@@ -31,3 +31,36 @@
 4. **Brief residue.** The brief's first bullet reads "U3 imports U1" and "theorem row of U3" (template residue). This seat built U2, the six rows the brief's title names.
 
 Closed: 2026-10-30T10:51:37Z.
+
+## PHASE proofs — seat L-U2 (proofs), opened 2026-10-30T11:01:51Z
+
+- **freeze check** 2026-10-30T11:01:51Z — `shasum -a 256 G5/ModTwo/Challenge.lean`: `c342ab92ba8ef07e5a9fba82422968b9de4410974583210dc1dcded53354c78c`, the frozen value. Prelude `G5/Ring/Solution.lean`: `0a11790b32f126ecac0f1df2f41e7399a4a9b514a77794ebf08f7878825c0271`, the PROVED value the brief names. `Challenge.lean`, `comparator.json`, `formalization.yaml`: read, not edited.
+- **PRELUDE-RULE U2: Solution imports G5.Ring.Solution** (the PROVED U1 prelude), not `G5.ModTwo.Challenge` and not `G5.Ring.Challenge`. The MOD2 block is restated byte-identically in the same position, under the same `open G5 ZPhi` / `namespace G5 … end G5` structure; the nine theorems keep their names and statement texts. Polls are by process name only (`pgrep -x lean|lake|lean4export|comparator`), every 15 s; each wait is logged in `<scratchpad>/L-U2-proofs/waits.log` and summarised here.
+- **assemble** 2026-10-30T11:04Z — `<scratchpad>/L-U2-proofs/gen.py` writes `Solution.lean` from the frozen `Challenge.lean`: the two imports become `import Mathlib` / `import G5.Ring.Solution`, the module doc is the proofs doc, everything from the first `open G5 ZPhi` on is carried as is, the private helpers (`g5_u2_aux_*`) go directly after the theorems' `namespace G5`, and each `:= by sorry` takes its proof. Script checks on every regeneration: the MOD2 block (3,764 characters from its `/- G5-U2-MOD2.` comment to its `end G5`) is a byte substring of both files; all nine statement texts are byte substrings of `Solution.lean`; 0 lines over 100 code points; no `sorry`, `admit`, `native_decide`, no `axiom` declaration, no forbidden word.
+- **build order.** The nine proofs were written as one file and built together (B1 onward), not one theorem per build; each build below is the whole module.
+- **wait** before B1, 11:04:23Z → 11:05:53Z, 6 polls: other seats' real `lean`/`lake` (pids 49227/49205, 49491/49471, 49848/49814).
+- **B1** 11:05:53Z → 11:06:47Z — `lake build G5.ModTwo.Solution`: exit **1**, wall 54 s. First error: l. 179 `g5_u2_aux_syl`, `(deterministic) timeout at whnf` (200000 heartbeats) — the elaborator's `decide` on the ten-matrix finsets; the same at the other finset `decide`s; plus `Unknown identifier even_zero`. Fix: `decide +kernel` (the kernel decides; no new axiom — the axioms print below) and `even_iff_two_dvd.mpr (dvd_zero 2)`.
+- **wait** before B2, 11:07:12Z → 11:11:13Z, 16 polls: real `lean`/`lake`, then another seat's comparator run (`lake` 53193, `comparator` 53224, `lean4export` 53452).
+- **B2** 11:11:13Z → 11:11:59Z: exit **1**, wall 46 s. First error: l. 265 `failed to synthesize Decidable (Sbar ∈ ↑{ carrier := ↑D5bar, … })` — the goal was stated on the local submonoid; fix: ascribe `(by decide +kernel : Sbar ∈ D5bar)`. Two lines over 100 code points (linter warnings), wrapped.
+- **wait** before B3, 11:12:23Z → 11:12:38Z, 1 poll.
+- **B3** 11:12:38Z → 11:13:20Z: exit **0**, wall 42 s, `Build completed successfully (8707 jobs)`. One long-line warning (l. 324), wrapped.
+- **wait** before B4, 11:13:31Z → 11:16:16Z, 11 polls (real `lean`/`lake` of other seats).
+- **B4 (final)** 11:16:16Z → 11:17:04Z: exit **0**, wall 48 s, `Build completed successfully (8707 jobs)`. First error: none. Warnings in this module: none.
+- **wait** before AX, 11:17:16Z → 11:18:02Z, 3 polls.
+- **axioms** 11:18:02Z → 11:18:34Z — scratch file `<scratchpad>/L-U2-proofs/l2.lean` (`import G5.ModTwo.Solution` + nine `#print axioms`), `lake env lean`, exit 0:
+```
+'G5.g5_u2_f4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u2_red_hom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u2_red_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u2_d5_gens' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u2_d5_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u2_d5_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u2_l1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u2_l2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u2_l2_int' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+- **comparator** 11:18:40Z → 11:20:30Z (polled clear at 11:18:40Z) — `bash tools/comparator.sh G5/ModTwo`: exit **0**, wall 110 s. Output head: `comparator.sh @ 2026-10-30T11:18:40Z · unit G5/ModTwo · landrun …/comparator/scripts/fake-landrun.sh (the macOS shim: NOT sandboxed)`; it exported the nine theorems from `G5.ModTwo.Challenge` and from `G5.ModTwo.Solution`, then `Running Lean default kernel on solution.` / `Lean default kernel accepts the solution` / **`Your solution is okay!`** The comparator accepts the prelude arrangement (Solution on `G5.Ring.Solution`, Challenge on `G5.Ring.Challenge`).
+- **digests** 2026-10-30T11:21:01Z — `Challenge.lean` `c342ab92…354c78c` (unchanged); `Solution.lean` `920c6398b7bef7ec5c350f633f703d7be26aa42db221d251fc64c0e74d6d045f` (328 lines); prelude `G5/Ring/Solution.lean` `0a11790b…825c0271`.
+- **rows:** G5-U2-MOD2 (block restated byte-identically; its own proofs compile) · G5-U2-HOM (`g5_u2_f4`, `g5_u2_red_hom`, `g5_u2_red_eq_zero`) PROVED · G5-U2-D5 (`g5_u2_d5_gens`, `g5_u2_d5_image`) PROVED · G5-U2-TRD5 (`g5_u2_d5_trace`) PROVED · G5-L1 (`g5_u2_l1`) PROVED · G5-L2 (`g5_u2_l2`, `g5_u2_l2_int`) PROVED. No STATEMENT-CHANGE-NEEDED.
+
+Closed: 2026-10-30T11:21:01Z.
