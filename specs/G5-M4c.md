@@ -81,3 +81,5 @@ theorem g5_u6_m4c (w : List ℕ) (hw : IsWord w) (hy : Odd (W w).trace.y) :
 SPEC-DRAFT 2026-10-30T10:14:38Z
 
 V1: V1-GREEN · V1-SPLIT-OK 2026-10-30T10:24:46Z — SH-P2-1 item 5 states exactly "N(t) = x² + xy − y² ≡ 3 (mod 4) whenever y is odd" (l. 214; l. 357; LEDGER l. 16 "equivalently y odd ⟹ N(t) ≡ 3 (mod 4)"), with no converse. The row adds none, and says nothing for y even. `nrm` is U1's x² + xy − y², SH-P2-1's formula, and is even in t, so the literal and normalized readings coincide. The record's scope is every element of G(5) ("not only words", l. 214); the row is the word-level form (design note 4), weaker only by that lane-wide cut. Own closure: 0 violations over the 320 states. Parse: 0 Lean line(s) over 100 code points
+
+V2: V2-GREEN 2026-10-30T10:40:29Z — byte-identical to §5; y odd ⟹ nrm ≡ 3 [ZMOD 4], with nrm U1's x² + xy − y² as at SH-P2-1 l. 214; no converse and nothing for y even, as recorded; nrm is even in t; the hypothesis is realized, so not vacuous; own closure 0 violations

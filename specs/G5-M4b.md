@@ -83,3 +83,5 @@ theorem g5_u6_m4b (w : List ℕ) (hw : IsWord w) : red4 (W w).trace ∈ H4 := by
 SPEC-DRAFT 2026-10-30T10:14:38Z
 
 V1: V1-GREEN · V1-SPLIT-OK 2026-10-30T10:24:46Z — STATEMENTS.md's row text and DO D-2 (l. 119–120, l. 246), H₄ form, inclusion only, read on the literal trace (AM l. 113). Normalized reading (PHASE-2-DEFINITIONS l. 15) is the same statement: H₄ is closed under negation, −(0,1) = (0,3), −(1,3) = (3,1), the others fixed (SH-P2-1 l. 272 says the same). The word-level restriction of "every trace of G(5)" follows design note 4. The group level sits with U7, but no U7 spec on disk carries a mod-4 or mod-3 leg; that is a note for the orchestrator, not a defect of this row. Own closure over the 320 word states: 0 residues outside H₄, all eight realized. Parse: 0 Lean line(s) over 100 code points
+
+V2: V2-GREEN 2026-10-30T10:40:29Z — byte-identical to §5; inclusion of red4 of the literal word trace in H4 for every IsWord word, exactly the row text's "lies in H₄", no realization claim; literal = normalized because H4 is negation-closed (SH-P2-1 l. 272); the group-level leg is U8's (§4 10:26:51Z, 10:29:26Z); own closure 0 violations
