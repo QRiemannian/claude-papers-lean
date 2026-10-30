@@ -64,3 +64,7 @@ Scratch a later stage must read: `/private/tmp/claude-501/-Users-qriemannian-Cla
 ## Status
 
 SPEC-DRAFT 2026-10-30T10:20:51Z — U5 on disk; four rows for V₁, one stopped (G5-LADc, CC-CANDIDATE) for the wall.
+
+## Probe elaboration (the orchestrator's serial run, 2026-10-30T10:26:22Z)
+
+`lake env lean <scratchpad>/M-U5/probe.lean`: exit 0; errors 0; `declaration uses sorry` warnings 16 (U1's five plus this unit's 11 theorems; the two LADc witness examples elaborated by decide with no error); maximum resident set size 5193039872 bytes; 17 s (10:24:53Z → 10:25:10Z) wall. Log: `<scratchpad>/M-U5/probe-orch-run.log`.

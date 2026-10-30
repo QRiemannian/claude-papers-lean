@@ -66,3 +66,7 @@ Scratch a later stage must read: `/private/tmp/claude-501/-Users-qriemannian-Cla
 ## Status
 
 SPEC-DRAFT 2026-10-30T10:18:54Z — U2 on disk; the probe awaits the orchestrator's serial elaboration.
+
+## Probe elaboration (the orchestrator's serial run, 2026-10-30T10:26:22Z)
+
+`lake env lean <scratchpad>/M-U2/probe.lean`: exit 0; errors 0; `declaration uses sorry` warnings 14 (U1's five plus this unit's 9 theorems); maximum resident set size 4894261248 bytes; 30 s (10:24:01Z → 10:24:31Z) wall. Log: `<scratchpad>/M-U2/probe-orch-run.log`.
