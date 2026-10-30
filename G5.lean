@@ -11,3 +11,6 @@ import G5.Ladder.Challenge
 import G5.ModTwo.Challenge
 import G5.Group.Challenge
 import G5.GroupLevel.Challenge
+import G5.SectorGroup.Challenge
+import G5.Containment.Challenge
+import G5.Census.Challenge

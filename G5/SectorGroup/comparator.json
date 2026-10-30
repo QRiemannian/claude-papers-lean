@@ -1,0 +1,10 @@
+{
+    "challenge_module": "G5.SectorGroup.Challenge",
+    "solution_module": "G5.SectorGroup.Solution",
+    "theorem_names": [
+        "G5.g5_u9_bg_a",
+        "G5.g5_u9_bg_b"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

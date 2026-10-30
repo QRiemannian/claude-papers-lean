@@ -1,0 +1,39 @@
+# Unit U9 (G5/SectorGroup) — per-unit record, Claude Paper No. 1
+unit: "U9"
+module_path: "G5/SectorGroup"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "a84cecdd3bfa79014173183ffcaea66d2d0f469033501ffae983072344000731"
+source_bytes: 21568
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition sha256 a84cecdd… · 21568 B, read at 2026-10-30T13:15:02Z and re-read at 13:18:23Z, unchanged; the specs' headers and §5 docstrings carry the same a84cecdd)"
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  - unit: "U1"
+    module: "G5.Ring.Challenge"
+    challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+    note: "frozen (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z); shasum at 2026-10-30T13:18:23Z matches; supplies ZPhi and its fields, phi, conj, the real order, M2, IsWord, ntr; imported, not restated"
+  - unit: "U7"
+    module: "G5.Group.Challenge"
+    challenge_sha256: "689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae"
+    note: "frozen (G5/Group/formalization.yaml statement_sha256, V2-U7 signed 2026-10-30T10:56:50Z); shasum at 2026-10-30T13:18:23Z matches; supplies HeckeGrp; imported, not restated"
+  - unit: "U4"
+    module: "G5.Sector.Challenge"
+    challenge_sha256: "df5fdf79df09a7dd097a8d3102c96b644458d2fcde98856b16de002cf910996f"
+    note: "frozen (G5/Sector/formalization.yaml statement_sha256, V2-U4 signed 2026-10-30T10:48:53Z); shasum at 2026-10-30T13:18:23Z matches; supplies ZPhi.rabs; imported, not restated"
+definitions: []
+definitions_note: "U9 defines nothing; ZPhi and its fields, phi, conj, the real order, M2 are U1's, HeckeGrp is U7's, ZPhi.rabs is U4's; hyperbolicity is the hypothesis 2 < rabs (g : M2).trace (V1-signed), not a definition"
+rows:
+  - row: "G5-BGa"
+    theorems: ["G5.g5_u9_bg_a"]
+    status: "STATED"
+    note: "TA §1 \"Theorem B\" (l. 43); STATEMENTS.md row G5-BG (l. 24, the sector clause) and §2 item 7 (l. 39); every g ∈ HeckeGrp with 2 < rabs tr has 1 ≤ t.y, 0 ≤ t.x ≤ t.y + 2 for t = rabs tr; V1-GREEN 2026-10-30T13:11:33Z, SPLIT-OK"
+  - row: "G5-BGb"
+    theorems: ["G5.g5_u9_bg_b"]
+    status: "STATED"
+    note: "TA §1 \"The true cone\" (l. 47); STATEMENTS.md row G5-BG (l. 24, the θ clause); the exact constant SH-P2-1 §1 (l. 103, l. 105); every g ∈ HeckeGrp with 2 < rabs tr has 11 · rabs (conj t) ≤ (17 − 7φ) · t for t = rabs tr, in the real order; V1-GREEN 2026-10-30T13:11:33Z, SPLIT-OK"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "c6a43405c82a8b43218854dc605d0b9952332b82681dfb03a9008e6e3195d6a8"

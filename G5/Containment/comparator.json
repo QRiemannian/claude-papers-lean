@@ -1,0 +1,9 @@
+{
+    "challenge_module": "G5.Containment.Challenge",
+    "solution_module": "G5.Containment.Solution",
+    "theorem_names": [
+        "G5.g5_u10_cor"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

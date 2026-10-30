@@ -1,0 +1,11 @@
+{
+    "challenge_module": "G5.Census.Challenge",
+    "solution_module": "G5.Census.Solution",
+    "theorem_names": [
+        "G5.g5_u11_census_a",
+        "G5.g5_u11_census_b",
+        "G5.g5_u11_census_b_wit"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}
