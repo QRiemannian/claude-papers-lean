@@ -83,3 +83,6 @@ theorem g5_u10_cor (g : M2ˣ) (hg : g ∈ HeckeGrp) :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T13:02:59Z
+
+V1: V1-GREEN 2026-10-30T13:11:09Z — faithful to the record at AM-1-second-head.md l. 263–265 (and STATEMENTS.md row G5-COR, l. 25): same domain (every element of ⟨S, T⟩ ⊂ SL(2, ℤ[φ]) as U7's `HeckeGrp`, literal trace, not normalized, not per class), same set; the seven pairs transcribe {±2, 0, ±φ, ±φ⁻¹} exactly, with φ⁻¹ = ⟨−1, 1⟩ and −φ⁻¹ = ⟨1, −1⟩ the record's own reading (AM-1-second-head.md §1 table l. 26: "φ − 1 = φ⁻¹, 1 − φ = −φ⁻¹") and no inverse theorem (STATEMENTS.md §2 item 7, l. 39); the infinite part's x, y over ℤ (the Theorem's "x, y ∈ ℤ_{≥0}", l. 259) with 0 ≤ x ∧ 1 ≤ y and both signs; the union as the outer disjunction. §2 quotes match the record byte for byte; §5 equals the probe (3e75573d…) byte for byte. No split; no CC (the recorded containment is true and not vacuous).
+parse: 0 Lean line(s) over 100 code points
