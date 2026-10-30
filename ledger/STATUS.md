@@ -36,3 +36,9 @@
 | G5-MONOb | U5 `G5/Ladder` | `G5.g5_u5_mono_b_rot`, `G5.g5_u5_mono_b_ge1`, `G5.g5_u5_mono_b_step` | **PROVED** (K PASS · V₃ CLEAN) | as above |
 | G5-LADa | U5 `G5/Ladder` | `G5.g5_u5_lad_a_one`, `G5.g5_u5_lad_a_two`, `G5.g5_u5_lad_a_ge3` | **PROVED** (K PASS · V₃ CLEAN) | as above; induction on the length with a decide base at k = 3 (64 words) and the deletion step |
 | G5-LADb | U5 `G5/Ladder` | `G5.g5_u5_lad_b_one`, `G5.g5_u5_lad_b_two`, `G5.g5_u5_lad_b_ge3` | **PROVED** (K PASS · V₃ CLEAN) | as above; uniqueness by antisymmetry + induction + the x-coefficient of (k + 1)φ; G5-LADc V1-CC, no statement |
+| G5-U7-NF | U7 `G5/Group` | `G5.g5_u7_nf` | L-PROVED, K pending | Challenge FROZEN `689c36e6…` (V₂ 10:56:50Z); Solution `94338219…` built 12:01:59Z, axioms propext/Classical.choice/Quot.sound, comparator okay 12:03:55Z; the prelude rule (Ring + WordLevel Solutions); the normal form by closure induction (every element E · W w · R^d) then strong induction on the syllable count — the cyclic reduction |
+| G5-U7-INTa | U7 `G5/Group` | `G5.g5_u7_int_a` | L-PROVED, K pending | as above; the trace read off the normal forms, U3's `g5_u3_a_y_eq_zero` for the word case |
+| G5-U7-INTb | U7 `G5/Group` | `G5.g5_u7_int_b` | L-PROVED, K pending | as above; witnesses S, I, S·S = −I |
+| G5-PHIa | U7 `G5/Group` | `G5.g5_u7_phi_a` | L-PROVED, K pending | as above; the path-weight route of SH-P2-1's Remark through U3's domination device |
+| G5-PHIb | U7 `G5/Group` | `G5.g5_u7_phi_b` | L-PROVED, K pending | as above; rotation invariance of ntr and t(1ⁿ2) = t(34ⁿ) = (n + 2)φ |
+| G5-PHIc | U7 `G5/Group` | `G5.g5_u7_phi_c` | L-PROVED, K pending | as above |

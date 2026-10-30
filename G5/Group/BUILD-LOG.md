@@ -68,3 +68,75 @@ Before every `lake` call: `pgrep -fl 'bin/lean|bin/lake'` (toolchain binaries on
 5. `G5.lean` untouched (the orchestrator adds the import). No `Solution.lean`.
 
 Closed: 2026-10-30T10:51:45Z.
+
+---
+
+# PHASE proofs (step 6) — seat L-U7-proofs (Opus), opened 2026-10-30T11:50:02Z
+
+- Brief: `SEAT-P3-LEAN-L-proofs-U7.md` (BRIEF READY 2026-10-30T11:45:11Z).
+- First act: `shasum -a 256 G5/Group/Challenge.lean` = `689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae` —
+  matches the freeze; proceeding. Challenge, comparator.json, formalization.yaml untouched by this seat.
+- PRELUDE-RULE U7: Solution imports G5.Ring.Solution (+ G5.WordLevel.Solution) — the latter for U3's
+  `g5_u3_a_y_eq_zero` (INTa's integer-trace leg); the `HeckeGrp`/`IsNF` block restated byte-identically.
+- Plan (NF invariant, fixed before coding): by `Subgroup.closure_induction_right`, every element's matrix is
+  `E * W w * R^d` with `E ∈ {1, −1, S, −S}`, syllables in 1..4 (w may be empty), `d : ℕ` — closed under
+  right multiplication by `S`, `R` and negation (T = −(R S), T⁻¹ = −(S R⁴), S⁻¹ = −S). Conjugating by
+  `R^d` moves the tail to the front; then strong induction on `w.length` for the pair
+  `Q(R^d W w) ∧ Q(R^d S W w)` (Q m := ∃ h ∈ HeckeGrp, IsNF (h m h⁻¹)): an exponent sum ≡ 0 mod 5 drops to
+  `S W w'`; `S W (init ++ [a])` conjugates by S then R^a to `−R^a W init` — the length drops by one.
+- Plan (φ-line): x(tr) ≥ x(one closed-path term) by coefficientwise domination in ℕ[φ] (U3's device);
+  rotation invariance of ntr (`Matrix.trace_mul_comm`); a φ·s·φ·t term with s, t non-zero ℕ[φ] has x ≥ 1.
+- **B1 (NF helpers + NF; other five scaffolded)** 2026-10-30T11:55:38Z → 2026-10-30T11:56:19Z (gate: 0 waits) — `lake build G5.Group.Solution` · exit **0** · wall 41 s · first error: none
+- **B2 (+ INTa, INTb)** 2026-10-30T11:56:37Z → 2026-10-30T11:57:15Z (gate: 0 waits) — `lake build G5.Group.Solution` · exit **0** · wall 38 s · first error: none
+- **B3 (+ φ-line helpers, PHIc)** 2026-10-30T11:58:07Z → 2026-10-30T11:58:39Z (gate: 0 waits) — `lake build G5.Group.Solution` · exit **1** · wall 32 s · first error: error: G5/Group/Solution.lean:547:9: unsolved goals
+- **B4 (bp_rep fix)** 2026-10-30T11:59:01Z → 2026-10-30T11:59:33Z (gate: 0 waits) — `lake build G5.Group.Solution` · exit **0** · wall 32 s · first error: none
+- **B5 (+ PHIa, PHIb)** 2026-10-30T12:00:32Z → 2026-10-30T12:01:02Z (gate: 0 waits) — `lake build G5.Group.Solution` · exit **0** · wall 30 s · first error: none
+- **B6 (lint tidy: push Not, an unused ring)** 2026-10-30T12:01:25Z → 2026-10-30T12:01:59Z (gate: 0 waits) — `lake build G5.Group.Solution` · exit **0** · wall 34 s · first error: none
+- Axioms (scratch `L-U7-proofs/axioms.lean` through `lake env lean`, 2026-10-30T12:02:07Z, gate clear, 0 waits):
+```
+'G5.g5_u7_nf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u7_int_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u7_int_b' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u7_phi_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u7_phi_b' depends on axioms: [propext, Classical.choice, Quot.sound]
+'G5.g5_u7_phi_c' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+- **Comparator** 2026-10-30T12:02:39Z → 12:03:55Z (gate clear, 0 waits; wall 76 s) — `bash tools/comparator.sh G5/Group` · exit **0**:
+```
+comparator.sh @ 2026-10-30T12:02:39Z · unit G5/Group · landrun /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh (the macOS shim: NOT sandboxed)
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build G5.Group.Challenge
+Build completed successfully (8707 jobs).
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/qriemannian/Claude/projects/comparator/.lake/packages/lean4export/.lake/build/bin/lean4export G5
+Exporting #[G5.g5_u7_nf, G5.g5_u7_int_a, G5.g5_u7_int_b, G5.g5_u7_phi_a, G5.g5_u7_phi_b, G5.g5_u7_phi_c, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build G5.Group.Solution
+Build completed successfully (8708 jobs).
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/qriemannian/Claude/projects/comparator/.lake/packages/lean4export/.lake/build/bin/lean4export G5
+Exporting #[G5.g5_u7_nf, G5.g5_u7_int_a, G5.g5_u7_int_b, G5.g5_u7_phi_a, G5.g5_u7_phi_b, G5.g5_u7_phi_c, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!
+```
+  Reading: PASS (exit 0 and `Your solution is okay!`) — the comparator ACCEPTS the prelude arrangement (Challenge on
+  `G5.Ring.Challenge`, Solution on `G5.Ring.Solution` + `G5.WordLevel.Solution`). The landrun is the macOS shim, NOT sandboxed.
+- Final build: **B6** (above) — exit 0, wall 34 s; warnings: style linters only (flexible `simp`, `<;>` sequencing in the
+  two family/power lemmas) plus U3's two unused `hw`; no `sorry`.
+- Checks by script (`L-U7-proofs/assemble.py`, run at every assembly): the `HeckeGrp`/`IsNF` block (506 bytes, `open G5 ZPhi`
+  through its `end G5`) is a byte substring of both files; each theorem's docstring + signature up to `:=` is a byte
+  substring of both (445 / 486 / 421 / 529 / 378 / 453 bytes); no `sorry` / `admit` / `native_decide` / `axiom`; 0 lines over
+  100 code points.
+- Digests at close: `Challenge.lean` `689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae` (unchanged, untouched); `Solution.lean` `9433821971f61be83142b25f8045c2ed1c280852dc2b80b5b452e067805454eb` (     836 lines, 67 private
+  helpers `g5_u7_aux_*`, inside the second `namespace G5`).
+
+## Rows (proofs phase)
+| row | theorem | status | proof |
+|---|---|---|---|
+| G5-U7-NF | `G5.g5_u7_nf` | PROVED | `Subgroup.closure_induction_right`: every element's matrix is `E · W w · R^d`, `E ∈ {±I, ±S}` (right multiplication by `S`, `R`, `−I` keeps the form; `T = −(R S)`, `T⁻¹ = −(S R⁴)`, `S⁻¹ = −S`, each by `decide`); conjugate by `R^d`; strong induction on the syllable count for `R^d W w` and `R^d S W w` together: exponents mod 5 by `R⁵ = −I`, an exponent sum `≡ 0` turns `R^d W (a :: w)` into `S W w`, and `S W (w ++ [a])` conjugates by `S` then `R^a` to `−R^a W w` |
+| G5-U7-INTa | `G5.g5_u7_int_a` | PROVED | from NF; the trace is a conjugation invariant (`Matrix.trace_mul_cycle`); `±I` → `±2`, `±S` → `0`, `±R^a` has `y ≠ 0` (`decide`, four cases); `±W w`: `tr W = ±t` (U1's `g5_u1_trace`), `y = 0` forces a constant word with `x = 2` (U3's `g5_u3_a_y_eq_zero`) |
+| G5-U7-INTb | `G5.g5_u7_int_b` | PROVED | witnesses `S` (trace 0), `I` (2), `S · S = −I` (−2) |
+| G5-PHIa | `G5.g5_u7_phi_a` | PROVED | ⇐: rotation invariance of `ntr` (`Matrix.trace_mul_comm`) and the two family computations. ⇒ (the direct path-weight route, U3's domination device): no `2`/`3` → the all-`0` path has weight 1, `x ≥ 1`; two of them → rotate one to the front, the all-`0` path carries `φ s φ t`, `x ≥ 1`; exactly one `2` with a `4` (one `3` with a `1`) → the path `0→1…1→0` (`1→0…0→1`) carries `φ s φ t`; otherwise the word is `1^i 2 1^j` or `4^i 3 4^j`, an explicit rotation of the family |
+| G5-PHIb | `G5.g5_u7_phi_b` | PROVED | PHIa ⇒, rotation invariance, `t(1^n 2) = t(3 4^n) = (n + 2) φ` (`bp(1^n) = [[1, nφ],[0, 1]]`, `bp(4^n) = [[1, 0],[nφ, 1]]` by induction) |
+| G5-PHIc | `G5.g5_u7_phi_c` | PROVED | the witness `1^{k−1} 2` and the family computation |
+
+No `STATEMENT-CHANGE-NEEDED`. Route note (PHIa ⇒): the record's path-weight route (SH-P2-1 Remark), not the f₁-count of
+PROOF-TA-1 Lemma 1. `Challenge.lean`, `comparator.json`, `formalization.yaml`, `G5.lean` untouched; no git run.
+Closed: 2026-10-30T12:04:19Z.

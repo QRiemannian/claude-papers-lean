@@ -53,3 +53,11 @@ automation:
 statement_sha256_draft: "689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae"
 statement_sha256: "689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae"
 v2_signed: "2026-10-30T10:56:50Z"
+proofs_phase:
+  closed: "2026-10-30T12:04:19Z"
+  solution_module: "G5.Group.Solution"
+  solution_sha256: "9433821971f61be83142b25f8045c2ed1c280852dc2b80b5b452e067805454eb"
+  theorems_proved: 6
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + G5.Ring.Solution + G5.WordLevel.Solution (the proved preludes; U3's g5_u3_a_y_eq_zero for INTa), not G5.Group.Challenge; the comparator accepted the arrangement 12:03:55Z"
+  note: "67 private helpers g5_u7_aux_*, a few of them private defs (the units S and T, three predicates) — no frozen name redefined; V3 reads them"
