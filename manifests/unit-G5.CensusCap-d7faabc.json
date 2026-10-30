@@ -1,0 +1,227 @@
+{
+  "clock": "2026-10-30T19:12:46Z",
+  "commit": "d7faabc",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.82,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.82s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 18 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.CensusCap.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.CensusCap.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_lt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "G5.g5_u13_cap_b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_not_lt._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_not_lt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_le_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_ab5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_v_phi",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_not_lt._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_v_inj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_v._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_v._proof_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_v._proof_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_v._proof_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_lt_of",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "_private.G5.CensusCap.Solution.0.G5.g5_u13_aux_v_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "G5.g5_u13_cap_b._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "G5.g5_u13_cap_a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.CensusCap.Solution",
+      "theorem": "G5.g5_u13_cap_b_conv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/CensusCap",
+      "sha256": "d10844cbc16f2b02706d4f35d5d9d232d4809812e9ecbdb6265f1339387b067e",
+      "signed": "d10844cbc16f2b02706d4f35d5d9d232d4809812e9ecbdb6265f1339387b067e"
+    }
+  ],
+  "file_hashes": {
+    "./G5/CensusCap/Challenge.lean": "d10844cbc16f2b02706d4f35d5d9d232d4809812e9ecbdb6265f1339387b067e",
+    "./G5/CensusCap/Solution.lean": "da8213ea97d825f222bb8e8741eda69b3474bd8d51e3deb9ab3fe9f330fe0e97",
+    "./G5/CensusCap/comparator.json": "e532f119891bc071989821c7498f3b15deb7efd37d5675f5ebc88b4aa44fc3a9",
+    "./G5/CensusCap/formalization.yaml": "925b8a0da08178f47fd9a0636167147910b32148114186e7b7e49bdd2bdd2aa9"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/CensusCap",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
