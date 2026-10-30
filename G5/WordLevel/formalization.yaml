@@ -38,3 +38,10 @@ automation:
 statement_sha256_draft: "69533d2d17c4ed2dc569c1de6ddb5e92e42b85099901370bb946ea0ed7a13735"
 statement_sha256: "69533d2d17c4ed2dc569c1de6ddb5e92e42b85099901370bb946ea0ed7a13735"
 v2_signed: "2026-10-30T10:39:11Z"
+proofs_phase:
+  closed: "2026-10-30T11:14:39Z"
+  solution_module: "G5.WordLevel.Solution"
+  solution_sha256: "1666d0f4eb56aeb7f5fa011cef9b480b7c7118fc1192bbd6256bbe024e080912"
+  theorems_proved: 4
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + G5.Ring.Solution (the proved prelude), not G5.WordLevel.Challenge; the comparator accepted the arrangement 11:08:39Z"

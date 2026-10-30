@@ -1,0 +1,758 @@
+{
+  "clock": "2026-10-30T11:08:49Z",
+  "commit": "d4e80d0",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 7.12,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 7.12s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 88 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.Congruence.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.Congruence.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_red_add",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_subE4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chkDo4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_rmul.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_rmulC.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_nd4",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.H4._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_subO4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_ncard",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_mem4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m3a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_hmod",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_trp.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_wv3._proof_1_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_ncard._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_word4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chkC4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_clO4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_nd4._proof_1_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m3b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_enc_inj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_hdiv",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_wv4",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_enc.eq_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4d._proof_1_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m3b._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4d._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_inv",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_len3._proof_1_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_hid4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_subE4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_foldC.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_len4",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_ws4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_red.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_len3",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_mem3._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_nd3",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chkDe4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_enc_dec_fold",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_pmul.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chkB4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chkDo4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4d._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4d._proof_1_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m3b._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_cl3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chk3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_ws3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_clO4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_emod",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.H4._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_dec_enc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_wv4._proof_1_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_hdiv._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_clE4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_trace",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_ws4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_len4._proof_1_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_ws3._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_cl3._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chk3._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_map_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_subO4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_mem4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_hg3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_dec.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_rmul._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_clE4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_wv3",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_hg4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_mem3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_hid3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_word3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_bridge",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chkB4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_inv._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chkC4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_inv._proof_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_red_mul",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "ZPhi.nrm.eq_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_chkDe4._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "_private.G5.Congruence.Solution.0.G5.g5_u6_aux_nd3._proof_1_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Congruence.Solution",
+      "theorem": "G5.g5_u6_m4c._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/Congruence",
+      "sha256": "d576229b23afb62ac8beb64cd32f0ca753d5564ca4839eab90b55cf769aac532",
+      "signed": "d576229b23afb62ac8beb64cd32f0ca753d5564ca4839eab90b55cf769aac532"
+    }
+  ],
+  "file_hashes": {
+    "./G5/Congruence/Challenge.lean": "d576229b23afb62ac8beb64cd32f0ca753d5564ca4839eab90b55cf769aac532",
+    "./G5/Congruence/Solution.lean": "5165d2c1eccbfcd9bb84d5021e3287e15a53d9238a4a01f9634dbdd3eb12c1f4",
+    "./G5/Congruence/comparator.json": "27e71eb55dc9db596d40c0a12bb5eec57d0f09704a746f3c5806702a192b1999",
+    "./G5/Congruence/formalization.yaml": "d0f4a0f617ccba8ca657fd0e28ee7932a9900e73a6e490db9e3868cc05f26420"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/Congruence",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}

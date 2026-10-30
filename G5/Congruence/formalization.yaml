@@ -63,3 +63,4 @@ proofs_phase:
   theorems_proved: 6
   axioms: ["propext", "Classical.choice", "Quot.sound"]
   prelude_rule: "Solution imports Mathlib + G5.Ring.Solution (the proved prelude), not G5.Congruence.Challenge; the comparator accepted the arrangement 11:02:08Z"
+proofs_phase_gate: "K PASS manifests/unit-G5.Congruence-d4e80d0.json (seat) + unit-G5.Congruence-dcc6af3.json (orchestrator re-run); V3 CLEAN specs/_V3-U6.md"
