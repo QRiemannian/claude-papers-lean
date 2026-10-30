@@ -1,0 +1,14 @@
+{
+    "challenge_module": "G5.Group.Challenge",
+    "solution_module": "G5.Group.Solution",
+    "theorem_names": [
+        "G5.g5_u7_nf",
+        "G5.g5_u7_int_a",
+        "G5.g5_u7_int_b",
+        "G5.g5_u7_phi_a",
+        "G5.g5_u7_phi_b",
+        "G5.g5_u7_phi_c"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

@@ -1,0 +1,53 @@
+# Unit U7 (G5/Group) — per-unit record, Claude Paper No. 1
+unit: "U7"
+module_path: "G5/Group"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "e0df0f356a20456e8b9a9cfdd816c41ee3d010642acc684a43bc4193c36733bf"
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition current at 2026-10-30T10:37:22Z, §4 Errata included; the specs' headers carry 0b277844, the brief named 3a9e5400)"
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  unit: "U1"
+  module: "G5.Ring.Challenge"
+  challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+  note: "the frozen U1 prelude (G5/Ring/formalization.yaml statement_sha256, V2-U1); imported, not restated"
+definitions:
+  - name: "G5.HeckeGrp"
+    note: "Subgroup M2ˣ := Subgroup.closure {u : M2ˣ | (u : M2) = S ∨ (u : M2) = T} — the group ⟨S, T⟩ (G5-U7-NF §5)"
+  - name: "G5.IsNF"
+    note: "M2 → Prop: ±I, ±S, ±R^a (1 ≤ a ≤ 4), ±W w (IsWord w) — the four syllable forms (G5-U7-NF §5)"
+definitions_note: "U7 defines HeckeGrp and IsNF only; every other name (ZPhi, phiCoeff, .x, M2, S, T, R, IsWord, W, ntr) is U1's"
+rows:
+  - row: "G5-U7-NF"
+    theorems: ["G5.g5_u7_nf"]
+    status: "STATED"
+    note: "AM-1-second-head §4 'Scope' (l. 65–72) and the Corollary (l. 263–267); every g ∈ ⟨S, T⟩ has a conjugate in ⟨S, T⟩ in one of the four forms; carries the definitions block"
+  - row: "G5-U7-INTa"
+    theorems: ["G5.g5_u7_int_a"]
+    status: "STATED"
+    note: "split half a of G5-U7-INT (V1-SPLIT-OK); LEDGER row AM-1 (l. 12), AM-1-second-head Corollary (l. 263–267) and §4 (l. 73–77); φ-coefficient 0 ⟹ trace ∈ {0, 2, −2}"
+  - row: "G5-U7-INTb"
+    theorems: ["G5.g5_u7_int_b"]
+    status: "STATED"
+    note: "split half b of G5-U7-INT (V1-SPLIT-OK); AM-1-second-head Corollary, last sentence (l. 267); 0, 2, −2 each realized in ⟨S, T⟩"
+  - row: "G5-PHIa"
+    theorems: ["G5.g5_u7_phi_a"]
+    status: "STATED"
+    note: "split half a of G5-PHI (V1-SPLIT-OK); SH-P2-1 §1 Remark (l. 120–128), LEDGER row R-4 (l. 37); x = 0 iff a rotation of (1^{k−1}, 2) or (3, 4^{k−1})"
+  - row: "G5-PHIb"
+    theorems: ["G5.g5_u7_phi_b"]
+    status: "STATED"
+    note: "split half b of G5-PHI (V1-SPLIT-OK); SH-P2-1 §1 Remark step 6 (l. 126) and l. 128, LEDGER row R-4 (l. 37); x = 0 ⟹ t = (k + 1)φ"
+  - row: "G5-PHIc"
+    theorems: ["G5.g5_u7_phi_c"]
+    status: "STATED"
+    note: "split half c of G5-PHI (V1-SPLIT-OK); RPA transcript l. 37, SH-P2-1 §1 'Realization' (l. 110); every k ≥ 1 realizes (k + 1)φ"
+rows_not_stated:
+  - row: "(V1-U7 option (c)) the printed Corollary's stronger containment"
+    note: "not in this unit by the orchestrator's call; it enters, if at all, as a new row after this freeze"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae"

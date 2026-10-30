@@ -9,3 +9,4 @@ import G5.Congruence.Challenge
 import G5.Sector.Challenge
 import G5.Ladder.Challenge
 import G5.ModTwo.Challenge
+import G5.Group.Challenge
