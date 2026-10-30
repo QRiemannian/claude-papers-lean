@@ -1,0 +1,1106 @@
+{
+  "clock": "2026-10-30T11:43:15Z",
+  "commit": "74216e3",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.69,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.69s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 129 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.Sector.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.Sector.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z.match_1.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_sorted",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.P.match_1.eq_4",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O.eq_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.eq_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_single",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bb._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.match_1.eq_2",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bb._proof_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q_14",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_both",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z_14",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_23._proof_1_10",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.match_1.eq_5",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum._proof_1_9",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.eq_5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q_eps",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_23._proof_1_9",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bc._proof_1_4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_fb._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_mono",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O.eq_5",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.P.match_1.eq_2",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_coef._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_coef._proof_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_ev0_23",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "ZPhi.rabs.eq_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_D_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bb_tr",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_rot_14",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.P.eq_4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bb._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_xy_1414._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.match_1.eq_4",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_T_ev0",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_ep",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O.eq_4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.eq_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.P.match_1.eq_3",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_lit",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum2._proof_1_9",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_1414",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_rot_23",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_single._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_single._proof_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_fc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q_ev1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_ntr_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_T_ev1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.P.eq_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bc._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.P.match_1.eq_5",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bc._proof_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_ev0_le2._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_xy_1414",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O.eq_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_count14._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_tr14",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.eq_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_count14._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bb._proof_1_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_mono._abel_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z.match_1.eq_3",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_fb._proof_1_4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_dich",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z.eq_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_ev0_le2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_phi_pow",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.match_1.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_single._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q_ev0",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_eps.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_ev0_14",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_23",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bb._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_coef",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z.match_1.eq_2",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_xy_le2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum._proof_1_7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_23._proof_1_7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bc_id",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_mul2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_T.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "ZPhi.conj.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_P4_pow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_xy_le2._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_fb._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_em",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_fb._proof_1_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_fa",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.P.match_1.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_ba",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_fb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_natCast",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum._proof_1_8",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z_cases",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_23._proof_1_8",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bc_att",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_map_prod",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.P.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_ntr_rotate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_map_trace",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.P.eq_5",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_count14",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_both'",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_14",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_P1_pow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum2._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_ntr_rot",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z.eq_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum2._proof_1_8",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_lead4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.P.eq_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_O_sum2._proof_1_10",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_fb._proof_1_5",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "ZPhi.phi.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "G5.g5_u4_bb._proof_1_5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_dich._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Q.match_1.eq_3",
+      "axioms": []
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_Z.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Sector.Solution",
+      "theorem": "_private.G5.Sector.Solution.0.G5.g5_u4_aux_14",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/Sector",
+      "sha256": "df5fdf79df09a7dd097a8d3102c96b644458d2fcde98856b16de002cf910996f",
+      "signed": "df5fdf79df09a7dd097a8d3102c96b644458d2fcde98856b16de002cf910996f"
+    }
+  ],
+  "file_hashes": {
+    "./G5/Sector/Challenge.lean": "df5fdf79df09a7dd097a8d3102c96b644458d2fcde98856b16de002cf910996f",
+    "./G5/Sector/Solution.lean": "7f454c144e666ef13329ffcd2ba2cb895f07a6161ba9b5f60dcc0842873418c1",
+    "./G5/Sector/comparator.json": "4c7ca33f279ac099247f0581e322b3dacf2760eb6ce867ed7f8cdedda88a7c1b",
+    "./G5/Sector/formalization.yaml": "5f073641f1c7d4f81566d8410680dc9a1365b088ba68324dc19e55d23c668dd4"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/Sector",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
