@@ -1,0 +1,711 @@
+{
+  "clock": "2026-10-30T11:48:46Z",
+  "commit": "bfb6965",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.68,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.68s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 78 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.Ladder.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.Ladder.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_xA._proof_1_10",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_v_inj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_14",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_open_nc",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_natCast",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_a_ge3._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_mono_b_rot._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_open_mem",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_one_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_v._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_del._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_v._proof_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_b_ge3._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_v_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.P.eq_4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_xB._proof_1_10",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_xA",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.P.match_1.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_mono_b_step",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_xB",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_v_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_geI_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_nonneg_add._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_mono_prod",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_nonneg_add",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_four",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_mono_b_ge1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_ab5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.P.eq_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_a_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_ntr_B",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_bp_nil",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_open",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_uniq._proof_1_11",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_ntr_rot",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_uniq._proof_1_6",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_le_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.P.match_1.eq_4",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_bp_rep1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_xB._proof_1_9",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_b_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_antisymm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_nonneg_add._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_uniq._simp_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_bp_append",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_a_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_x0",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_base3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.P.match_1.eq_2",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_xB._proof_1_8",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_mono_b_rot",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_a_ge3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_b_ge3._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.P.match_1.eq_3",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_nonneg_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_bp_single",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_open_pref",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.P.eq_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_lad",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_uniq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.P.eq_5",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_ntr_rotate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_b_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_xA._proof_1_8",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_bp_cons",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_bp_rep4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_v._proof_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.P.match_1.eq_5",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_ge1_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_v._proof_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_v_phi",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_del",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_ntr_A",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_lad_b_ge3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.P.eq_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "ZPhi.phi.eq_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "G5.g5_u5_mono_a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ladder.Solution",
+      "theorem": "_private.G5.Ladder.Solution.0.G5.g5_u5_aux_xA._proof_1_9",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/Ladder",
+      "sha256": "ea6b4aedd3021843c9399543ebbac30b625aeae4cdd18a0b9042b6b33513d11a",
+      "signed": "ea6b4aedd3021843c9399543ebbac30b625aeae4cdd18a0b9042b6b33513d11a"
+    }
+  ],
+  "file_hashes": {
+    "./G5/Ladder/Challenge.lean": "ea6b4aedd3021843c9399543ebbac30b625aeae4cdd18a0b9042b6b33513d11a",
+    "./G5/Ladder/Solution.lean": "7b4326ca615910ae87b4861175f81d942e8d3e784d2664263d7d67369b58a141",
+    "./G5/Ladder/comparator.json": "faeebcf03337f874b9afb337677aa5049c91baefa941671b79f6455807347a81",
+    "./G5/Ladder/formalization.yaml": "071d1ff01dc5a09c58c0794d9d250569fbdaf21dcd8ad1feb199db21fae4f5d7"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/Ladder",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
