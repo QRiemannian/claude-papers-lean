@@ -71,3 +71,5 @@ theorem g5_u1_ras (a : ℕ) (ha : 1 ≤ a ∧ a ≤ 4) : R ^ a * S = -P a := by 
 SPEC-DRAFT 2026-10-30T09:59:55Z
 
 V1: V1-GREEN 2026-10-30T10:10:55Z — AM-1-second-head l. 22 / l. 30 / l. 32, AM l. 28 / l. 32 and LEDGER l. 12 quoted exactly. `P` is DEFINED by the printed blocks, row-major as the record prints them (P₂ = [[φ, φ], [1, φ]] = `!![phi, phi; 1, phi]`, P₃ = [[φ, 1], [φ, φ]] = `!![phi, 1; phi, phi]`, P₁, P₄ likewise), so the record's definition P_a := −R^aS becomes this identity and has content; domain a ∈ {1, …, 4}, the record's a = 1..4; equality in M2, literal lift. Independent pair arithmetic: R^aS = −P_a for all four. The ledger's "entrywise in {0, 1, φ}" rightly left out (its ℕ[φ] content is GEa). Parse: 0 Lean line(s) over 100 code points
+
+V2: V2-GREEN 2026-10-30T10:23:30Z — `R ^ a * S = -P a` under 1 ≤ a ≤ 4 is AM-1-second-head l. 22 with P the printed blocks (l. 30), so the identity has content; byte-identical in Challenge.lean inside `namespace G5`.
