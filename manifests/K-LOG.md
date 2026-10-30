@@ -86,3 +86,21 @@ Build completed successfully (8707 jobs).
 [PASS] retired_names — 0 hits for the four retired names
 manifest: manifests/unit-G5.Sector-74216e3.json · verdict PASS
 ```
+
+## K-U5 · G5/Ladder · 2026-10-30T11:45:12Z → 2026-10-30T11:47:04Z · exit 0
+
+`bash tools/check.sh --unit G5/Ladder`
+
+```
+check.sh @ 2026-10-30T11:45:12Z · commit 5858377 · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/Ladder
+warning: G5/Ladder/Challenge.lean:111:8: declaration uses `sorry`
+Build completed successfully (8707 jobs).
+Build completed successfully (8707 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 6.1s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 78 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.Ladder-5858377.json · verdict PASS
+```
