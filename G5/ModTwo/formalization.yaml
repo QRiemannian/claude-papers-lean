@@ -1,0 +1,62 @@
+# Unit U2 (G5/ModTwo) — per-unit record, Claude Paper No. 1
+unit: "U2"
+module_path: "G5/ModTwo"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "e0df0f356a20456e8b9a9cfdd816c41ee3d010642acc684a43bc4193c36733bf"
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition current at 2026-10-30T10:37:37Z, §4 Errata included; re-read unchanged at 2026-10-30T10:50:48Z; the specs' headers carry 0b277844, V1-U2 read 3a9e5400 and 51324441; the §4 entries between touch no U2 statement — the 10:29:26Z entry moves the group-level main clause of G5-L2 to a new unit U8 and leaves the word-level rows as they are)"
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  unit: "U1"
+  module: "G5.Ring.Challenge"
+  challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+  note: "the frozen U1 prelude (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z; shasum of G5/Ring/Challenge.lean at 2026-10-30T10:38:30Z and 10:50:48Z matches); imported, not restated"
+definitions:
+  - name: "G5.F4"
+    note: "𝔽₄ = ℤ[φ]/2 as pairs ⟨x, y⟩ with x y : ZMod 2, the ℤ[φ] product read mod 2 (φ̄² = φ̄ + 1); @[ext], deriving DecidableEq; CommRing instance G5.F4.instCommRing (axioms proved in the block, no sorry) (G5-U2-MOD2)"
+  - name: "G5.red2"
+    note: "x + yφ ↦ x̄ + ȳφ̄, Int.cast into ZMod 2 on each coordinate (G5-U2-MOD2)"
+  - name: "G5.F4M"
+    note: "Matrix (Fin 2) (Fin 2) F4 (G5-U2-MOD2)"
+  - name: "G5.red2M"
+    note: "entrywise reduction A.map red2 (G5-U2-MOD2)"
+  - name: "G5.Sbar"
+    note: "red2M S (G5-U2-MOD2)"
+  - name: "G5.Tbar"
+    note: "red2M T (G5-U2-MOD2)"
+  - name: "G5.Rbar"
+    note: "red2M R, R = T * S (G5-U2-MOD2)"
+  - name: "G5.D5bar"
+    note: "the Finset {R̄^j, R̄^j S̄ : j < 5}, AM l. 124's {r^j, r^j s} (G5-U2-MOD2)"
+definitions_note: "the MOD2 block is carried whole as the probe places it (its own namespace G5 … end G5, then open G5 ZPhi), after the file's open G5 ZPhi, which the probe had in effect at the same point; the nine theorems sit in namespace G5; every other name (ZPhi, M2, S, T, R, W, IsWord) is U1's"
+rows:
+  - row: "G5-U2-MOD2"
+    theorems: []
+    status: "STATED"
+    note: "the unit's definitions block, byte for byte from the spec's §5; no theorem"
+  - row: "G5-U2-HOM"
+    theorems: ["G5.g5_u2_f4", "G5.g5_u2_red_hom", "G5.g5_u2_red_eq_zero"]
+    status: "STATED"
+    note: "cut of the brief's MOD2 id (V1-SPLIT-OK as a cut); AM l. 178, l. 188; F4 a field of four elements, red2 a ring map, kernel 2ℤ[φ]"
+  - row: "G5-U2-D5"
+    theorems: ["G5.g5_u2_d5_gens", "G5.g5_u2_d5_image"]
+    status: "STATED"
+    note: "cut (V1-SPLIT-OK as a cut); AM l. 178, l. 124, l. 99, l. 83, LEDGER row L-1 l. 7; the dihedral relations and the submonoid closure of {S̄, T̄} = D5bar, ten elements"
+  - row: "G5-U2-TRD5"
+    theorems: ["G5.g5_u2_d5_trace"]
+    status: "STATED"
+    note: "cut (V1-SPLIT-OK as a cut); AM gap 3 l. 188, l. 178, l. 181; no trace 1 on D5bar, trace 0 on each R̄^j S̄"
+  - row: "G5-L1"
+    theorems: ["G5.g5_u2_l1"]
+    status: "STATED"
+    note: "LEDGER row L-1 l. 7; AM l. 177, l. 178, l. 114; odd-length word ⟹ both coordinates of tr W even"
+  - row: "G5-L2"
+    theorems: ["G5.g5_u2_l2", "G5.g5_u2_l2_int"]
+    status: "STATED"
+    note: "word-level leg (STATEMENTS.md §2 note 4); LEDGER row L-2 l. 8; AM l. 180, l. 181, l. 114; the group-level main clause is unit U8's (STATEMENTS.md §4, 2026-10-30T10:29:26Z)"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "c342ab92ba8ef07e5a9fba82422968b9de4410974583210dc1dcded53354c78c"

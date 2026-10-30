@@ -8,3 +8,4 @@ import G5.WordLevel.Challenge
 import G5.Congruence.Challenge
 import G5.Sector.Challenge
 import G5.Ladder.Challenge
+import G5.ModTwo.Challenge
