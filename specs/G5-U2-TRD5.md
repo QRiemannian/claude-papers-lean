@@ -58,3 +58,5 @@ theorem g5_u2_d5_trace :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T10:16:34Z
+
+V1: V1-GREEN 2026-10-30T10:26:54Z — the three §2 quotes match AM l. 188, 178 and 181 verbatim. (i) "every element of the closure of {S̄, R̄} has trace ≠ 1" stated over `D5bar`: the monoid closure of {S̄, R̄} equals that of {S̄, T̄} equals `D5bar` (computed; the equivalence on the lane is G5-U2-D5's theorem). (ii) "trace 0 whenever the S-count is odd" read as trace 0 on the reflection half {R̄^j S̄}: this is the record's mathematical content at l. 178 ("W̄ lies outside ⟨R̄⟩ … tr M = 0"); the grading itself (odd S-count ⟺ the reflection half; checked on every R̄/S̄ word to length 8) is a step of the L-1 proof, declared out of the row in G5-U2-D5 §6, and the claim it feeds is the stated row G5-L1 — so nothing the record asserts is dropped from the lane. Values: traces on `D5bar` are 0 (the identity and the five reflections), φ̄ and 1 + φ̄ (= ω, ω²) on the rotations, never 1 — AM l. 181's "0, 0, ω^{±1}". Parse: 0 Lean line(s) over 100 code points

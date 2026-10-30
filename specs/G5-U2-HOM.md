@@ -65,3 +65,5 @@ theorem g5_u2_red_eq_zero (t : ZPhi) : red2 t = 0 ↔ 2 ∣ t.x ∧ 2 ∣ t.y :=
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T10:16:34Z
+
+V1: V1-GREEN 2026-10-30T10:26:54Z — the three §2 quotes match AM l. 178 (twice) and l. 188 verbatim. The three theorems are no stronger than the record: (i) `IsField F4 ∧ Nat.card F4 = 4` is what the record's "the inert prime 2" (ℤ[φ]/2 a field) and its name 𝔽₄ for ℤ[φ]/2 (gap 3) assert, made explicit; `Nat.card … = 4` is non-vacuous (an infinite type has `Nat.card` 0); (ii) a ring map with underlying function `red2` — the clause itself; (iii) kernel = 2ℤ[φ], the record's "≡ 0 mod 2, i.e. x ≡ y ≡ 0 mod 2" (l. 178). Not weaker: the record's second clause "induces a homomorphism SL(2, ℤ[φ]) → SL(2, 𝔽₄)" follows from (ii) through `RingHom.mapMatrix` (a mathlib consequence, not an independent claim), and "SL(2, 𝔽₄) = PSL(2, 𝔽₄)" is a characteristic-2 remark no lane statement reads; both omissions are declared in §3/§6. Arithmetic: `red2` additive and multiplicative and its kernel = both coordinates even, on every pair in [−4, 4]². Parse: 0 Lean line(s) over 100 code points
