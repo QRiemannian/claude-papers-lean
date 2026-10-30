@@ -108,3 +108,5 @@ theorem g5_u3_a_nonneg (w : List ℕ) (hw : IsWord w) : nonneg (ntr w) := by sor
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T10:14:20Z
+
+V1: V1-GREEN 2026-10-30T10:20:20Z — all eleven §2 cites match their source lines verbatim (script), and the record at the locus (AM-1-second-head l. 257–259, AM l. 128, LEDGER l. 12, PHASE-2-DEFINITIONS l. 9) says "x, y ≥ 0 for every word, k ≥ 1". `nonneg (ntr w)` together with U1's frozen `g5_u1_trace` is that literal sentence: tr W = (−1)^k t because ((−1)^k)² = 1, so the record's (x, y) are t's coordinates. On its own it is the second head's "cleanest form" (l. 38), the core that STATEMENTS.md row G5-A's Lean notes name. I do not freeze the literal form `nonneg ((-1) ^ w.length * (W w).trace)`: it is a one-step rewrite by TRACE, and freezing both forms would add nothing. Conventions confirmed: t is U1's `ntr` (STATEMENTS.md §0), `nonneg` is gap 6, the domain is IsWord (k ≥ 1, the record's population), and it is a statement about words, not classes. Own arithmetic, independent of both trees: 0 violations on all 87,380 words with k ≤ 8. Parse: 0 Lean line(s) over 100 code points

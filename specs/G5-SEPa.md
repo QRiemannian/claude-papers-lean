@@ -102,3 +102,5 @@ theorem g5_u3_sep_lin (w : List ℕ) (hw : IsWord w) (hy : 1 ≤ (ntr w).y) :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T10:14:20Z
+
+V1: V1-GREEN 2026-10-30T10:20:20Z — all ten §2 cites match their source lines verbatim. The linear clause is part of the record's STATEMENT, not only a derivation step. It is the first clause of STATEMENTS.md row G5-SEP itself ("t − t^σ = y√5 ≥ √5; the distance …"), of the ledger's second-head note (l. 26), and of TA's printed sentence (l. 49). √5 = 2φ − 1 = ⟨−1, 2⟩ is the record's own identification (SH-P2-1 l. 198). Its real value is √5 exactly, so ≥ in U1's real order (the identity embedding, φ ≈ 1.618) is the record's "≥ √5". Hypothesis y ≥ 1: STATEMENTS.md's own Lean notes put y ≥ 1 in hypothesis position, and it is stated, not silently assumed. G5-A is not re-proved. With Aa and Ab, the record's "every hyperbolic class" is covered: a hyperbolic word is not constant (Ab gives t = 2 on constant words), so y ≠ 0 (Ab) and y ≥ 1 (Aa). Clause (i) holds for every t, and `hw` and, in (i), `hy` are unused; that is harmless. Own arithmetic: 0 violations on k ≤ 8. Split SEP → SEPa/SEPb: V1-SPLIT-OK. Parse: 0 Lean line(s) over 100 code points
