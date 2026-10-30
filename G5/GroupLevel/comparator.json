@@ -1,0 +1,12 @@
+{
+    "challenge_module": "G5.GroupLevel.Challenge",
+    "solution_module": "G5.GroupLevel.Solution",
+    "theorem_names": [
+        "G5.g5_u8_ell",
+        "G5.g5_u8_l2g",
+        "G5.g5_u8_m4g",
+        "G5.g5_u8_m3g"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

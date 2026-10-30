@@ -1,0 +1,53 @@
+# Unit U8 (G5/GroupLevel) — per-unit record, Claude Paper No. 1
+unit: "U8"
+module_path: "G5/GroupLevel"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "e0df0f356a20456e8b9a9cfdd816c41ee3d010642acc684a43bc4193c36733bf"
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition current at 2026-10-30T11:35:41Z, §4 Errata included; re-read at 11:40:14Z, unchanged; the four specs' headers and §5 docstrings carry the same e0df0f35)"
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  - unit: "U1"
+    module: "G5.Ring.Challenge"
+    challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+    note: "the frozen U1 prelude (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z); shasum of G5/Ring/Challenge.lean at 2026-10-30T11:40:14Z matches; imported, not restated"
+  - unit: "U7"
+    module: "G5.Group.Challenge"
+    challenge_sha256: "689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae"
+    note: "frozen (G5/Group/formalization.yaml statement_sha256, V2-U7 signed 2026-10-30T10:56:50Z); shasum at 2026-10-30T11:40:14Z matches; supplies HeckeGrp; imported, not restated"
+  - unit: "U2"
+    module: "G5.ModTwo.Challenge"
+    challenge_sha256: "c342ab92ba8ef07e5a9fba82422968b9de4410974583210dc1dcded53354c78c"
+    note: "frozen (G5/ModTwo/formalization.yaml statement_sha256); shasum at 2026-10-30T11:40:14Z matches; imported, not restated"
+  - unit: "U6"
+    module: "G5.Congruence.Challenge"
+    challenge_sha256: "d576229b23afb62ac8beb64cd32f0ca753d5564ca4839eab90b55cf769aac532"
+    note: "frozen (G5/Congruence/formalization.yaml statement_sha256, V2-U6 signed 2026-10-30T10:40:29Z); shasum at 2026-10-30T11:40:14Z matches; supplies ZPhi.red4 and H4; imported, not restated"
+definitions: []
+definitions_note: "U8 defines nothing; ZPhi and its fields, M2, S, R are U1's, HeckeGrp is U7's, ZPhi.red4 and H4 are U6's"
+rows:
+  - row: "G5-U8-ELL"
+    theorems: ["G5.g5_u8_ell"]
+    status: "STATED"
+    note: "candidates/checks/AM-1-second-head.md §1 table (l. 21, l. 26) and §4 (l. 73–76); tr I = 2, tr S = 0, tr R^a = φ, φ − 1, 1 − φ, −φ (a = 1..4) as pair values; V1-GREEN re-signed 2026-10-30T11:34:32Z on the struck spec (g5_u8_ell_inv struck, not stated)"
+  - row: "G5-U8-L2G"
+    theorems: ["G5.g5_u8_l2g"]
+    status: "STATED"
+    note: "LEDGER row L-2 (l. 8); AM §4 Lemma (L-2) (l. 180, l. 181); AM §3.2 (l. 130); AM-1-second-head §4 (l. 72); no g ∈ HeckeGrp has trace x + yφ with x odd and y even"
+  - row: "G5-U8-M4G"
+    theorems: ["G5.g5_u8_m4g"]
+    status: "STATED"
+    note: "DO §3.2 (l. 118–120) and §10 D-2 (l. 246); AM §2.3 (l. 95); PHASE-2-DEFINITIONS §1 (l. 15); red4 of the trace of every g ∈ HeckeGrp lies in H4, inclusion only"
+  - row: "G5-U8-M3G"
+    theorems: ["G5.g5_u8_m3g"]
+    status: "STATED"
+    note: "LEDGER row AM-5 (l. 17); AM §2.3 (l. 95), §2.4 (l. 116); DO §3.2 (l. 116, l. 121) and §10 D-2 (l. 246); no g ∈ HeckeGrp has trace with x ≡ y ≢ 0 (mod 3)"
+rows_not_stated:
+  - row: "G5-U8-ELL (second theorem g5_u8_ell_inv)"
+    note: "struck at V1-U8's word (2026-10-30T11:28:12Z): the identity φ · (φ − 1) = 1 is one of V3-U1's uncarried statements, left to the wall's scope; the charter routes only the traces to U8; no statement"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "bf7316f7eae415f48781199ebd28706dfc940633d484ca5ef2aae997dcb08ccd"
