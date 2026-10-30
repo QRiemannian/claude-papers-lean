@@ -1,0 +1,262 @@
+{
+  "clock": "2026-10-30T13:56:41Z",
+  "commit": "a970e60",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.61,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.61s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 22 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.SectorGroup.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.SectorGroup.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_v_phi",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_rabs_nonneg._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_rabs_W",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_v._proof_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_v._proof_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "G5.g5_u9_bg_a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_ab5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_tr_conj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_rabs_neg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_le_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_word._simp_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_v_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_rn",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_rabs_nonneg",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "G5.g5_u9_bg_b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_word",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_hyp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_v._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_v._proof_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_main",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_word._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.SectorGroup.Solution",
+      "theorem": "_private.G5.SectorGroup.Solution.0.G5.g5_u9_aux_v_inj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/SectorGroup",
+      "sha256": "c6a43405c82a8b43218854dc605d0b9952332b82681dfb03a9008e6e3195d6a8",
+      "signed": "c6a43405c82a8b43218854dc605d0b9952332b82681dfb03a9008e6e3195d6a8"
+    }
+  ],
+  "file_hashes": {
+    "./G5/SectorGroup/Challenge.lean": "c6a43405c82a8b43218854dc605d0b9952332b82681dfb03a9008e6e3195d6a8",
+    "./G5/SectorGroup/Solution.lean": "ad41084f17758cf26774b597142736d6cfa7aa5429166a842653619983535c79",
+    "./G5/SectorGroup/comparator.json": "8f81a8d76078973811e03475af011f3c4091f603cde75d0009e69c7bca74e37d",
+    "./G5/SectorGroup/formalization.yaml": "cc913714a2a2c977af67692221a03823bed4f62331cafc60fcc459f02511aa7b"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/SectorGroup",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
