@@ -1,0 +1,10 @@
+{
+    "challenge_module": "G5.EvenK.Challenge",
+    "solution_module": "G5.EvenK.Solution",
+    "theorem_names": [
+        "G5.g5_u12_evk_a",
+        "G5.g5_u12_evk_b"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

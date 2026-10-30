@@ -14,3 +14,5 @@ import G5.GroupLevel.Challenge
 import G5.SectorGroup.Challenge
 import G5.Containment.Challenge
 import G5.Census.Challenge
+import G5.EvenK.Challenge
+import G5.CensusCap.Challenge

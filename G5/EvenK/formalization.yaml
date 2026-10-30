@@ -1,0 +1,38 @@
+# Unit U12 (G5/EvenK) — per-unit record, Claude Paper No. 1
+unit: "U12"
+module_path: "G5/EvenK"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "1fb5b03ec18e49f0fa5060dc0068145d59521f1e1062bb5a00989e9936055c47"
+source_bytes: 25981
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition sha256 1fb5b03e… · 25981 B, read at 2026-10-30T18:42:08Z and re-read at 18:44:49Z, unchanged; it EXTENDS the frozen units' edition — head -c 21568 of it reproduces a84cecdd3bfa79014173183ffcaea66d2d0f469033501ffae983072344000731 · 21568 B, read 18:42:08Z; the specs' headers and §5 docstrings carry the prefix 1fb5b03e)"
+source_extends:
+  sha256: "a84cecdd3bfa79014173183ffcaea66d2d0f469033501ffae983072344000731"
+  bytes: 21568
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  - unit: "U1"
+    module: "G5.Ring.Challenge"
+    challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+    note: "frozen (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z); shasum at 2026-10-30T18:42:08Z and 18:44:49Z matches; supplies ZPhi and its fields, IsWord, W; imported, not restated"
+  - unit: "U2"
+    module: "G5.ModTwo.Challenge"
+    challenge_sha256: "c342ab92ba8ef07e5a9fba82422968b9de4410974583210dc1dcded53354c78c"
+    note: "frozen (G5/ModTwo/formalization.yaml statement_sha256, V2-U2 signed 2026-10-30T10:57:07Z); shasum at 2026-10-30T18:42:08Z and 18:44:49Z matches; imported for the reduction mod 2 the proof composes with (EVKb's corollary source g5_u2_l2); imported, not restated"
+definitions: ["G5.A"]
+definitions_note: "U12 defines ONE thing, A : List ℕ → ℤ by recursion (A [] = 0, A (a :: l) = (a : ℤ) - A l), the record's A(w) = a₁ − a₂ + a₃ − ⋯ − a_k (SH-P4-LW-A l. 58), V1-signed with its name; ZPhi, IsWord, W are U1's"
+rows:
+  - row: "G5-EVKa"
+    theorems: ["G5.g5_u12_evk_a"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-EVK (l. 63), §5; SH-P4-LW-A §3 Remark 4.4 (l. 58, proof l. 60); AM transcript §3.1 (l. 124); for a word of even length, 5 ∣ A w ↔ Even (W w).trace.y — the record's (a) ⟺ (c); V1-GREEN 2026-10-30T18:34:49Z, SPLIT-OK, the name A kept"
+  - row: "G5-EVKb"
+    theorems: ["G5.g5_u12_evk_b"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-EVK (l. 63), §5; SH-P4-LW-A §3 Remark 4.4 (l. 58, proof l. 60); for a word of even length, Even y ↔ (Even x ∧ Even y) on tr W — the record's (c) ⟺ (d); hk carried (the record's 'Let k be even'), unused by the proof; V1-GREEN 2026-10-30T18:34:49Z, SPLIT-OK, hk kept"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "321dfbf5abdc78157328a8f7d1c53d40ae09a60b6a5cf027824d09da8f967565"
