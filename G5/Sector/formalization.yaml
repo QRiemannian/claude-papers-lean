@@ -48,3 +48,10 @@ automation:
 statement_sha256_draft: "df5fdf79df09a7dd097a8d3102c96b644458d2fcde98856b16de002cf910996f"
 statement_sha256: "df5fdf79df09a7dd097a8d3102c96b644458d2fcde98856b16de002cf910996f"
 v2_signed: "2026-10-30T10:48:53Z"
+proofs_phase:
+  closed: "2026-10-30T11:39:44Z"
+  solution_module: "G5.Sector.Solution"
+  solution_sha256: "7f454c144e666ef13329ffcd2ba2cb895f07a6161ba9b5f60dcc0842873418c1"
+  theorems_proved: 9
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + G5.Ring.Solution (the proved prelude), not G5.Sector.Challenge; rabs restated byte-identically; the comparator accepted the arrangement 11:39:44Z"

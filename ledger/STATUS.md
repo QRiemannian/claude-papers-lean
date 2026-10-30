@@ -26,3 +26,9 @@
 | G5-U2-TRD5 | U2 `G5/ModTwo` | `G5.g5_u2_d5_trace` | **PROVED** (K PASS · V₃ CLEAN) | as above |
 | G5-L1 | U2 `G5/ModTwo` | `G5.g5_u2_l1` | **PROVED** (K PASS · V₃ CLEAN) | as above; induction on the word keyed to parity |
 | G5-L2 | U2 `G5/ModTwo` | `G5.g5_u2_l2`, `G5.g5_u2_l2_int` | **PROVED** (K PASS · V₃ CLEAN) | as above; the word-level leg (the group-level clause is U8's G5-U8-L2G) |
+| G5-Ba | U4 `G5/Sector` | `G5.g5_u4_ba` | L-PROVED, K pending | Challenge FROZEN `df5fdf79…` (V₂ 10:48:53Z); Solution `7f454c14…` built 11:36:57Z, axioms propext/Classical.choice/Quot.sound (bc_id propext only), comparator okay 11:39:44Z; the prelude rule accepted; the λ-specialization route (blocks as ℕ[λ]-matrices at λ = φ, bounds via T(0), T(1)) |
+| G5-Bb | U4 `G5/Sector` | `G5.g5_u4_bb`, `G5.g5_u4_bb_tr` | L-PROVED, K pending | as above |
+| G5-Bc | U4 `G5/Sector` | `G5.g5_u4_bc`, `G5.g5_u4_bc_id`, `G5.g5_u4_bc_att` | L-PROVED, K pending | as above; `ZPhi.rabs` is U4's one definition |
+| G5-Fa | U4 `G5/Sector` | `G5.g5_u4_fa` | L-PROVED, K pending | as above |
+| G5-Fb | U4 `G5/Sector` | `G5.g5_u4_fb` | L-PROVED, K pending | as above |
+| G5-Fc | U4 `G5/Sector` | `G5.g5_u4_fc` | L-PROVED, K pending | as above |
