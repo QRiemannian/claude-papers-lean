@@ -1,0 +1,393 @@
+{
+  "clock": "2026-10-30T10:55:40Z",
+  "commit": "59b7100",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": null,
+  "checks": [
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 54 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "G5.W.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.one_y",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "G5.g5_u1_det",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "G5.g5_u1_ge_a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "G5.g5_u1_trace",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.mk.injEq",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.mk.sizeOf_spec",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.add_y",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.neg_x",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.ext_iff",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "instDecidableEqZPhi.decEq._proof_2",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "instDecidableEqZPhi.decEq._proof_3",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_18",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.mk.inj",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.sub_x",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_14",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_11",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.ext",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_16",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.one_x",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.mul_x",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_21",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.add_x",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_15",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_24",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "_private.G5.Ring.Solution.0.G5.g5_u1_aux_W_smul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.zero_y",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "G5.g5_u1_r5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.mul_y",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_5",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_13",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_23",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_10",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_8",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_9",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.sub_y",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_22",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.neg_y",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "G5.ntr.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_25",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_20",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_12",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "G5.blockProd.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "instDecidableEqZPhi.decEq._proof_1",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_4",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_19",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "G5.g5_u1_ras",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.instCommRing._proof_17",
+      "axioms": []
+    },
+    {
+      "module": "G5.Ring.Solution",
+      "theorem": "ZPhi.zero_x",
+      "axioms": []
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/Ring",
+      "sha256": "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c",
+      "signed": "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+    }
+  ],
+  "file_hashes": {
+    "./G5/Ring/Challenge.lean": "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c",
+    "./G5/Ring/Solution.lean": "0a11790b32f126ecac0f1df2f41e7399a4a9b514a77794ebf08f7878825c0271",
+    "./G5/Ring/comparator.json": "83466d83f3cf3b855838ed7755ffd927a78b5a268f899368cd83ff1292781c94",
+    "./G5/Ring/formalization.yaml": "49503303efc22c3dc20acfe2ad2413343341a12e6cb941399102ca3bcd65020e"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/Ring",
+  "arms": "no_sorry_no_axiom axioms comparator challenge_digest retired_names (no lake build)"
+}
