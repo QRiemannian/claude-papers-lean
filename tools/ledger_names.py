@@ -79,7 +79,11 @@ from collections import OrderedDict, defaultdict
 
 KEYWORDS = ("theorem", "lemma", "def", "abbrev", "structure", "class", "instance", "inductive",
             "irreducible_def", "alias", "opaque", "axiom")  # the last four: UPGRADE-687 (1), governor sitting 73
-TEMPLATE = (r"(^|\s)(" + "|".join(KEYWORDS) + r")\s+([A-Za-z0-9_'.]*\.)?{short}([^A-Za-z0-9_'.!?]|$)")
+# an optional parenthesised attribute group between the keyword and the name, e.g. `instance (priority := 100) name`
+# (UPGRADE-694, governor sitting 77): zero or more `( ... )` groups, one level of inner parentheses, each then whitespace
+ATTR_GROUPS = r"(?:\((?:[^()]|\([^()]*\))*\)\s+)*"
+ATTR_SKIP = re.compile(r"\s*" + ATTR_GROUPS)
+TEMPLATE = (r"(^|\s)(" + "|".join(KEYWORDS) + r")\s+" + ATTR_GROUPS + r"([A-Za-z0-9_'.]*\.)?{short}([^A-Za-z0-9_'.!?]|$)")
 NS_RE = re.compile(r"^namespace\s+(\S+)")
 SEC_RE = re.compile(r"^(?:@\[[^\]]*\]\s*)?(?:(?:public|private|noncomputable|protected)\s+)*section\b(?:\s+(\S+))?")
 MUTUAL_RE = re.compile(r"^mutual\b")
@@ -189,8 +193,7 @@ class Mathlib:
                     continue
                 for s in present:
                     for m in pats[s].finditer(code):
-                        rest = code[m.end(2):]
-                        start = m.end(2) + len(rest) - len(rest.lstrip())
+                        start = ATTR_SKIP.match(code, m.end(2)).end()  # past the whitespace and any attribute group (694)
                         ident = IDENT_STOP.split(code[start:], 1)[0].replace("«", "").replace("»", "")
                         if ident.split(".")[-1] != s:
                             continue  # confirm (i): the declared name's last component IS <short>

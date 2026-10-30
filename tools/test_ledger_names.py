@@ -83,6 +83,13 @@ abbrev IsElliptic : Prop := True
 end GeneralLinearGroup
 end Matrix
 """,
+    # UPGRADE-694, governor-agent sitting 77 (2026-10-30): an attribute group between keyword and name
+    "Mathlib/Data/Cast/Prio.lean": """\
+@[nolint unusedArguments]
+instance (priority := 100) instPrioCast {n : Nat} [Inhabited Nat] : Inhabited (Fin (n + 1)) where
+  default := 0
+instance (n : Nat) : Nonempty (Fin (n + 1)) := ⟨0⟩
+""",
 }
 
 LEDGER = """\
@@ -267,6 +274,35 @@ class RealMathlib(unittest.TestCase):
     def test_687_end_with_comment_keeps_Metric_namespace(self):
         self.assertEqual(self.verdict("Metric.NonemptyCompacts.dist_eq"),
                          "FOUND Metric.NonemptyCompacts Mathlib/Topology/MetricSpace/Closeds.lean:355")
+
+
+class AttributeGroup(unittest.TestCase):
+    """UPGRADE-694, governor-agent sitting 77 (2026-10-30): `instance (priority := 100) name` reads as the name."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.mkdtemp(prefix="ledger-names-694-", dir=SCRATCH)
+        assert not os.path.abspath(cls.tmp).startswith(REPO + os.sep)
+        for rel, text in FIXTURE.items():
+            write(os.path.join(cls.tmp, "ml", rel), text)
+        cls.ml = ln.Mathlib(os.path.join(cls.tmp, "ml"))
+
+    @classmethod
+    def tearDownClass(cls):
+        shutil.rmtree(cls.tmp, ignore_errors=True)
+
+    def test_694_priority_group_then_name_FOUND(self):
+        self.assertEqual(ln.render(*ln.classify(self.ml, "instPrioCast")),
+                         "FOUND _root_ Mathlib/Data/Cast/Prio.lean:2")
+
+    def test_694_anonymous_instance_binder_is_not_a_declaration_of_its_class(self):
+        self.assertEqual(ln.classify(self.ml, "Nonempty")[0], "NOT FOUND")
+
+    @unittest.skipUnless(os.path.isdir(os.path.join(MATHLIB, "Mathlib")), "pinned mathlib checkout absent")
+    def test_694_instOfNatAtLeastTwo_FOUND_at_the_pin(self):
+        ml = ln.Mathlib(MATHLIB)
+        self.assertEqual(ln.render(*ln.classify(ml, "instOfNatAtLeastTwo")),
+                         "FOUND _root_ Mathlib/Data/Nat/Cast/Defs.lean:42")
 
 
 if __name__ == "__main__":

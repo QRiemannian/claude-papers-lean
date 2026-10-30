@@ -8,10 +8,12 @@
 #   COMPARATOR_LEAN4EXPORT default ~/Claude/projects/comparator/.lake/packages/lean4export/.lake/build/bin/lean4export
 #
 # Usage:  bash tools/check.sh                   the full run: six checks over every unit -> manifests/build-<sha>.json;
+#                                               the build check runs the default target, then every [[lean_lib]] of
+#                                               lakefile.toml by name, then every unit's Solution module by name;
 #                                               on a dirty tree it refuses: exit 2, no manifest, the dirty paths named
 #         bash tools/check.sh --unit <path>     the per-unit arms on ONE unit directory (e.g. RiemannZeta/SmallArith):
-#                                               no sorry / no axiom, axioms, Comparator, digest, retired names; NO
-#                                               lake build (the axioms arm reads the unit's modules as last built) ->
+#                                               lake build of the unit's Challenge and Solution modules by name, then
+#                                               no sorry / no axiom, axioms, Comparator, digest, retired names ->
 #                                               manifests/unit-<Module.Path>-<sha>.json
 #         --allow-dirty                         the hand declares the tree dirty: build-<sha>-dirty.json
 #                                               (unit-<Module.Path>-<sha>-dirty.json with --unit), "dirty_declared": true
@@ -28,6 +30,17 @@
 # named here in the ruled form: a read-only form named by the running script's header is outside the no-git
 # rule's class (_shared §12, word 5). GIT_OPTIONAL_LOCKS=0 keeps the read from refreshing the index. The --unit
 # and --allow-dirty arms do not make it; with --allow-dirty the hand declares the tree dirty.
+# Install note (UPGRADE-693, governor sitting 77; installed 2026-10-30 by the orchestrator-aide at Orchestrator A's word): the
+# build check builds by NAME — `lake build` (the default target), then `lake build <lib>` for every [[lean_lib]] name in
+# lakefile.toml, then `lake build <Unit>.Solution` for every unit directory carrying a Solution.lean — runs every target,
+# fails on any non-zero exit, and writes each target's exit into the manifest ("build_targets"). The default target alone
+# passed a declared lib whose glob directory was missing (claude-papers-lean build-faadcc3.json, 2026-10-30), and the
+# axioms arm (3) reads Solution modules as last built.
+# Install note (the per-unit build; Orchestrator A's decision on the sitting-77 directive's open question, brief to the
+# orchestrator-aide of 2026-10-30; installed 2026-10-30 by the orchestrator-aide): --unit builds the unit's own modules
+# by name before its axioms arm reads them — `lake build <Unit>.Challenge`, then `lake build <Unit>.Solution` where
+# Solution.lean exists — runs both, fails on any non-zero exit (the lake_build row), and writes each target's exit into
+# "build_targets". Under --unit there is no pin check and no default or lib target.
 set -uo pipefail
 UNIT=""; ALLOW_DIRTY=0
 usage() { sed -n '/^# Usage:/,/^#         -h/p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'; }
@@ -102,22 +115,57 @@ fi
 NUNITS=$(wc -l < "$TMP/units" | tr -d ' ')
 note "check.sh @ $CLOCK · commit $COMMIT · $TOOLCHAIN · mathlib $LAKEFILE_REV · units $NUNITS${UNIT:+ · --unit $UNIT}$([ $ALLOW_DIRTY -eq 1 ] && printf ' · --allow-dirty')"
 
-# 1 · lake build clean at the pin (the full run only)
-BUILD_S=""
-if [ -n "$UNIT" ]; then note "lake build: not run under --unit (the axioms arm reads the unit's modules as last built)"
+# 1 · lake build clean at the pin: the default target, every [[lean_lib]] by name, every Solution by name
+#     (under --unit: the unit's Challenge and Solution modules by name, so the axioms arm never reads a stale build)
+BUILD_S=""; : > "$TMP/build_targets"
+if [ -n "$UNIT" ]; then
+: > "$TMP/build.log"; brc=0; bad_t=""
+t0=$(python3 -I -c 'import time;print(time.time())')
+for f in Challenge Solution; do
+  [ -f "$UNIT/$f.lean" ] || continue
+  tgt="$(printf '%s' "$UNIT/$f" | tr '/' '.')"
+  "$LAKE" build "$tgt" >> "$TMP/build.log" 2>&1; rc=$?
+  printf '%s\t%s\n' "$tgt" "$rc" >> "$TMP/build_targets"
+  [ $rc -eq 0 ] || { brc=$rc; bad_t+="$tgt=$rc "; }
+done
+t1=$(python3 -I -c 'import time;print(time.time())')
+BUILD_S=$(python3 -I -c "print(round($t1-$t0,2))")
+NT=$(wc -l < "$TMP/build_targets" | tr -d ' ')
+tail -3 "$TMP/build.log"
+if [ $brc -eq 0 ]; then res lake_build PASS "exit 0 on $NT target(s) (the unit's modules by name) in ${BUILD_S}s"
+else res lake_build FAIL "lake build non-zero on: ${bad_t:-none} ($NT target(s))"; fi
 else
 pin_ok=1; why=""
 [ -n "$LAKEFILE_REV" ] || { pin_ok=0; why="lakefile rev is not a 40-hex sha; "; }
 [ "$LAKEFILE_REV" = "$MANIFEST_REV" ] || { pin_ok=0; why+="manifest mathlib rev $MANIFEST_REV != lakefile rev; "; }
 if [ -f .lake/packages/mathlib/lean-toolchain ] && ! diff -q lean-toolchain .lake/packages/mathlib/lean-toolchain >/dev/null; then
   pin_ok=0; why+="lean-toolchain differs from the pinned mathlib's; "; fi
+LIBS="$(python3 -I - <<'PY'
+import re
+lib = False
+for line in open("lakefile.toml", encoding="utf-8"):
+    s = line.split("#", 1)[0].strip()
+    if s.startswith("["):
+        lib = (s == "[[lean_lib]]"); continue
+    m = re.match(r'name\s*=\s*"([^"]+)"', s)
+    if lib and m: print(m.group(1)); lib = False
+PY
+)"
+[ -n "$LIBS" ] || { pin_ok=0; why+="no [[lean_lib]] name read from lakefile.toml; "; }
+SOLMODS="$(while IFS= read -r u; do [ -f "$u/Solution.lean" ] && printf '%s\n' "${u#./}/Solution" | tr '/' '.'; done < "$TMP/units")"
+: > "$TMP/build.log"; brc=0; bad_t=""
 t0=$(python3 -I -c 'import time;print(time.time())')
-"$LAKE" build > "$TMP/build.log" 2>&1; brc=$?
+for tgt in "" $LIBS $SOLMODS; do
+  if [ -z "$tgt" ]; then "$LAKE" build >> "$TMP/build.log" 2>&1; rc=$?; else "$LAKE" build "$tgt" >> "$TMP/build.log" 2>&1; rc=$?; fi
+  printf '%s\t%s\n' "${tgt:-<default>}" "$rc" >> "$TMP/build_targets"
+  [ $rc -eq 0 ] || { brc=$rc; bad_t+="${tgt:-<default>}=$rc "; }
+done
 t1=$(python3 -I -c 'import time;print(time.time())')
 BUILD_S=$(python3 -I -c "print(round($t1-$t0,2))")
+NT=$(wc -l < "$TMP/build_targets" | tr -d ' ')
 tail -3 "$TMP/build.log"
-if [ $pin_ok -eq 1 ] && [ $brc -eq 0 ]; then res lake_build PASS "exit 0 in ${BUILD_S}s at $TOOLCHAIN / mathlib $LAKEFILE_REV"
-else res lake_build FAIL "${why}lake build exit $brc"; fi
+if [ $pin_ok -eq 1 ] && [ $brc -eq 0 ]; then res lake_build PASS "exit 0 on $NT target(s) (default + libs + Solutions) in ${BUILD_S}s at $TOOLCHAIN / mathlib $LAKEFILE_REV"
+else res lake_build FAIL "${why}lake build non-zero on: ${bad_t:-none} ($NT target(s))"; fi
 fi
 
 # 2 · no sorry/admit outside Challenge.lean; no axiom declarations anywhere
@@ -222,11 +270,12 @@ for l in open(os.path.join(tmp,'axioms.txt')):
     if m: axioms.append({"module":m.group(1),"theorem":m.group(2),"axioms":[a.strip() for a in m.group(3).split(',') if a.strip()]})
 d={"clock":clock,"commit":commit,"toolchain":tc,"mathlib_rev":rev,"lake_build_seconds":float(bs) if bs else None,
    "checks":[{"check":c,"status":s,"detail":x} for c,s,x in rows('results')],
+   "build_targets":[{"target":t,"exit":int(x)} for t,x in rows('build_targets')],
    "axioms":axioms,
    "challenge_digests":[{"unit":u,"sha256":g,"signed":w} for u,g,w in rows('digests')],
    "file_hashes":{f:h for f,h in rows('hashes')},
    "verdict":"FAIL" if fail=="1" else "PASS"}
-if unit: d["mode"]="unit"; d["unit"]=unit; d["arms"]="no_sorry_no_axiom axioms comparator challenge_digest retired_names (no lake build)"
+if unit: d["mode"]="unit"; d["unit"]=unit; d["arms"]="lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
 if dirty=="1": d["dirty_declared"]=True
 json.dump(d,open(man,'w'),indent=2,ensure_ascii=False); open(man,'a').write('\n')
 PY
