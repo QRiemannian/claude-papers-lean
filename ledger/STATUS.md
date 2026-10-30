@@ -42,3 +42,7 @@
 | G5-PHIa | U7 `G5/Group` | `G5.g5_u7_phi_a` | **PROVED** (K PASS · V₃ CLEAN) | as above; the path-weight route of SH-P2-1's Remark through U3's domination device |
 | G5-PHIb | U7 `G5/Group` | `G5.g5_u7_phi_b` | **PROVED** (K PASS · V₃ CLEAN) | as above; rotation invariance of ntr and t(1ⁿ2) = t(34ⁿ) = (n + 2)φ |
 | G5-PHIc | U7 `G5/Group` | `G5.g5_u7_phi_c` | **PROVED** (K PASS · V₃ CLEAN) | as above |
+| G5-U8-ELL | U8 `G5/GroupLevel` | `G5.g5_u8_ell` | L-PROVED, K pending | Challenge FROZEN `bf7316f7…` (V₂ 11:44:57Z); Solution `e13158fc…` built 12:10:50Z, axioms propext/Classical.choice/Quot.sound, comparator okay 12:13:13Z; the prelude rule with FOUR preludes (Ring, Group, ModTwo, Congruence); the six traces by `trace_fin_two` + kernel decide |
+| G5-U8-L2G | U8 `G5/GroupLevel` | `G5.g5_u8_l2g` | L-PROVED, K pending | as above; `g5_u8_aux_main` (any sign-invariant trace law holding on the eight normal forms holds on HeckeGrp, through `g5_u7_nf` and trace invariance) + U2's `g5_u2_l2` on the word form |
+| G5-U8-M4G | U8 `G5/GroupLevel` | `G5.g5_u8_m4g` | L-PROVED, K pending | as above; H₄ closed under negation by decide; U6's `g5_u6_m4b` on the word form |
+| G5-U8-M3G | U8 `G5/GroupLevel` | `G5.g5_u8_m3g` | L-PROVED, K pending | as above; `Int.ModEq.neg`; U6's `g5_u6_m3b` on the word form |
