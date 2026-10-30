@@ -85,3 +85,7 @@ Scratch a later stage must read: `/private/tmp/claude-501/-Users-qriemannian-Cla
 ## Status
 
 SPEC-DRAFT 2026-10-30T10:16:49Z — U6 on disk; V₁-U6 may open.
+
+## Probe elaboration (the orchestrator's serial run, 2026-10-30T10:21:46Z)
+
+`lake env lean <scratchpad>/M-U6/probe.lean`: exit 0; errors 0; warnings: U1's five `sorry` lines plus six at l. 172, 178, 183, 189, 198, 204 (the six U6 theorems); maximum resident set size 4,641,030,144 bytes; 23 s wall (10:20:23Z → 10:20:46Z). Log: `<scratchpad>/M-U6/probe-orch-run.log`.
