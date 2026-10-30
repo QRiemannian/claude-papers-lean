@@ -16,3 +16,5 @@ import G5.Containment.Challenge
 import G5.Census.Challenge
 import G5.EvenK.Challenge
 import G5.CensusCap.Challenge
+import G5.EvenKRemark.Challenge
+import G5.CensusSearch.Challenge

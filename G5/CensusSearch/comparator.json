@@ -1,0 +1,12 @@
+{
+    "challenge_module": "G5.CensusSearch.Challenge",
+    "solution_module": "G5.CensusSearch.Solution",
+    "theorem_names": [
+        "G5.g5_u15_srch_cap",
+        "G5.g5_u15_srch_visit",
+        "G5.g5_u15_srch_const",
+        "G5.g5_u15_srch_inf"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

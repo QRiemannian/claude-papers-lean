@@ -1,0 +1,13 @@
+{
+    "challenge_module": "G5.EvenKRemark.Challenge",
+    "solution_module": "G5.EvenKRemark.Solution",
+    "theorem_names": [
+        "G5.g5_u14_evkr_mech",
+        "G5.g5_u14_evkr_one",
+        "G5.g5_u14_evkr_ord",
+        "G5.g5_u14_evkr_b",
+        "G5.g5_u14_evkr_rot"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

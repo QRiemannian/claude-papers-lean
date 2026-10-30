@@ -1,0 +1,50 @@
+# Unit U14 (G5/EvenKRemark) — per-unit record, Claude Paper No. 1
+unit: "U14"
+module_path: "G5/EvenKRemark"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "9ebf30048d9d246295226f9f8aa7ac86da0d72956e1c1d6e0c45d4eda57c79b3"
+source_bytes: 31612
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition sha256 9ebf3004… · 31612 B, the third extending edition — the §6 errata appended after V₁ — read at 2026-10-30T21:55:17Z and re-read at 21:58:10Z, unchanged; it EXTENDS the three editions before it — head -c 30598 reproduces 4a53d9ba… (the edition the specs were written under), head -c 25981 reproduces 1fb5b03e…, head -c 21568 reproduces a84cecdd…, all read 21:55:17Z; the specs' headers and §5 docstrings carry the prefix 4a53d9ba; the rows are §6, l. 72)"
+source_extends:
+  - sha256: "4a53d9bab6c8ce4f09d27fa55804287f280dcc19deed5c5e2ff1e60058c64e1f"
+    bytes: 30598
+  - sha256: "1fb5b03ec18e49f0fa5060dc0068145d59521f1e1062bb5a00989e9936055c47"
+    bytes: 25981
+  - sha256: "a84cecdd3bfa79014173183ffcaea66d2d0f469033501ffae983072344000731"
+    bytes: 21568
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  - unit: "U1"
+    module: "G5.Ring.Challenge"
+    challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+    note: "frozen (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z); shasum at 2026-10-30T21:55:17Z and 21:58:10Z matches; supplies ZPhi, IsWord, W; imported, not restated"
+  - unit: "U2"
+    module: "G5.ModTwo.Challenge"
+    challenge_sha256: "c342ab92ba8ef07e5a9fba82422968b9de4410974583210dc1dcded53354c78c"
+    note: "frozen (G5/ModTwo/formalization.yaml statement_sha256, V2-U2 signed 2026-10-30T10:57:07Z); shasum at 2026-10-30T21:55:17Z and 21:58:10Z matches; supplies F4M, red2M, Rbar; imported, not restated"
+  - unit: "U12"
+    module: "G5.EvenK.Challenge"
+    challenge_sha256: "321dfbf5abdc78157328a8f7d1c53d40ae09a60b6a5cf027824d09da8f967565"
+    note: "frozen (G5/EvenK/formalization.yaml statement_sha256, V2-U12 signed 2026-10-30T18:51:02Z); shasum at 2026-10-30T21:55:17Z and 21:58:10Z matches; supplies the alternating sum A; imported, not restated"
+definitions: []
+definitions_note: "U14 defines nothing; ZPhi, IsWord, W are U1's; F4M, red2M, Rbar are U2's; A is U12's"
+rows:
+  - row: "G5-EVKRa"
+    theorems: ["G5.g5_u14_evkr_mech"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-EVKR (l. 72), clause (1), §6; SH-P4-LW-A §3 Remark 4.4 (even k) (l. 58, proof l. 60); for a word of even length, red2M (W w) = Rbar ^ (A w : ZMod 5).val — the mechanism; V1-GREEN 2026-10-30T21:50:38Z, SPLIT-OK"
+  - row: "G5-EVKRb"
+    theorems: ["G5.g5_u14_evkr_one", "G5.g5_u14_evkr_ord", "G5.g5_u14_evkr_b"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-EVKR (l. 72), clause (2), §6; SH-P4-LW-A §3 Remark 4.4 (even k) (l. 58, proof l. 60); for a word of even length, 5 ∣ A w ↔ red2M (W w) = 1; 5 ∤ A w → orderOf (red2M (W w)) = 5; and 5 ∣ A w ↔ orderOf (red2M (W w)) ≠ 5 — the record's (a) ⟺ (b); V1-GREEN 2026-10-30T21:50:38Z, SPLIT-OK, g5_u14_evkr_b KEPT"
+  - row: "G5-EVKRc"
+    theorems: ["G5.g5_u14_evkr_rot"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-EVKR (l. 72), clause (3), §6; SH-P4-LW-A §3 'Rotation (the brief's question)' (l. 63); for a list a :: l of even length, A (l ++ [a]) = -A (a :: l) in ℤ; no IsWord (the identity holds on A's whole domain; the widening accepted at V1 with the note); V1-GREEN 2026-10-30T21:50:38Z, SPLIT-OK"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "398c41e2254cecad8a0291cbd766b202219ffc56f6ced92822a859007c1c13cd"
