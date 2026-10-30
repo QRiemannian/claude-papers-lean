@@ -104,3 +104,23 @@ Build completed successfully (8707 jobs).
 [PASS] retired_names — 0 hits for the four retired names
 manifest: manifests/unit-G5.Ladder-5858377.json · verdict PASS
 ```
+
+## K-U7 · G5/Group · 2026-10-30T12:06:01Z → 2026-10-30T12:08:01Z
+
+Wait: pgrep -x lean/lake/lean4export/comparator all empty at 2026-10-30T12:05:56Z (no wait).
+Command: cd ~/Claude/projects/claude-papers-lean && export PATH="$HOME/.elan/bin:$PATH" && source tools/env.sh && bash tools/check.sh --unit G5/Group
+Exit code: 0
+
+```
+check.sh @ 2026-10-30T12:06:01Z · commit 59eb6ca · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/Group
+info: G5/Group/Solution.lean:583:2: `ext`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 582!
+Build completed successfully (8708 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 5.46s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 112 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.Group-59eb6ca.json · verdict PASS
+```
