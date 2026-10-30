@@ -65,3 +65,5 @@ theorem g5_u7_phi_c (k : ℕ) (hk : 1 ≤ k) :
 ## 7 · Status
 
 SPEC-DRAFT 2026-10-30T10:17:01Z
+
+V1: V1-GREEN 2026-10-30T10:26:49Z — all three §2 cites match verbatim (script; RPA l. 37 and LEDGER l. 37 verbatim substrings, SH-P2-1 l. 110 exact). (f) No stronger than the record: the record's realization is itself per k — the RPA's word (1^{k−1}, 2) at syllable count k with trace (−1)^k (k+1)φ, and SH-P2-1's (1^{n−2}, 2) for nφ, the same word with k = n − 1 — so fixing the length is what the record states, and the set-level 'nφ, n ≥ 3 (and 2φ at k = 1), each realized' (n = k + 1 ≥ 2) follows from it. `IsWord` in the existential keeps U1's P filler out of the witness. Own arithmetic: P₁^{k−1}P₂ has trace (k + 1)φ (by hand for all k; computed for k ≤ 9). Cosmetic, not a drift: §6's standing paragraph is PHIa's (the x = 0 characterization) copied; PHIc's own standing (DERIVED by the RPA, restated by SH-P2-1) is in §3. Parse: 0 Lean line(s) over 100 code points

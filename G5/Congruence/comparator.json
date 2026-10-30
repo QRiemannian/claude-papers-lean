@@ -1,0 +1,14 @@
+{
+    "challenge_module": "G5.Congruence.Challenge",
+    "solution_module": "G5.Congruence.Solution",
+    "theorem_names": [
+        "G5.g5_u6_m4a",
+        "G5.g5_u6_m4b",
+        "G5.g5_u6_m4c",
+        "G5.g5_u6_m4d",
+        "G5.g5_u6_m3a",
+        "G5.g5_u6_m3b"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}
