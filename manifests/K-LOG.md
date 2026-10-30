@@ -209,3 +209,25 @@ manifest: manifests/unit-G5.SectorGroup-a970e60.json · verdict PASS
 ```
 
 manifest sha256: c751eee09a95da952afedadb52c40234b598a9dde9c760553e291a2903f1027d  manifests/unit-G5.SectorGroup-a970e60.json
+
+## K-U12 · G5/EvenK · logged 2026-10-30T19:08:02Z
+
+Slot poll by process name (lean · lake · lean4export · comparator): all empty at 2026-10-30T19:06:17Z; no wait needed. Command run 2026-10-30T19:06:22Z → 2026-10-30T19:07:52Z, exit 0:
+
+`cd ~/Claude/projects/claude-papers-lean && export PATH="$HOME/.elan/bin:$PATH" && source tools/env.sh && bash tools/check.sh --unit G5/EvenK`
+
+```
+check.sh @ 2026-10-30T19:06:22Z · commit fc8d6f2 · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/EvenK
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (8708 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 5.91s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 18 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.EvenK-fc8d6f2.json · verdict PASS
+```
+
+manifest sha256: 8e8fe267862fc99d7726dc369c5b1b832ed1264d63e3cf4cf1017ec8db4fdf69  manifests/unit-G5.EvenK-fc8d6f2.json
