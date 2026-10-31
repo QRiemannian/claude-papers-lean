@@ -1,0 +1,148 @@
+{
+  "clock": "2026-10-31T12:13:29Z",
+  "commit": "2b32b97",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.95,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.95s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 10 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.ClassSep.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.ClassSep.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "_private.G5.ClassSep.Solution.0.G5.g5_u16_aux_lin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "_private.G5.ClassSep.Solution.0.G5.g5_u16_aux_natCast",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "G5.g5_u16_csep_sq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "_private.G5.ClassSep.Solution.0.G5.g5_u16_aux_intCast",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "G5.g5_u16_csep_lin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "_private.G5.ClassSep.Solution.0.G5.g5_u16_aux_two",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "_private.G5.ClassSep.Solution.0.G5.g5_u16_aux_diff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "_private.G5.ClassSep.Solution.0.G5.g5_u16_aux_sq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "_private.G5.ClassSep.Solution.0.G5.g5_u16_aux_lin._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.ClassSep.Solution",
+      "theorem": "_private.G5.ClassSep.Solution.0.G5.g5_u16_aux_five",
+      "axioms": [
+        "propext"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/ClassSep",
+      "sha256": "2021ed569a939caef12eb04b02ffc6d885da5671716989cc3358f726df22c63e",
+      "signed": "2021ed569a939caef12eb04b02ffc6d885da5671716989cc3358f726df22c63e"
+    }
+  ],
+  "file_hashes": {
+    "./G5/ClassSep/Challenge.lean": "2021ed569a939caef12eb04b02ffc6d885da5671716989cc3358f726df22c63e",
+    "./G5/ClassSep/Solution.lean": "4309e45aab0e4d23252072184e16c6d15eb004b8da433c15ffe4c1c25830b5cf",
+    "./G5/ClassSep/comparator.json": "46cd1aad75fb61a9142d6a2a9b982ce0815413e8cb52ad4a6d68d487b2b9e9ce",
+    "./G5/ClassSep/formalization.yaml": "7c85e85baab1965e763df9087af2d2142817d1f22d0f6a70302aa4675f4186b8"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/ClassSep",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
