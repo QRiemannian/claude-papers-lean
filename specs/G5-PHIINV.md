@@ -108,3 +108,5 @@ Sheet line (id · statement in one line · locus · unit): G5-PHIINV · each of 
 SPEC-DRAFT 2026-10-31T11:21:54Z
 
 V1: V1-GREEN 2026-10-31T11:33:52Z — the RECORD states both signs (AM-1-second-head §4 l. 74 "±φ, ±φ⁻¹ (±R^a …)", §1 l. 26 table φ − 1 = φ⁻¹ at R², 1 − φ = −φ⁻¹ at R³; AM transcript l. 130; wall §5 "±φ⁻¹ realized"; S3 l. 51–53 is a + use only), so GREEN as stated; φ⁻¹ = ⟨-1, 1⟩, −φ⁻¹ = ⟨1, -1⟩ (STATEMENTS §2 item 7, U8 g5_u8_ell); U7 g5_u7_int_b form confirmed; ±φ rightly off-lane; §2 quotes verbatim (7/7); §5 a byte substring of probe dc8fd763… · parse: 0 Lean line(s) over 100 code points
+
+V2: V2-GREEN 2026-10-31T11:53:01Z — faithful to AM-1-second-head §1 l. 26 (φ − 1 = φ⁻¹ at R², 1 − φ = −φ⁻¹ at R³) and §4 l. 73–74 ("±φ⁻¹ (±R^a)"), AM transcript l. 130: both signs and no others; ⟨−1, 1⟩ = φ⁻¹ by U1's product rule (⟨0, 1⟩·⟨−1, 1⟩ = 1), ⟨1, −1⟩ = −φ⁻¹; U7 g5_u7_int_b shape with two disjuncts; membership added over U8 g5_u8_ell; §5 byte-identical in Challenge.lean b429cfc8…
