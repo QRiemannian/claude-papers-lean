@@ -1,0 +1,10 @@
+{
+    "challenge_module": "G5.ClassSep.Challenge",
+    "solution_module": "G5.ClassSep.Solution",
+    "theorem_names": [
+        "G5.g5_u16_csep_lin",
+        "G5.g5_u16_csep_sq"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

@@ -1,0 +1,11 @@
+{
+    "challenge_module": "G5.EveryRung.Challenge",
+    "solution_module": "G5.EveryRung.Solution",
+    "theorem_names": [
+        "G5.g5_u18_rung_a",
+        "G5.g5_u18_rung_b",
+        "G5.g5_u18_rung_c"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

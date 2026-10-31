@@ -1,0 +1,56 @@
+# Unit U16 (G5/ClassSep) — per-unit record, Claude Paper No. 1
+unit: "U16"
+module_path: "G5/ClassSep"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "5f2f0ed820a3acf6e2be57f5f11fe12a0c0c3010e74a0ae89ef33eec8783bdf3"
+source_bytes: 36526
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition sha256 5f2f0ed8… · 36526 B, the fourth extending edition — §7 appended 2026-10-31T11:26:17Z with the wave's four sheet lines — read at 2026-10-31T11:37:41Z and re-read at 2026-10-31T11:42:14Z, unchanged; it EXTENDS the four editions before it — head -c 31612 reproduces 9ebf3004… (the edition the specs were written under), head -c 30598 reproduces 4a53d9ba…, head -c 25981 reproduces 1fb5b03e…, head -c 21568 reproduces a84cecdd…, all read 11:37:41Z; the specs' headers and §5 docstrings carry the prefix 9ebf3004; the rows are §7, l. 84)"
+source_extends:
+  - sha256: "9ebf30048d9d246295226f9f8aa7ac86da0d72956e1c1d6e0c45d4eda57c79b3"
+    bytes: 31612
+  - sha256: "4a53d9bab6c8ce4f09d27fa55804287f280dcc19deed5c5e2ff1e60058c64e1f"
+    bytes: 30598
+  - sha256: "1fb5b03ec18e49f0fa5060dc0068145d59521f1e1062bb5a00989e9936055c47"
+    bytes: 25981
+  - sha256: "a84cecdd3bfa79014173183ffcaea66d2d0f469033501ffae983072344000731"
+    bytes: 21568
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  - unit: "U1"
+    module: "G5.Ring.Challenge"
+    challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+    note: "frozen (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; supplies ZPhi and its fields, phi, conj, the real order, M2; imported, not restated"
+  - unit: "U7"
+    module: "G5.Group.Challenge"
+    challenge_sha256: "689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae"
+    note: "frozen (G5/Group/formalization.yaml statement_sha256, V2-U7 signed 2026-10-30T10:56:50Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; supplies HeckeGrp; imported, not restated"
+  - unit: "U4"
+    module: "G5.Sector.Challenge"
+    challenge_sha256: "df5fdf79df09a7dd097a8d3102c96b644458d2fcde98856b16de002cf910996f"
+    note: "frozen (G5/Sector/formalization.yaml statement_sha256, V2-U4 signed 2026-10-30T10:48:53Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; supplies ZPhi.rabs; imported, not restated"
+  - unit: "U3"
+    module: "G5.WordLevel.Challenge"
+    challenge_sha256: "69533d2d17c4ed2dc569c1de6ddb5e92e42b85099901370bb946ea0ed7a13735"
+    note: "frozen (G5/WordLevel/formalization.yaml statement_sha256, V2-U3 signed 2026-10-30T10:39:11Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; imported for the legs the proof composes with (g5_u3_sep_lin, g5_u3_sep_sq); imported, not restated"
+  - unit: "U9"
+    module: "G5.SectorGroup.Challenge"
+    challenge_sha256: "c6a43405c82a8b43218854dc605d0b9952332b82681dfb03a9008e6e3195d6a8"
+    note: "frozen (G5/SectorGroup/formalization.yaml statement_sha256, V2-U9 signed 2026-10-30T13:25:12Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; imported for the legs the proof composes with (g5_u9_bg_a); imported, not restated"
+definitions: []
+definitions_note: "U16 defines nothing; ZPhi and its fields, phi, conj, the real order, M2 are U1's, HeckeGrp is U7's, ZPhi.rabs is U4's; hyperbolicity is the hypothesis 2 < rabs (g : M2).trace, not a definition; U3 and U9 are imported for the legs"
+rows:
+  - row: "G5-CSEPa"
+    theorems: ["G5.g5_u16_csep_lin"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-CSEP (l. 84), §7, the linear clause; TA transcript §1 'E2, sharpened' (l. 49); DO transcript §1.3 (l. 47); candidates/checks/SH-P2-1-sector-ladder-pruning.md §4 (l. 197–200); STATEMENTS.md row G5-SEP (l. 22); every hyperbolic g of ⟨S, T⟩ has, with t = |tr g|, t − conj t = y • (2φ − 1) and 2φ − 1 ≤ t − conj t — t − t^σ = y√5 ≥ √5; V1-GREEN 2026-10-31T11:33:30Z, SPLIT-OK"
+  - row: "G5-CSEPb"
+    theorems: ["G5.g5_u16_csep_sq"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-CSEP (l. 84), §7, the distance clause, squared; TA transcript §1 'E2, sharpened' (l. 49); DO transcript §1.3 (l. 47); candidates/checks/SH-P2-1-sector-ladder-pruning.md §4 (l. 200); STATEMENTS.md row G5-SEP (l. 22); every hyperbolic g of ⟨S, T⟩ has (t − conj t)^2 = ⟨5 y^2, 0⟩ and 5 ≤ (t − conj t)^2 — distance ≥ √(5/2) from the diagonal, stated without √; V1-GREEN 2026-10-31T11:33:30Z, SPLIT-OK"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "2021ed569a939caef12eb04b02ffc6d885da5671716989cc3358f726df22c63e"

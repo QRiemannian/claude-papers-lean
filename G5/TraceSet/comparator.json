@@ -1,0 +1,10 @@
+{
+    "challenge_module": "G5.TraceSet.Challenge",
+    "solution_module": "G5.TraceSet.Solution",
+    "theorem_names": [
+        "G5.g5_u17_tsym",
+        "G5.g5_u17_phiinv"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

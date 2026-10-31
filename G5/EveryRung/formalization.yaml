@@ -1,0 +1,52 @@
+# Unit U18 (G5/EveryRung) — per-unit record, Claude Paper No. 1
+unit: "U18"
+module_path: "G5/EveryRung"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "5f2f0ed820a3acf6e2be57f5f11fe12a0c0c3010e74a0ae89ef33eec8783bdf3"
+source_bytes: 36526
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition sha256 5f2f0ed8… · 36526 B, the fourth extending edition — §7 appended 2026-10-31T11:26:17Z with the wave's four sheet lines — read at 2026-10-31T11:37:41Z and re-read at 2026-10-31T11:42:14Z, unchanged; it EXTENDS the four editions before it — head -c 31612 reproduces 9ebf3004… (the edition the specs were written under), head -c 30598 reproduces 4a53d9ba…, head -c 25981 reproduces 1fb5b03e…, head -c 21568 reproduces a84cecdd…, all read 11:37:41Z; the specs' headers and §5 docstrings carry the prefix 9ebf3004; the rows are §7, l. 87)"
+source_extends:
+  - sha256: "9ebf30048d9d246295226f9f8aa7ac86da0d72956e1c1d6e0c45d4eda57c79b3"
+    bytes: 31612
+  - sha256: "4a53d9bab6c8ce4f09d27fa55804287f280dcc19deed5c5e2ff1e60058c64e1f"
+    bytes: 30598
+  - sha256: "1fb5b03ec18e49f0fa5060dc0068145d59521f1e1062bb5a00989e9936055c47"
+    bytes: 25981
+  - sha256: "a84cecdd3bfa79014173183ffcaea66d2d0f469033501ffae983072344000731"
+    bytes: 21568
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  - unit: "U1"
+    module: "G5.Ring.Challenge"
+    challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+    note: "frozen (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; supplies ZPhi and its fields, phi, M2; imported, not restated"
+  - unit: "U7"
+    module: "G5.Group.Challenge"
+    challenge_sha256: "689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae"
+    note: "frozen (G5/Group/formalization.yaml statement_sha256, V2-U7 signed 2026-10-30T10:56:50Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; supplies HeckeGrp; imported, not restated"
+  - unit: "U10"
+    module: "G5.Containment.Challenge"
+    challenge_sha256: "34608245fb7cc62c538d6e5cab0592061649df8857ae133221b289e37e56b288"
+    note: "frozen (G5/Containment/formalization.yaml statement_sha256, V2-U10 signed 2026-10-30T13:24:39Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; imported for the legs the proof composes with (g5_u10_cor, the containment); imported, not restated"
+definitions: ["G5.fibZ", "G5.lucasZ"]
+definitions_note: "U18 defines TWO things, fibZ : ℕ → ℤ (F₀ = 0, F₁ = 1, F_{n+2} = F_{n+1} + F_n) and lucasZ : ℕ → ℤ (L₀ = 2, L₁ = 1, L_{n+2} = L_{n+1} + L_n), by structural recursion — the blocks of specs/G5-RUNGa.md §5 (carried in each of the three specs), byte for byte, in the probe's order; COROLLARY-RUNG.md §2 (C-5) (l. 25); ZPhi, phi, M2 are U1's, HeckeGrp is U7's; φ⁻¹ in RUNGc is mathlib's Ring.inverse phi"
+rows:
+  - row: "G5-RUNGa"
+    theorems: ["G5.g5_u18_rung_a"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-RUNG (l. 87), §7, the even leg; phase-4/proofs/RUNG/COROLLARY-RUNG.md §1 (l. 13, l. 15), §5 Step 2 (l. 77); SKELETON.md row Cor. 3.6′ (l. 121); for every even n ≥ 1 no element of ⟨S, T⟩ has trace ±⟨lucasZ n, 0⟩ — the pair of φⁿ + φ⁻ⁿ at even n, (3.12); V1-GREEN 2026-10-31T11:33:12Z, SPLIT-OK"
+  - row: "G5-RUNGb"
+    theorems: ["G5.g5_u18_rung_b"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-RUNG (l. 87), §7, the odd leg; phase-4/proofs/RUNG/COROLLARY-RUNG.md §1 (l. 13, l. 15), §5 Step 3 (l. 79); SKELETON.md row Cor. 3.6′ (l. 121); for every odd n no element of ⟨S, T⟩ has trace ±⟨−fibZ n, 2 fibZ n⟩ — the pair of φⁿ + φ⁻ⁿ = F_n √5 at odd n, (3.12); V1-GREEN 2026-10-31T11:33:12Z, SPLIT-OK"
+  - row: "G5-RUNGc"
+    theorems: ["G5.g5_u18_rung_c"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-RUNG (l. 87), §7, as printed; phase-4/proofs/RUNG/COROLLARY-RUNG.md §1 (l. 13), Lemma R.1 (b) (l. 31); SKELETON.md row Cor. 3.6′ (l. 121); for every n ≥ 1 no element of ⟨S, T⟩ has trace ±(phi ^ n + Ring.inverse phi ^ n); V1-GREEN 2026-10-31T11:33:12Z (KEEP), SPLIT-OK"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "5bccdfeb26a4a34702a9ecbcb2b7f2e9cd3b54e8cecb33b0d27aaa7876cb2a21"

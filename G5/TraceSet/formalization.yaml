@@ -1,0 +1,48 @@
+# Unit U17 (G5/TraceSet) — per-unit record, Claude Paper No. 1
+unit: "U17"
+module_path: "G5/TraceSet"
+paper: "Claude Paper No. 1 — The Realized Trace Set of the Hecke Group G(5)"
+source_sha256: "5f2f0ed820a3acf6e2be57f5f11fe12a0c0c3010e74a0ae89ef33eec8783bdf3"
+source_bytes: 36526
+source_file: "Claude-Papers/No1-G5/phase-3/STATEMENTS.md (the edition sha256 5f2f0ed8… · 36526 B, the fourth extending edition — §7 appended 2026-10-31T11:26:17Z with the wave's four sheet lines — read at 2026-10-31T11:37:41Z and re-read at 2026-10-31T11:42:14Z, unchanged; it EXTENDS the four editions before it — head -c 31612 reproduces 9ebf3004… (the edition the specs were written under), head -c 30598 reproduces 4a53d9ba…, head -c 25981 reproduces 1fb5b03e…, head -c 21568 reproduces a84cecdd…, all read 11:37:41Z; the specs' headers and §5 docstrings carry the prefix 9ebf3004; the rows are §7, l. 85, l. 86)"
+source_extends:
+  - sha256: "9ebf30048d9d246295226f9f8aa7ac86da0d72956e1c1d6e0c45d4eda57c79b3"
+    bytes: 31612
+  - sha256: "4a53d9bab6c8ce4f09d27fa55804287f280dcc19deed5c5e2ff1e60058c64e1f"
+    bytes: 30598
+  - sha256: "1fb5b03ec18e49f0fa5060dc0068145d59521f1e1062bb5a00989e9936055c47"
+    bytes: 25981
+  - sha256: "a84cecdd3bfa79014173183ffcaea66d2d0f469033501ffae983072344000731"
+    bytes: 21568
+mathlib_rev: "db584cd6d46c92f209a44c0f1c829460d327499d"
+toolchain: "leanprover/lean4:v4.33.0"
+depends_on:
+  - unit: "U1"
+    module: "G5.Ring.Challenge"
+    challenge_sha256: "863127f81663d1ff5cebf9b44762a1341559e5b5a26660fbf751f0f69445948c"
+    note: "frozen (G5/Ring/formalization.yaml statement_sha256, V2-U1 signed 2026-10-30T10:23:30Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; supplies ZPhi, M2, S, T, R; imported, not restated"
+  - unit: "U7"
+    module: "G5.Group.Challenge"
+    challenge_sha256: "689c36e6c026a1ce151dd2ab84243a5f8f76bb20a11304c9065cdb358ed410ae"
+    note: "frozen (G5/Group/formalization.yaml statement_sha256, V2-U7 signed 2026-10-30T10:56:50Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; supplies HeckeGrp; imported, not restated"
+  - unit: "U8"
+    module: "G5.GroupLevel.Challenge"
+    challenge_sha256: "bf7316f7eae415f48781199ebd28706dfc940633d484ca5ef2aae997dcb08ccd"
+    note: "frozen (G5/GroupLevel/formalization.yaml statement_sha256, V2-U8 signed 2026-10-30T11:44:57Z); shasum at 2026-10-31T11:38:29Z and 2026-10-31T11:42:14Z matches; imported for the leg PHIINV composes with (g5_u8_ell: tr R² = ⟨−1, 1⟩, tr R³ = ⟨1, −1⟩); imported, not restated"
+definitions: []
+definitions_note: "U17 defines nothing; ZPhi, M2 are U1's, HeckeGrp is U7's; φ⁻¹ and −φ⁻¹ are written as the pairs ⟨−1, 1⟩ and ⟨1, −1⟩, no inverse stated; U8 is imported for the leg"
+rows:
+  - row: "G5-TSYM"
+    theorems: ["G5.g5_u17_tsym"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-TSYM (l. 85), §7; candidates/checks/AM-1-second-head.md §4 'Every element, not only every class' (l. 72); the print phase-4/draft/S2-preliminaries.md §2.1 (l. 66–68); for every g ∈ ⟨S, T⟩ there is h ∈ ⟨S, T⟩ with tr h = −tr g — the literal trace set is symmetric under t ↦ −t; V1-GREEN 2026-10-31T11:33:52Z"
+  - row: "G5-PHIINV"
+    theorems: ["G5.g5_u17_phiinv"]
+    status: "STATED"
+    note: "STATEMENTS.md row G5-PHIINV (l. 86), §7; candidates/checks/AM-1-second-head.md §1 table (l. 26), §4 'The non-hyperbolic traces' (l. 73–74); the print phase-4/draft/S2-preliminaries.md Prop. 2.5 (l. 196–199), l. 210–212, phase-4/draft/S3-theorem-a.md l. 51–53; each of ⟨−1, 1⟩ = φ − 1 and ⟨1, −1⟩ = 1 − φ is the trace of an element of ⟨S, T⟩; V1-GREEN 2026-10-31T11:33:52Z"
+authors:
+  - "QRiemannian Research"
+automation:
+  methods:
+    - "Claude models (Anthropic), as agents"
+statement_sha256_draft: "b429cfc86f24801ae7ccc22817a2285b5de4fd004ff8b21e91b694f7defdaeed"

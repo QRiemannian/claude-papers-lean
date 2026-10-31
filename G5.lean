@@ -18,3 +18,6 @@ import G5.EvenK.Challenge
 import G5.CensusCap.Challenge
 import G5.EvenKRemark.Challenge
 import G5.CensusSearch.Challenge
+import G5.ClassSep.Challenge
+import G5.TraceSet.Challenge
+import G5.EveryRung.Challenge
