@@ -291,3 +291,24 @@ manifest: manifests/unit-G5.CensusSearch-3f07903.json · verdict PASS
 ```
 
 manifest sha256: a71de788c1b5458616903b6483502b527fe4b54ca4f04b936c0094277010bfef  manifests/unit-G5.CensusSearch-3f07903.json
+
+## K-U16 `G5/ClassSep` — logged 2026-10-31T12:13:00Z (K seat, procedural)
+
+- poll by process name (lean · lake · lean4export · comparator): 2026-10-31T12:11:23Z all four empty, no wait
+- command: `cd ~/Claude/projects/claude-papers-lean && export PATH="$HOME/.elan/bin:$PATH" && source tools/env.sh && bash tools/check.sh --unit G5/ClassSep`
+- start 2026-10-31T12:11:29Z · end 2026-10-31T12:12:52Z · exit 0
+- manifest sha256: 4351a1168f03cf1e378b84384bf2b1e4ae126fed78c2596f094e2eb601c89710
+
+```
+check.sh @ 2026-10-31T12:11:29Z · commit 5993914 · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/ClassSep
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (8714 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 5.82s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 10 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.ClassSep-5993914.json · verdict PASS
+```
