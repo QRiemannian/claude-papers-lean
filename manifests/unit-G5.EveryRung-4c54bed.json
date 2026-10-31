@@ -1,0 +1,329 @@
+{
+  "clock": "2026-10-31T12:21:23Z",
+  "commit": "4c54bed",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 5.19,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 5.19s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 31 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.EveryRung.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.EveryRung.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_b._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_9",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_inv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_fib_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_lucas_pos._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_a._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_a._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_a._proof_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_lucas_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_phi_pow",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_uphi._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_b._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_b._proof_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_lucas_fib",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_8",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "G5.g5_u18_rung_c._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_fib_pos._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_uphi._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_inv_pow",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.EveryRung.Solution",
+      "theorem": "_private.G5.EveryRung.Solution.0.G5.g5_u18_aux_shape._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/EveryRung",
+      "sha256": "5bccdfeb26a4a34702a9ecbcb2b7f2e9cd3b54e8cecb33b0d27aaa7876cb2a21",
+      "signed": "5bccdfeb26a4a34702a9ecbcb2b7f2e9cd3b54e8cecb33b0d27aaa7876cb2a21"
+    }
+  ],
+  "file_hashes": {
+    "./G5/EveryRung/Challenge.lean": "5bccdfeb26a4a34702a9ecbcb2b7f2e9cd3b54e8cecb33b0d27aaa7876cb2a21",
+    "./G5/EveryRung/Solution.lean": "58758765b32e19568dce4d670d5bdde14ea033fcee236a5a77ec04cb3de8dd6a",
+    "./G5/EveryRung/comparator.json": "48ba9f1d1757eeb411dcbe10b015495ee0f58b9534b457ef001bea50453b2f3c",
+    "./G5/EveryRung/formalization.yaml": "26c50650177277677fce7a0036ff3f5d6fbc6935dae783c665bb4b442de481b4"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/EveryRung",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}
