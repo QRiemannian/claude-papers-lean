@@ -151,3 +151,5 @@ theorem g5_u18_rung_b (n : ℕ) (ho : Odd n) (g : M2ˣ) (hg : g ∈ HeckeGrp) :
 Sheet line (id · statement in one line · locus · unit): G5-RUNGb · for every odd n and g ∈ HeckeGrp, tr g ≠ (−F_n, 2F_n) and tr g ≠ (F_n, −2F_n) (the odd rungs φⁿ + φ⁻ⁿ = F_n√5, (3.12)) · COROLLARY-RUNG §1 l. 13, 15, §5 Step 3 l. 79; SKELETON l. 121; print S3 Cor. 3.6′ l. 265–267, (3.12) l. 281 · U18 `G5/EveryRung`
 
 SPEC-DRAFT 2026-10-31T11:21:54Z
+
+V1: V1-GREEN 2026-10-31T11:33:12Z — faithful to COROLLARY-RUNG.md l. 13 + l. 15 / Lemma R.1 (c) l. 32 / Step 3 l. 79: odd n (`Odd n`, so n ≥ 1 by itself), both signs ±(−F_n, 2F_n), every g ∈ U7 HeckeGrp, literal trace; parity keying is the record's, not a narrowing; `fibZ` = (C-5)'s F on ℕ (F₋₁ never indexed); keep `fibZ` over `Nat.fib` (both faithful; no casts, parallel with `lucasZ`); §2 quotes verbatim at their lines; §5 blocks byte substrings of probe 677dc138; imports FROZEN. Parse: 0 Lean line(s) over 100 code points

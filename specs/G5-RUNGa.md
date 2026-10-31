@@ -151,3 +151,5 @@ theorem g5_u18_rung_a (n : ℕ) (hn : 1 ≤ n) (he : Even n) (g : M2ˣ) (hg : g 
 Sheet line (id · statement in one line · locus · unit): G5-RUNGa · for every even n ≥ 1 and g ∈ HeckeGrp, tr g ≠ (L_n, 0) and tr g ≠ −(L_n, 0) (the even rungs φⁿ + φ⁻ⁿ = L_n, (3.12)) · COROLLARY-RUNG §1 l. 13, 15, §5 Step 2 l. 77; SKELETON l. 121; print S3 Cor. 3.6′ l. 265–267, (3.12) l. 281 · U18 `G5/EveryRung`
 
 SPEC-DRAFT 2026-10-31T11:21:54Z
+
+V1: V1-GREEN 2026-10-31T11:33:12Z — faithful to COROLLARY-RUNG.md l. 13 + l. 15 / Lemma R.1 (c) l. 32 / Step 2 l. 77: even n ≥ 1 (`1 ≤ n ∧ Even n`, root mathlib `Even` on ℕ), both signs (±L_n, 0), every g ∈ U7 HeckeGrp, literal trace; parity keying is the record's (l. 15, (3.12)), not a narrowing; `1 ≤ n` is content (t₀ = (2, 0) = tr I); `lucasZ` = (C-5)'s L (L₀ = 2, L₁ = 1, recursion; = F_{n−1} + F_{n+1}, n < 300); §2 quotes verbatim at their lines; §5 blocks byte substrings of probe 677dc138; imports U1 863127f8 · U7 689c36e6 · U10 34608245 FROZEN. Parse: 0 Lean line(s) over 100 code points

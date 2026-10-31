@@ -152,3 +152,5 @@ theorem g5_u18_rung_c (n : ℕ) (hn : 1 ≤ n) (g : M2ˣ) (hg : g ∈ HeckeGrp) 
 Sheet line (id · statement in one line · locus · unit): G5-RUNGc · for every n ≥ 1 and g ∈ HeckeGrp, tr g ≠ φⁿ + φ⁻ⁿ and tr g ≠ −(φⁿ + φ⁻ⁿ), φ⁻¹ = Ring.inverse φ (Cor. 3.6′ as printed) · COROLLARY-RUNG §1 l. 13, Lemma R.1 (b) l. 31; SKELETON l. 121; print S3 (3.10) l. 260, Cor. 3.6′ l. 265–267 · U18 `G5/EveryRung`
 
 SPEC-DRAFT 2026-10-31T11:21:54Z
+
+V1: V1-GREEN 2026-10-31T11:33:12Z — KEEP: the record's own sentence (COROLLARY-RUNG.md l. 13; print Cor. 3.6′ l. 265–267): n ≥ 1, both signs of φⁿ + φ⁻ⁿ, every g ∈ U7 HeckeGrp; carries the corollary whole where the legs need (3.12), which is on no theorem; `Ring.inverse phi` KEPT as φ⁻¹ — mathlib's MonoidWithZero inverse (U1 fixes no inverse name; no `Inv ZPhi` in G5/), φ a unit (⟨0,1⟩·⟨−1,1⟩ = ⟨1,0⟩), so it is φ − 1 = the record's φ⁻¹ of Lemma R.1 (b) l. 31; `(phi − 1)^n` equal and also faithful but builds R.1 (b) into the statement; `1 ≤ n` is content (n = 0 gives 2 = tr I); §2 quotes verbatim; §5 blocks byte substrings of probe 677dc138; imports FROZEN. Parse: 0 Lean line(s) over 100 code points
