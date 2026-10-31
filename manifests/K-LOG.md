@@ -332,3 +332,21 @@ manifest: manifests/unit-G5.TraceSet-7cfdccf.json · verdict PASS
 ```
 
 manifest sha256: a9b8fdaf13edbff485d4286c44bd8904dc1fa955310faf0918d656c1bdf9e8a2
+
+## K-U18 G5/EveryRung — logged 2026-10-31T12:21:02Z (seat K, procedural)
+- poll by name 2026-10-31T12:19:49Z: lean/lake/lean4export/comparator all empty, no wait
+- run 2026-10-31T12:19:53Z → 2026-10-31T12:20:56Z · exit 0
+- manifest sha256: 554c8d821b22f81c068e84a87c9728ba9dc706d21f79b60a14b69029635d8acd
+```
+check.sh @ 2026-10-31T12:19:53Z · commit fabfbd3 · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/EveryRung
+info: G5/Group/Solution.lean:583:2: `ext`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 582!
+Build completed successfully (8713 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 5.54s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 31 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.EveryRung-fabfbd3.json · verdict PASS
+```
