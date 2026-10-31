@@ -1,0 +1,167 @@
+{
+  "clock": "2026-10-31T12:15:49Z",
+  "commit": "7cfdccf",
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_rev": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lake_build_seconds": 7.62,
+  "checks": [
+    {
+      "check": "lake_build",
+      "status": "PASS",
+      "detail": "exit 0 on 2 target(s) (the unit's modules by name) in 7.62s"
+    },
+    {
+      "check": "no_sorry_no_axiom",
+      "status": "PASS",
+      "detail": "2 .lean files scanned"
+    },
+    {
+      "check": "axioms",
+      "status": "PASS",
+      "detail": "1 Solution module(s), 11 theorem(s), all within {propext Classical.choice Quot.sound}"
+    },
+    {
+      "check": "comparator",
+      "status": "PASS",
+      "detail": "1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)"
+    },
+    {
+      "check": "challenge_digest",
+      "status": "PASS",
+      "detail": "1 Challenge.lean digest(s) equal the signed statement_sha256"
+    },
+    {
+      "check": "retired_names",
+      "status": "PASS",
+      "detail": "0 hits for the four retired names"
+    }
+  ],
+  "build_targets": [
+    {
+      "target": "G5.TraceSet.Challenge",
+      "exit": 0
+    },
+    {
+      "target": "G5.TraceSet.Solution",
+      "exit": 0
+    }
+  ],
+  "axioms": [
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_uS._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_uS._proof_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_uT._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_uR_pow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_SS",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "G5.g5_u17_phiinv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "G5.g5_u17_tsym",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_uT._proof_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_uS_mem",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_uR_pow_mem",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "module": "G5.TraceSet.Solution",
+      "theorem": "_private.G5.TraceSet.Solution.0.G5.g5_u17_aux_uT_mem",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "challenge_digests": [
+    {
+      "unit": "./G5/TraceSet",
+      "sha256": "b429cfc86f24801ae7ccc22817a2285b5de4fd004ff8b21e91b694f7defdaeed",
+      "signed": "b429cfc86f24801ae7ccc22817a2285b5de4fd004ff8b21e91b694f7defdaeed"
+    }
+  ],
+  "file_hashes": {
+    "./G5/TraceSet/Challenge.lean": "b429cfc86f24801ae7ccc22817a2285b5de4fd004ff8b21e91b694f7defdaeed",
+    "./G5/TraceSet/Solution.lean": "e333d5d20453e91111c34ad9f742defbc71f5abb7b102915d640123b46055d4c",
+    "./G5/TraceSet/comparator.json": "a425193b251264c1459ff2d9190ca899e9e6e3c3da3ef504c2d59759f4f83c4d",
+    "./G5/TraceSet/formalization.yaml": "0ba753c24cef1218df73236c5c59f782c6acbe54c92633acbeeb2d8f61fd14cf"
+  },
+  "verdict": "PASS",
+  "mode": "unit",
+  "unit": "G5/TraceSet",
+  "arms": "lake_build no_sorry_no_axiom axioms comparator challenge_digest retired_names (lake build: the unit's Challenge and Solution modules by name)"
+}

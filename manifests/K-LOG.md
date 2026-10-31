@@ -312,3 +312,23 @@ Build completed successfully (8714 jobs).
 [PASS] retired_names — 0 hits for the four retired names
 manifest: manifests/unit-G5.ClassSep-5993914.json · verdict PASS
 ```
+
+## K-U17 `G5/TraceSet` — K seat run, logged 2026-10-31T12:17:26Z
+
+Poll (pgrep -x lean/lake/lean4export/comparator) at 2026-10-31T12:15:43Z: all four empty; waitlean.sh at 2026-10-31T12:15:49Z: no waits. Command (once, as written): `cd ~/Claude/projects/claude-papers-lean && export PATH="$HOME/.elan/bin:$PATH" && source tools/env.sh && bash tools/check.sh --unit G5/TraceSet` — start 2026-10-31T12:15:49Z · end 2026-10-31T12:17:15Z · exit 0.
+
+```
+check.sh @ 2026-10-31T12:15:49Z · commit 7cfdccf · leanprover/lean4:v4.33.0 · mathlib db584cd6d46c92f209a44c0f1c829460d327499d · units 1 · --unit G5/TraceSet
+info: G5/Group/Solution.lean:583:2: `ext`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 582!
+Build completed successfully (8712 jobs).
+[PASS] lake_build — exit 0 on 2 target(s) (the unit's modules by name) in 7.62s
+[PASS] no_sorry_no_axiom — 2 .lean files scanned
+[PASS] axioms — 1 Solution module(s), 11 theorem(s), all within {propext Classical.choice Quot.sound}
+[PASS] comparator — 1 unit(s) okay (landrun: /Users/qriemannian/Claude/projects/comparator/scripts/fake-landrun.sh)
+[PASS] challenge_digest — 1 Challenge.lean digest(s) equal the signed statement_sha256
+[PASS] retired_names — 0 hits for the four retired names
+manifest: manifests/unit-G5.TraceSet-7cfdccf.json · verdict PASS
+```
+
+manifest sha256: a9b8fdaf13edbff485d4286c44bd8904dc1fa955310faf0918d656c1bdf9e8a2
