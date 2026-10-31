@@ -153,3 +153,5 @@ Sheet line (id · statement in one line · locus · unit): G5-RUNGb · for every
 SPEC-DRAFT 2026-10-31T11:21:54Z
 
 V1: V1-GREEN 2026-10-31T11:33:12Z — faithful to COROLLARY-RUNG.md l. 13 + l. 15 / Lemma R.1 (c) l. 32 / Step 3 l. 79: odd n (`Odd n`, so n ≥ 1 by itself), both signs ±(−F_n, 2F_n), every g ∈ U7 HeckeGrp, literal trace; parity keying is the record's, not a narrowing; `fibZ` = (C-5)'s F on ℕ (F₋₁ never indexed); keep `fibZ` over `Nat.fib` (both faithful; no casts, parallel with `lucasZ`); §2 quotes verbatim at their lines; §5 blocks byte substrings of probe 677dc138; imports FROZEN. Parse: 0 Lean line(s) over 100 code points
+
+V2: V2-GREEN 2026-10-31T11:52:17Z — `g5_u18_rung_b` says what COROLLARY-RUNG.md says at l. 13, l. 15 / Lemma R.1 (c) l. 32 / Step 3 l. 79 (sheet §7 l. 87), no stronger, no weaker: odd n (`Odd n` on ℕ forces n ≥ 1, so `1 ≤ n` is redundant), every g ∈ U7 `HeckeGrp`, U1 literal trace, both signs ±⟨−fibZ n, 2 fibZ n⟩ = the record's (−F_n, 2F_n) and (F_n, −2F_n); `fibZ` = (C-5)'s F (F₃ = 2, F₅ = 5, F₇ = 13 by hand); blocks byte-identical to §5, once each; imports FROZEN; freeze 5bccdfeb.
