@@ -52,3 +52,11 @@ automation:
 statement_sha256_draft: "5bccdfeb26a4a34702a9ecbcb2b7f2e9cd3b54e8cecb33b0d27aaa7876cb2a21"
 statement_sha256: "5bccdfeb26a4a34702a9ecbcb2b7f2e9cd3b54e8cecb33b0d27aaa7876cb2a21"
 v2_signed: "2026-10-31T11:52:17Z"
+proofs_phase:
+  closed: "2026-10-31T12:08Z"
+  solution_module: "G5.EveryRung.Solution"
+  solution_sha256: "58758765b32e19568dce4d670d5bdde14ea033fcee236a5a77ec04cb3de8dd6a"
+  theorems_proved: 3
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.Group.Solution, G5.Containment.Solution; restates the unit's two definitions fibZ and lucasZ byte for byte with their docstrings; the comparator accepted the arrangement (exit 0, 65 s, 'Your solution is okay!', 12:07:19Z, macOS shim — unsandboxed)"
+  note: "a shared helper reads g5_u10_cor as a constraint on the trace's coordinates (y = 0 with x ∈ {2, −2, 0}; or y = ±1; or x ≥ 0 ∧ y ≥ 1; or x ≤ 0 ∧ y ≤ −1); rung_a: n = m + 2, L_{m+2} ≥ 3 by induction, coordinates compared, omega; rung_b: n = m + 1, F_{m+1} ≥ 1, the same; rung_c: Ring.inverse φ = ⟨−1, 1⟩ by Ring.inverse_unit at the unit ⟨φ, ⟨−1, 1⟩⟩, Lemma R.1's closed forms φ^(m+1) = ⟨F_m, F_{m+1}⟩ and ⟨−1,1⟩^(m+1) = ⟨(−1)^(m+1) F_{m+2}, (−1)^m F_{m+1}⟩ and L_{m+1} = F_m + F_{m+2} by induction, then Nat.even_or_odd reduces to the two legs. B1 failed on an omega atom (lucasZ (n+1+1) vs lucasZ (n+2)) and four linter lines; B2 12:06:16Z exit 0 (28 s; no warning). The wall's caution (a possible genuine wall): none met"

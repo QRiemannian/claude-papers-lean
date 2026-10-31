@@ -23,3 +23,29 @@
 3. Scratch: `<scratchpad>/L-ADD4/` (sec5.py, assemble.py, records.py, run.sh, runs.log, B1-U16.log).
 
 Closed: 2026-10-31T11:43:14Z.
+
+# BUILD-LOG — unit U16 (`G5/ClassSep`), seat L-ADD4-proofs, PHASE proofs
+
+*Seat opened 2026-10-31T11:55:14Z. Brief: `Orchestrator/Claude-Papers/No1-G5/briefs/SEAT-P4-LEAN-L-proofs-ADD4.md` (READY 2026-10-31T11:54:12Z), with every rule of `SEAT-P4-LEAN-L-proofs-ADD3.md`, `SEAT-P4-LEAN-L-proofs-ADD2.md`, `SEAT-P4-LEAN-L-proofs-ADD.md`, `SEAT-P3-LEAN-L-proofs-U8.md`. One seat, three units (U16, U17, U18), built serially. No git, no web. Scratch: `<scratchpad>/L-ADD4-proofs/`. Lean-process discipline: `pgrep -x` on lean / lake / lean4export / comparator before every lake command; `tools/waitlean.sh`; never `pgrep -f`.*
+
+- **frozen check** 2026-10-31T11:55:14Z: `shasum -a 256 G5/ClassSep/Challenge.lean` = `2021ed569a939caef12eb04b02ffc6d885da5671716989cc3358f726df22c63e` — equals `formalization.yaml` `statement_sha256`. Proceed.
+- **PRELUDE-RULE U16: Solution imports `Mathlib`, `G5.Ring.Solution`, `G5.Group.Solution`, `G5.Sector.Solution`, `G5.WordLevel.Solution`, `G5.SectorGroup.Solution`** — never its own Challenge, no Challenge prelude; restates nothing (U16 defines nothing). U3's private helpers for the separation (`g5_u3_aux_natCast`, `_intCast`, `_two`, `_five`, `_diff`) restated as `g5_u16_aux_*` from U3's Solution text, proofs unchanged up to the prefix; U3's `g5_u3_sep_lin` / `g5_u3_sep_sq` proof bodies restated in a free variable `t : ZPhi` under `1 ≤ t.y` as `g5_u16_aux_lin` / `g5_u16_aux_sq` (a generalization of the same proof, not a new one).
+- **Solution written** 2026-10-31T11:56:20Z — assembled by script (`<scratchpad>/L-ADD4-proofs/assemble.py`, `spec16.py`) from the Challenge's text from `open G5 ZPhi` to `end G5`: helpers inserted after `namespace G5`, each `:= by sorry` replaced by its proof; the two statements otherwise untouched.
+- **wait** before B1: `pgrep -x` lean / lake / lean4export / comparator at 2026-10-31T11:56:26Z, then `tools/waitlean.sh` — clear, no wait (`<scratchpad>/L-ADD4-proofs/waits.log`).
+- **B1** 2026-10-31T11:56:26Z — `lake build G5.ClassSep.Solution`: exit **0**, wall 44 s (the module 38 s), `Build completed successfully (8714 jobs)`. First error: none. Warnings in this module: none (the log's warnings are upstream linter lines replayed from U3's and U7's Solutions); zero `sorry`. Log: `<scratchpad>/L-ADD4-proofs/B1-U16.log`.
+- **statement check** 2026-10-31T11:56Z (`check.py`): each of the two theorem blocks (docstring + text up to `:=`) occurs exactly once in `Solution.lean`, in the Challenge's order; no `import` of a Challenge; longest line 93 code points; no `sorry` / `admit` / `native_decide` / `axiom` / `set_option`; none of the lane's barred words.
+- **axioms** 2026-10-31T11:57:22Z (poll clear) — `lake env lean <scratchpad>/L-ADD4-proofs/ax-U16.lean` (exit 0, 20 s):
+  - `G5.g5_u16_csep_lin` depends on axioms: [propext, Classical.choice, Quot.sound]
+  - `G5.g5_u16_csep_sq` depends on axioms: [propext, Classical.choice, Quot.sound]
+- **comparator** 2026-10-31T11:57:42Z (poll clear) — `bash tools/comparator.sh G5/ClassSep`: exit **0**, wall 75 s; landrun = the macOS shim (NOT sandboxed). Last lines: `Running Lean default kernel on solution.` · `Lean default kernel accepts the solution` · `Your solution is okay!`. Log: `CMP-U16.log`.
+- `Solution.lean` sha256 `4309e45aab0e4d23252072184e16c6d15eb004b8da433c15ffe4c1c25830b5cf`, 111 lines. `Challenge.lean` re-read 2026-10-31T11:59:04Z: still `2021ed56…c63e`.
+
+## Rows (proofs)
+| row | declaration | status | how |
+|---|---|---|---|
+| G5-CSEPa | `g5_u16_csep_lin` | PROVED | `t − t^σ = ⟨−y, 2y⟩` by `ext`; `y • (2φ − 1) = ⟨−y, 2y⟩` through `zsmul_eq_mul` and the integer cast; `2φ − 1 ≤ ⟨−y, 2y⟩` is `NonnegAB5` of `(0, 2y − 2)`, the first disjunct by `omega` from `1 ≤ y`; applied at `t := rabs (tr g)` with `1 ≤ t.y` from `g5_u9_bg_a g hg hh` (first conjunct) |
+| G5-CSEPb | `g5_u16_csep_sq` | PROVED | `⟨−y, 2y⟩² = ⟨5y², 0⟩` by U1's product rule (`ext`, `ring`); `5 ≤ ⟨5y², 0⟩` the first disjunct of `NonnegAB5` by `nlinarith` from `1 ≤ y`; same application |
+
+No `STATEMENT-CHANGE-NEEDED`. No git run; `G5.lean` untouched. Scratch: `<scratchpad>/L-ADD4-proofs/` (assemble.py, spec16.py, check.py, run.sh, ax-U16.lean, B1-U16.log, AX-U16.log, CMP-U16.log, waits.log, runs.log).
+
+Closed (U16 proofs): 2026-10-31T11:59Z.

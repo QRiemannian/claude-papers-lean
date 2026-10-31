@@ -24,3 +24,34 @@
 3. Scratch: `<scratchpad>/L-ADD4/` (sec5.py, assemble.py, records.py, run.sh, runs.log, B1-U18.log).
 
 Closed: 2026-10-31T11:43:14Z.
+
+# BUILD-LOG — unit U18 (`G5/EveryRung`), seat L-ADD4-proofs, PHASE proofs
+
+*Seat opened 2026-10-31T11:55:14Z. Brief: `Orchestrator/Claude-Papers/No1-G5/briefs/SEAT-P4-LEAN-L-proofs-ADD4.md` (READY 2026-10-31T11:54:12Z), with every rule of `SEAT-P4-LEAN-L-proofs-ADD3.md`, `SEAT-P4-LEAN-L-proofs-ADD2.md`, `SEAT-P4-LEAN-L-proofs-ADD.md`, `SEAT-P3-LEAN-L-proofs-U8.md`. One seat, three units (U16, U17, U18), built serially. No git, no web. Scratch: `<scratchpad>/L-ADD4-proofs/`. Lean-process discipline: `pgrep -x` on lean / lake / lean4export / comparator before every lake command; `tools/waitlean.sh`; never `pgrep -f`.*
+
+- **frozen check** 2026-10-31T11:55:14Z: `shasum -a 256 G5/EveryRung/Challenge.lean` = `5bccdfeb26a4a34702a9ecbcb2b7f2e9cd3b54e8cecb33b0d27aaa7876cb2a21` — equals `formalization.yaml` `statement_sha256`. Proceed.
+- **PRELUDE-RULE U18: Solution imports `Mathlib`, `G5.Ring.Solution`, `G5.Group.Solution`, `G5.Containment.Solution`** — never its own Challenge, no Challenge prelude; restates the unit's TWO definitions `fibZ` and `lucasZ` byte for byte (docstrings included, at the Challenge's position, before the helpers and the theorems; `check.py` finds each definition block exactly once). No upstream private helper needed restating; the helpers are new and small (`g5_u18_aux_*`).
+- **Solution written** 2026-10-31T12:05:05Z — assembled by script (`<scratchpad>/L-ADD4-proofs/assemble.py`, `spec18.py`) from the Challenge's text from `open G5 ZPhi` to `end G5`: helpers inserted after the two definitions (before the RUNGa docstring), each `:= by sorry` replaced by its proof; the definitions and the three statements otherwise untouched.
+- **wait** before B1: `pgrep -x` lean / lake / lean4export / comparator at 2026-10-31T12:05:10Z, then `tools/waitlean.sh` — clear, no wait (every poll of this unit clear at the first look; `<scratchpad>/L-ADD4-proofs/waits.log`).
+- **B1** 2026-10-31T12:05:10Z — `lake build G5.EveryRung.Solution`: exit **1**, wall 33 s. First error: `G5/EveryRung/Solution.lean:62:15: omega could not prove the goal` — in `g5_u18_aux_lucas_pos`, `omega` read `lucasZ (n + 1 + 1)` and `lucasZ (n + 2)` as two atoms. Also four unused-simp-argument lines (`neg_x`, `neg_y` in the un-negated branches of RUNGa/RUNGb) and two `unnecessarySeqFocus` lines (`ext <;> simp … <;> ring`, one goal left by `simp`). Log: `<scratchpad>/L-ADD4-proofs/B1-U18.log`.
+- **fix** — the first conjunct by `(1 ≤ 3).trans ih.2` (the two atoms are definitionally equal); `dsimp only` in the un-negated branches; `ring` on its own line after `ext <;> simp …`.
+- **B2** 2026-10-31T12:06:16Z (poll clear) — `lake build G5.EveryRung.Solution`: exit **0**, wall 28 s (the module 24 s), `Build completed successfully (8713 jobs)`. First error: none. Warnings in this module: none; zero `sorry`. Log: `B2-U18.log`.
+- **statement check** 2026-10-31T12:06Z (`check.py`): the two definition blocks and each of the three theorem blocks (docstring + text up to `:=`) occur exactly once in `Solution.lean`, in the Challenge's order; no `import` of a Challenge; longest line 98 code points; no `sorry` / `admit` / `native_decide` / `axiom` / `set_option`; none of the lane's barred words.
+- **axioms** 2026-10-31T12:06:54Z (poll clear) — `lake env lean <scratchpad>/L-ADD4-proofs/ax-U18.lean` (exit 0, 25 s):
+  - `G5.g5_u18_rung_a` depends on axioms: [propext, Classical.choice, Quot.sound]
+  - `G5.g5_u18_rung_b` depends on axioms: [propext, Classical.choice, Quot.sound]
+  - `G5.g5_u18_rung_c` depends on axioms: [propext, Classical.choice, Quot.sound]
+- **comparator** 2026-10-31T12:07:19Z (poll clear) — `bash tools/comparator.sh G5/EveryRung`: exit **0**, wall 65 s; landrun = the macOS shim (NOT sandboxed). Last lines: `Running Lean default kernel on solution.` · `Lean default kernel accepts the solution` · `Your solution is okay!`. Log: `CMP-U18.log`.
+- `Solution.lean` sha256 `58758765b32e19568dce4d670d5bdde14ea033fcee236a5a77ec04cb3de8dd6a`, 213 lines. `Challenge.lean` re-read 2026-10-31T12:08:24Z: still `5bccdfeb…2a21`.
+- **The wall's caution (a possible genuine wall at U18):** none met. The attempt log is B1 → B2 above: one `omega` atom slip and linter lines, no row resisted, no statement change needed. The one identity worked out on paper first (the brief's NOTE): the invariant proved is not a common recursion but the two closed forms of Lemma R.1 separately — `φ^(m+1) = ⟨F_m, F_{m+1}⟩` and `⟨−1, 1⟩^(m+1) = ⟨(−1)^(m+1) F_{m+2}, (−1)^m F_{m+1}⟩` (one-step inductions, the step `⟨a, b⟩ · ⟨−1, 1⟩ = ⟨b − a, a⟩`) — summed; at n = 1..4 they give ⟨−1, 2⟩, ⟨3, 0⟩, ⟨−2, 4⟩, ⟨7, 0⟩, the record's table.
+
+## Rows (proofs)
+| row | declaration | status | how |
+|---|---|---|---|
+| G5-RUNGa | `fibZ`, `lucasZ` (restated) · `g5_u18_rung_a` | PROVED | `n = m + 2` from `Even n`, `1 ≤ n`; `L_{m+2} ≥ 3` by induction; U10's `g5_u10_cor` read as a shape on the trace's coordinates (`g5_u18_aux_shape`: `y = 0 ∧ x ∈ {2, −2, 0}`, `y = ±1`, `x ≥ 0 ∧ y ≥ 1`, or `x ≤ 0 ∧ y ≤ −1`); `tr = ⟨±L, 0⟩` compared coordinatewise (`congrArg ZPhi.x/.y`), `omega` |
+| G5-RUNGb | `g5_u18_rung_b` | PROVED | `n = m + 1` from `Odd n`; `F_{m+1} ≥ 1` by induction; the same shape: `⟨−F, 2F⟩` needs `x = −F ≥ 0` or `y = 2F ∈ {0, ±1}`, `⟨F, −2F⟩` needs `x = F ≤ 0` or `y ≥ 1`; `omega` |
+| G5-RUNGc | `g5_u18_rung_c` | PROVED | `Ring.inverse φ = ⟨−1, 1⟩` by `Ring.inverse_unit` at the unit `⟨φ, ⟨−1, 1⟩⟩` (`decide` on the two products); the two closed forms above and `L_{m+1} = F_m + F_{m+2}` (two-step induction); `Nat.even_or_odd (m + 1)` with `Even.neg_one_pow` / `Odd.neg_one_pow` rewrites `φⁿ + φ⁻ⁿ` to `⟨L_n, 0⟩` or `⟨−F_n, 2F_n⟩`, then RUNGa / RUNGb |
+
+No `STATEMENT-CHANGE-NEEDED`. No git run; `G5.lean` untouched. Scratch: `<scratchpad>/L-ADD4-proofs/` (assemble.py, spec18.py, check.py, run.sh, ax-U18.lean, B1/B2-U18.log, AX-U18.log, CMP-U18.log, waits.log, runs.log).
+
+Closed (U18 proofs): 2026-10-31T12:08Z.

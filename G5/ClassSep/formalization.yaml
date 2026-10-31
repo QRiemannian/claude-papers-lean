@@ -56,3 +56,11 @@ automation:
 statement_sha256_draft: "2021ed569a939caef12eb04b02ffc6d885da5671716989cc3358f726df22c63e"
 statement_sha256: "2021ed569a939caef12eb04b02ffc6d885da5671716989cc3358f726df22c63e"
 v2_signed: "2026-10-31T11:52:43Z"
+proofs_phase:
+  closed: "2026-10-31T11:59Z"
+  solution_module: "G5.ClassSep.Solution"
+  solution_sha256: "4309e45aab0e4d23252072184e16c6d15eb004b8da433c15ffe4c1c25830b5cf"
+  theorems_proved: 2
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.Group.Solution, G5.Sector.Solution, G5.WordLevel.Solution, G5.SectorGroup.Solution; restates nothing (no definition in the unit); U3's separation arithmetic restated as private helpers in a free t : ZPhi with 1 ≤ t.y; the comparator accepted the arrangement (exit 0, 75 s, 'Your solution is okay!', 11:57:42Z, macOS shim — unsandboxed)"
+  note: "csep_lin / csep_sq: the helper (t − conj t = ⟨−y, 2y⟩ = y • (2φ − 1) via zsmul_eq_mul; its square ⟨5y², 0⟩; the order goals the first NonnegAB5 case by omega/nlinarith) applied at t := rabs (tr g) with 1 ≤ t.y from the first conjunct of g5_u9_bg_a g hg hh. Build B1 11:56:26Z exit 0 (44 s; no warning in the module)"

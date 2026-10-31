@@ -48,3 +48,11 @@ automation:
 statement_sha256_draft: "b429cfc86f24801ae7ccc22817a2285b5de4fd004ff8b21e91b694f7defdaeed"
 statement_sha256: "b429cfc86f24801ae7ccc22817a2285b5de4fd004ff8b21e91b694f7defdaeed"
 v2_signed: "2026-10-31T11:53:01Z"
+proofs_phase:
+  closed: "2026-10-31T12:02Z"
+  solution_module: "G5.TraceSet.Solution"
+  solution_sha256: "e333d5d20453e91111c34ad9f742defbc71f5abb7b102915d640123b46055d4c"
+  theorems_proved: 2
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  prelude_rule: "Solution imports Mathlib + the proved preludes G5.Ring.Solution, G5.Group.Solution, G5.GroupLevel.Solution; restates nothing (no definition in the unit); U7's unit device (the units of S and T, membership by Subgroup.subset_closure, the unit (T S)^a with matrix R^a) restated privately; the comparator accepted the arrangement (exit 0, 72 s, 'Your solution is okay!', 12:00:57Z, macOS shim — unsandboxed)"
+  note: "tsym: the witness uS · uS · g, whose matrix is S S g = −g since S² = −I (decide), then Matrix.trace_neg; phiinv: rcases ht with rfl | rfl, witnesses (T S)² and (T S)³ with traces from conjuncts 4 and 5 of g5_u8_ell. Build B1 11:59:47Z exit 0 (35 s; no warning)"
