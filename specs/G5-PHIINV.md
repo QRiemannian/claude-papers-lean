@@ -106,3 +106,5 @@ theorem g5_u17_phiinv (t : ZPhi)
 Sheet line (id · statement in one line · locus · unit): G5-PHIINV · each of φ⁻¹ = ⟨−1, 1⟩ and −φ⁻¹ = ⟨1, −1⟩ is the trace of some g ∈ HeckeGrp (R², R³) · AM-1-second-head §1 l. 26, §4 l. 73–74; AM §3.2 l. 130; print S2 Prop. 2.5 l. 196–199, l. 210–212, S3 l. 51–53 · U17 `G5/TraceSet`
 
 SPEC-DRAFT 2026-10-31T11:21:54Z
+
+V1: V1-GREEN 2026-10-31T11:33:52Z — the RECORD states both signs (AM-1-second-head §4 l. 74 "±φ, ±φ⁻¹ (±R^a …)", §1 l. 26 table φ − 1 = φ⁻¹ at R², 1 − φ = −φ⁻¹ at R³; AM transcript l. 130; wall §5 "±φ⁻¹ realized"; S3 l. 51–53 is a + use only), so GREEN as stated; φ⁻¹ = ⟨-1, 1⟩, −φ⁻¹ = ⟨1, -1⟩ (STATEMENTS §2 item 7, U8 g5_u8_ell); U7 g5_u7_int_b form confirmed; ±φ rightly off-lane; §2 quotes verbatim (7/7); §5 a byte substring of probe dc8fd763… · parse: 0 Lean line(s) over 100 code points

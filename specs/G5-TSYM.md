@@ -77,3 +77,5 @@ theorem g5_u17_tsym (g : M2ˣ) (hg : g ∈ HeckeGrp) :
 Sheet line (id · statement in one line · locus · unit): G5-TSYM · for every g ∈ HeckeGrp there is h ∈ HeckeGrp with tr h = −tr g (the literal trace set is symmetric under t ↦ −t) · AM-1-second-head §4 l. 72; print S2 §2.1 l. 66–68 · U17 `G5/TraceSet`
 
 SPEC-DRAFT 2026-10-31T11:21:54Z
+
+V1: V1-GREEN 2026-10-31T11:33:52Z — faithful to AM-1-second-head §4 l. 72 ("contains −I = S², so its trace set is sign-symmetric"): closure of the literal SL trace set under negation is the whole of the symmetry; −I ∈ G(5) is the reason, not a clause (S² = −I off-lane, STATEMENTS §2 item 7); witness S·S·g from U1 names (−I as `-1 : M2`); §2 quotes verbatim (2/2); §5 a byte substring of probe dc8fd763…; imports U1 863127f8…, U7 689c36e6…, U8 bf7316f7… reproduce · parse: 0 Lean line(s) over 100 code points
