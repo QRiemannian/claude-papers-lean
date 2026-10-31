@@ -125,3 +125,5 @@ theorem g5_u16_csep_lin (g : M2ˣ) (hg : g ∈ HeckeGrp) (hh : 2 < rabs (g : M2)
 Sheet line (id · statement in one line · locus · unit): G5-CSEPa · for every g ∈ HeckeGrp with 2 < |tr g| (real order), t := |tr g| has t − t^σ = y·(2φ − 1) and 2φ − 1 ≤ t − t^σ · TA §1 "E2, sharpened" l. 49; DO §1.3 l. 47; SH-P2-1 §4 l. 197–200; LEDGER D-E2 l. 26; print S3 Cor. 3.7 l. 384–388 · U16 `G5/ClassSep`
 
 SPEC-DRAFT 2026-10-31T11:21:54Z
+
+V1: V1-GREEN 2026-10-31T11:33:30Z — faithful to TA l. 49 / DO l. 47 / SH-P2-1 l. 197–199 / STATEMENTS l. 22 "for every hyperbolic class, t − t^σ = y√5 ≥ √5": t = rabs (g : M2).trace is the record's "t = ±tr g > 0" (STATEMENTS l. 24; = ntr w on words), hyperbolicity U9's frozen `2 < rabs (g : M2).trace`, no `1 ≤ y` hypothesis (y ≥ 1 is the content), √5 = U3's `2 * phi - 1`; U3's frozen `g5_u3_sep_lin` lifted to elements, the composition stated; imports U1/U7/U4/U3/U9 shasums match; §2 quotes exact; §5 a byte substring of probe 367c1902…; parse: 0 Lean line(s) over 100 code points. Note: print S3 now 3aaa55af…, Cor. 3.7 one line up (383–387), text unchanged — see _V1-U16.md.

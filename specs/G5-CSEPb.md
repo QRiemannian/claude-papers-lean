@@ -121,3 +121,5 @@ theorem g5_u16_csep_sq (g : M2ˣ) (hg : g ∈ HeckeGrp) (hh : 2 < rabs (g : M2).
 Sheet line (id · statement in one line · locus · unit): G5-CSEPb · for every g ∈ HeckeGrp with 2 < |tr g| (real order), t := |tr g| has (t − t^σ)² = 5y² and 5 ≤ (t − t^σ)² (the distance ≥ √(5/2) from the diagonal, in the ring) · TA §1 l. 49; DO §1.3 l. 47; SH-P2-1 §4 l. 200; STATEMENTS G5-SEP l. 22 (Lean notes); print S3 Cor. 3.7 l. 387–388, l. 395 · U16 `G5/ClassSep`
 
 SPEC-DRAFT 2026-10-31T11:21:54Z
+
+V1: V1-GREEN 2026-10-31T11:33:30Z — faithful: the record's "distance ≥ √(5/2) from the diagonal" (TA l. 49; DO l. 47 "|t − t^σ|/√2 = √(5/2)·|y|"; SH-P2-1 l. 200) is (t − t^σ)² ≥ 5, stated in the ring as STATEMENTS l. 22's Lean notes ask ("(t − t^σ)² = 5y² ≥ 5"), U3's frozen `g5_u3_sep_sq` form; t = rabs (g : M2).trace (the record's sign normalization), hyperbolicity U9's frozen hypothesis, no `1 ≤ y`; the squared form carries |y| exactly as the distance does; §2 quotes exact; §5 a byte substring of probe 367c1902…; parse: 0 Lean line(s) over 100 code points. SPLIT-OK with G5-CSEPa.
