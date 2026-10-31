@@ -2,13 +2,13 @@
 
 The Lean lane of *The Claude Papers*, No. 1: *The Realized Trace Set of the Hecke Group G(5)*.
 
-This repository is internal. The paper is unpublished, and the repository stays internal until the paper's ship word; whether the lane then merges into `lean-papers` or ships as the series' own repository is decided at the ship. It has its own git history and no remote.
+The paper is published: [qriemannian.ai](https://qriemannian.ai/research.html#claude-papers-1) serves the PDF with this lane beside it — a git bundle and source tarball of this repository at commit `2350f9a`, with their sha256 digests on the page. This repository is the lane's public home, released at the paper's ship (2026-10-31). **The lane is frozen with the paper:** 18 units · 62 statements, every one proved · 81 theorems. A change to the paper's print reopens the lane through the whole loop; nothing here changes outside it.
 
 ## The discipline
 
 The loop is `lean-papers`' loop, whole: a spec for each statement → a fresh V₁ reviewer compares the spec with the source → the statements are frozen (`Challenge.lean`, its sha256 signed into the unit's `formalization.yaml`) → the proofs (`Solution.lean`) → a fresh V₃ reviewer → the gate (`tools/check.sh`).
 
-One difference from `lean-papers`: there is no served edition to compare against, because the paper is not yet written. The statements are checked against the dig's record instead. Each spec's "printed statement" section quotes the record file and line it takes the statement from; the statement sheet is `Orchestrator/Claude-Papers/No1-G5/phase-3/STATEMENTS.md`.
+One difference from `lean-papers`: the lane was built during the paper's drafting, before a served edition existed, so the statements are checked against the dig's record instead. Each spec's "printed statement" section quotes the record file and line it takes the statement from; the statement sheet is `Orchestrator/Claude-Papers/No1-G5/phase-3/STATEMENTS.md`.
 
 ## Toolchain and pin
 
